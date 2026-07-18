@@ -25,7 +25,7 @@ button:focus-visible, textarea:focus-visible { outline: 3px solid rgba(164, 61, 
 .app-shell { min-height: 100vh; }
 .site-header { height: 84px; display: flex; align-items: center; justify-content: space-between; max-width: 1240px; margin: auto; padding: 0 32px; border-bottom: 1px solid var(--line); }
 .brand { display: flex; align-items: center; gap: 12px; border: 0; background: none; cursor: pointer; padding: 0; text-align: left; }
-.brand-mark { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px 4px 12px 4px; background: var(--red); color: white; font-family: "Noto Serif SC", serif; font-size: 24px; box-shadow: 5px 5px 0 #d8c3a2; }
+.brand-mark { display: block; width: 44px; height: 44px; border-radius: 10px; box-shadow: 3px 4px 0 #d8c3a2, 0 8px 18px rgba(94, 39, 31, .12); }
 .brand strong, .brand small { display: block; }
 .brand strong { font-family: "Noto Serif SC", serif; font-size: 19px; letter-spacing: .08em; }
 .brand small { color: var(--muted); font-size: 11px; margin-top: 2px; }
@@ -66,7 +66,11 @@ textarea::placeholder { color: #aaa197; }
 .center-seal strong { font-family: "Noto Serif SC", serif; font-size: 54px; line-height: 1; }
 .center-seal span { font-size: 11px; letter-spacing: .2em; margin-top: 8px; }
 .persona-dot { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 5px; transform: translate(-50%, -50%); }
-.persona-dot span, .persona-avatar { display: grid; place-items: center; flex: 0 0 auto; width: 54px; height: 54px; border-radius: 50% 45% 50% 45%; background: var(--paper); border: 1px solid rgba(164,61,47,.22); color: var(--red); font-family: "Noto Serif SC", serif; font-size: 21px; box-shadow: 0 8px 25px rgba(55, 39, 24, .1); }
+.persona-portrait { display: block; flex: 0 0 auto; filter: drop-shadow(0 7px 9px rgba(86, 67, 36, .13)); }
+.portrait-xs { width: 34px; height: 34px; }
+.portrait-sm { width: 62px; height: 62px; }
+.portrait-md { width: 64px; height: 64px; }
+.portrait-lg { width: 88px; height: 88px; }
 .persona-dot small { font-size: 11px; color: var(--muted); background: #f4efe5; padding: 1px 5px; }
 .dot-1 { left: 50%; top: 2%; }.dot-2 { left: 79%; top: 13%; }.dot-3 { left: 96%; top: 40%; }.dot-4 { left: 90%; top: 73%; }.dot-5 { left: 65%; top: 95%; }.dot-6 { left: 34%; top: 95%; }.dot-7 { left: 9%; top: 75%; }.dot-8 { left: 4%; top: 40%; }.dot-9 { left: 21%; top: 13%; }
 
@@ -98,7 +102,7 @@ textarea::placeholder { color: #aaa197; }
 .persona-card { position: relative; display: flex; align-items: flex-start; gap: 14px; min-height: 210px; padding: 24px 22px; text-align: left; background: rgba(255,253,248,.72); border: 1px solid var(--line); border-radius: 5px 20px 5px 20px; cursor: pointer; transition: transform .18s, border .18s, background .18s; }
 .persona-card:hover { transform: translateY(-3px); border-color: rgba(164,61,47,.4); }
 .persona-card.selected { background: #fffaf0; border: 2px solid var(--red); padding: 23px 21px; box-shadow: 7px 7px 0 #dfcdb0; }
-.persona-card .persona-avatar { width: 45px; height: 45px; font-size: 18px; }
+.persona-card .persona-portrait { margin-top: -5px; }
 .persona-content { min-width: 0; }
 .persona-content small { display: block; color: var(--muted); font-size: 11px; }
 .persona-content strong { display: block; font-family: "Noto Serif SC", serif; font-size: 20px; margin: 4px 0 8px; }
@@ -107,7 +111,7 @@ textarea::placeholder { color: #aaa197; }
 .persona-card .check { position: absolute; right: 12px; top: 10px; color: var(--red); font-weight: 700; }
 .submit-bar { position: sticky; z-index: 5; bottom: 18px; display: flex; justify-content: space-between; align-items: center; gap: 16px; margin: 28px auto 0; max-width: 650px; padding: 13px 16px; background: rgba(37,35,31,.94); color: white; border-radius: 12px; box-shadow: var(--shadow); backdrop-filter: blur(10px); }
 .selected-stack { display: flex; align-items: center; }
-.selected-stack > span { display: grid; place-items: center; width: 31px; height: 31px; margin-right: -5px; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; background: var(--red); font-family: "Noto Serif SC", serif; }
+.selected-stack .persona-portrait { margin-right: -6px; filter: drop-shadow(0 3px 5px rgba(0,0,0,.22)); }
 .selected-stack small { margin-left: 14px; color: #d7d0c6; }
 
 .report-page { max-width: 880px; margin: auto; padding-top: 64px; }
@@ -170,7 +174,7 @@ footer { padding: 30px; text-align: center; border-top: 1px solid var(--line); c
   body { background: #f4efe5; }
   .site-header { height: 68px; padding: 0 18px; }
   .site-header nav { display: none; }
-  .brand-mark { width: 38px; height: 38px; font-size: 20px; }
+  .brand-mark { width: 38px; height: 38px; }
   .brand strong { font-size: 17px; }
   main { padding: 0 16px 96px; }
   .hero { min-height: auto; padding: 45px 0 30px; }
@@ -183,7 +187,7 @@ footer { padding: 30px; text-align: center; border-top: 1px solid var(--line); c
   .council-visual { width: 310px; height: 310px; margin-top: 30px; }
   .center-seal { width: 100px; height: 100px; }
   .center-seal strong { font-size: 40px; }
-  .persona-dot span { width: 40px; height: 40px; font-size: 16px; }
+  .persona-dot .persona-portrait { width: 46px; height: 46px; }
   .persona-dot small { display: none; }
   .section-block { padding: 62px 0; }
   .section-heading h2 { font-size: 28px; }
@@ -200,7 +204,7 @@ footer { padding: 30px; text-align: center; border-top: 1px solid var(--line); c
   .report-section.lead { grid-template-columns: 1fr; gap: 10px; }
   .report-section.lead p, .synthesis > p { font-size: 17px; }
   .perspective { gap: 13px; }
-  .perspective .persona-avatar { width: 42px; height: 42px; font-size: 17px; }
+  .perspective .persona-portrait { width: 48px; height: 48px; }
   .simple-page { padding-top: 50px; }
   footer { padding-bottom: 90px; }
   .mobile-nav { position: fixed; z-index: 10; left: 12px; right: 12px; bottom: max(10px, env(safe-area-inset-bottom)); display: grid; grid-template-columns: repeat(3, 1fr); padding: 6px; background: rgba(37,35,31,.94); border-radius: 14px; box-shadow: 0 10px 35px rgba(0,0,0,.22); backdrop-filter: blur(12px); }

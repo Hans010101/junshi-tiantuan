@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { PersonaPortrait } from './components/PersonaPortrait'
 import { examples, personas, recommendPersonaIds } from './data/personas'
 import type { AdviceReport } from './types'
 
@@ -134,7 +135,7 @@ function Header({ view, navigate, reset }: { view: View; navigate: (view: View) 
   return (
     <header className="site-header">
       <button className="brand" onClick={reset} aria-label="返回首页">
-        <span className="brand-mark">策</span>
+        <img className="brand-mark" src="/brand-mark.svg" alt="" />
         <span><strong>军师天团</strong><small>你的多元思维决策室</small></span>
       </button>
       <nav aria-label="主导航">
@@ -182,7 +183,7 @@ function Home({ question, setQuestion, begin, error }: {
           <div className="center-seal"><strong>智</strong><span>多元思维</span></div>
           {personas.map((persona, index) => (
             <div className={`persona-dot dot-${index + 1}`} key={persona.id} title={persona.name}>
-              <span>{persona.shortName}</span><small>{persona.name}</small>
+              <PersonaPortrait personaId={persona.id} name={persona.name} size="sm" /><small>{persona.name}</small>
             </div>
           ))}
         </div>
@@ -224,7 +225,7 @@ function Council({ question, context, setContext, selected, toggle, submit, load
           const checked = selected.includes(persona.id)
           return (
             <button key={persona.id} className={`persona-card ${checked ? 'selected' : ''}`} onClick={() => toggle(persona.id)} aria-pressed={checked}>
-              <span className="persona-avatar">{persona.shortName}</span>
+              <PersonaPortrait personaId={persona.id} name={persona.name} size="md" />
               <span className="persona-content"><small>{persona.era} · {persona.role}</small><strong>{persona.name}</strong><p>{persona.lens}</p><i>{persona.challenge}</i></span>
               <span className="check">{checked ? '✓' : '+'}</span>
             </button>
@@ -233,7 +234,7 @@ function Council({ question, context, setContext, selected, toggle, submit, load
       </div>
       <div className="submit-bar">
         <div className="selected-stack">
-          {selectedPersonasFallback(selected).map((persona) => <span key={persona.id}>{persona.shortName}</span>)}
+          {selectedPersonasFallback(selected).map((persona) => <PersonaPortrait key={persona.id} personaId={persona.id} name={persona.name} size="xs" decorative />)}
           <small>已选 {selected.length}/3 位</small>
         </div>
         <button className="primary" disabled={loading || selected.length === 0} onClick={submit}>{loading ? '军师正在会商…' : '开始会商 →'}</button>
@@ -266,7 +267,7 @@ function Report({ report, onAgain }: { report: AdviceReport; onAgain: () => void
         <div className="perspective-list">
           {report.perspectives.map((item) => (
             <div className="perspective" key={`${item.personaId}-${item.headline}`}>
-              <span className="persona-avatar">{personas.find((persona) => persona.id === item.personaId)?.shortName ?? '策'}</span>
+              <PersonaPortrait personaId={item.personaId} name={item.personaName} size="md" />
               <div><small>{item.personaName}</small><h3>{item.headline}</h3><p>{item.analysis}</p><blockquote>{item.question}</blockquote></div>
             </div>
           ))}

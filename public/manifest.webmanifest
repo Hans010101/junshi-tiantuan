@@ -1,0 +1,13 @@
+{
+  "name": "军师天团｜多元思维决策助手",
+  "short_name": "军师天团",
+  "description": "用多元思维模型拆解复杂决策，形成清晰、可执行的行动方案。",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4efe5",
+  "theme_color": "#a43d2f",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

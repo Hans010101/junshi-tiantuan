@@ -68,6 +68,8 @@ textarea::placeholder { color: #aaa197; }
 .persona-dot { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 5px; transform: translate(-50%, -50%); }
 .advisor-avatar { position: relative; display: grid; place-items: center; flex: 0 0 auto; border-radius: 50%; filter: drop-shadow(0 7px 9px rgba(86, 67, 36, .13)); }
 .advisor-avatar img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
+.advisor-avatar.portrait-crop { overflow: hidden; background: #27231e; border: 2px solid #b69755; box-shadow: inset 0 0 0 3px #27231e, inset 0 0 0 4px #d4bd83; }
+.advisor-avatar.portrait-crop img { position: absolute; left: 50%; top: 50%; width: 215%; max-width: none; height: auto; object-fit: initial; border-radius: 0; transform: translate(-50%, -40%); }
 .advisor-avatar.is-placeholder { background: #f2e7c7; border: 2px solid #b69755; box-shadow: inset 0 0 0 3px #f6edda, inset 0 0 0 4px #d4bd83; color: #8b6a31; }
 .avatar-placeholder-char { font-family: "Noto Serif SC", "Songti SC", serif; font-size: .42em; font-weight: 700; }
 .advisor-avatar > i { position: absolute; right: -7px; bottom: -3px; padding: 2px 5px; color: #fffaf0; background: #746d63; border: 2px solid #f4efe5; border-radius: 99px; font-size: 9px; font-style: normal; line-height: 1.2; white-space: nowrap; }

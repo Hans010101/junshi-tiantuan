@@ -1,0 +1,983 @@
+[
+  {
+    "card_id": "alexander",
+    "person_id": "P-alexander",
+    "name": "亚历山大大帝",
+    "domain": "战略",
+    "source_file": "军师卡_战略_亚历山大大帝_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "aristotle",
+    "person_id": "P-aristotle",
+    "name": "亚里士多德",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_亚里士多德_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "augustus",
+    "person_id": "P-augustus",
+    "name": "奥古斯都",
+    "domain": "治理",
+    "source_file": "军师卡_治理_奥古斯都_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "bezos",
+    "person_id": "P-bezos",
+    "name": "杰夫·贝索斯",
+    "domain": "商业",
+    "source_file": "军师卡_商业_贝索斯_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "bismarck",
+    "person_id": "P-bismarck",
+    "name": "俾斯麦",
+    "domain": "治理",
+    "source_file": "军师卡_治理_俾斯麦_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "bogle",
+    "person_id": "P-bogle",
+    "name": "博格",
+    "domain": "投资",
+    "source_file": "军师卡_投资_博格_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "bohr",
+    "person_id": "P-bohr",
+    "name": "尼尔斯·玻尔",
+    "domain": "科学",
+    "source_file": "军师卡_科学_玻尔_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "buffett",
+    "person_id": "P-buffett",
+    "name": "沃伦·巴菲特",
+    "domain": "商业",
+    "source_file": "军师卡_商业_巴菲特_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "caesar",
+    "person_id": "P-caesar",
+    "name": "凯撒",
+    "domain": "战略",
+    "source_file": "军师卡_战略_凯撒_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "caocao",
+    "person_id": "P-caocao",
+    "name": "曹操",
+    "domain": "战略",
+    "source_file": "军师卡_战略_曹操_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "caoxueqin",
+    "person_id": "P-caoxueqin",
+    "name": "曹雪芹",
+    "domain": "创作",
+    "source_file": "军师卡_创作_曹雪芹_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "carnegie",
+    "person_id": "P-carnegie",
+    "name": "安德鲁·卡内基",
+    "domain": "商业",
+    "source_file": "军师卡_商业_卡内基_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "chanel",
+    "person_id": "P-chanel",
+    "name": "可可·香奈儿",
+    "domain": "商业",
+    "source_file": "军师卡_商业_可可香奈儿_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "churchill",
+    "person_id": "P-churchill",
+    "name": "丘吉尔",
+    "domain": "治理",
+    "source_file": "军师卡_治理_丘吉尔_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "clausewitz",
+    "person_id": "P-clausewitz",
+    "name": "克劳塞维茨",
+    "domain": "战略",
+    "source_file": "军师卡_战略_克劳塞维茨_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "columbus",
+    "person_id": "P-columbus",
+    "name": "哥伦布",
+    "domain": "探索",
+    "source_file": "军师卡_历史_哥伦布_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "confucius",
+    "person_id": "P-confucius",
+    "name": "孔子",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_孔子_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "curie",
+    "person_id": "P-curie",
+    "name": "居里夫人",
+    "domain": "科学",
+    "source_file": "军师卡_科学_居里夫人_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "dalio",
+    "person_id": "P-dalio",
+    "name": "达里奥",
+    "domain": "投资",
+    "source_file": "军师卡_投资_达里奥_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "darwin",
+    "person_id": "P-darwin",
+    "name": "查尔斯·达尔文",
+    "domain": "科学",
+    "source_file": "军师卡_科学_达尔文_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "davinci",
+    "person_id": "P-davinci",
+    "name": "达·芬奇",
+    "domain": "科学",
+    "source_file": "军师卡_科学_达芬奇_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "degaulle",
+    "person_id": "P-degaulle",
+    "name": "戴高乐",
+    "domain": "治理",
+    "source_file": "军师卡_治理_戴高乐_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "dickens",
+    "person_id": "P-dickens",
+    "name": "查尔斯·狄更斯",
+    "domain": "创作",
+    "source_file": "军师卡_创作_狄更斯_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "disney",
+    "person_id": "P-disney",
+    "name": "迪士尼",
+    "domain": "创新",
+    "source_file": "军师卡_创新_迪士尼_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "edison",
+    "person_id": "P-edison",
+    "name": "爱迪生",
+    "domain": "创新",
+    "source_file": "军师卡_创新_爱迪生_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "einstein",
+    "person_id": "P-einstein",
+    "name": "阿尔伯特·爱因斯坦",
+    "domain": "科学",
+    "source_file": "军师卡_科学_爱因斯坦_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "engelbart",
+    "person_id": "P-engelbart",
+    "name": "恩格尔巴特",
+    "domain": "创新",
+    "source_file": "军师卡_创新_恩格尔巴特_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "fanli",
+    "person_id": "P-fanli",
+    "name": "范蠡",
+    "domain": "历史",
+    "source_file": "军师卡_历史_范蠡_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "faraday",
+    "person_id": "P-faraday",
+    "name": "法拉第",
+    "domain": "科学",
+    "source_file": "军师卡_科学_法拉第_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "feynman",
+    "person_id": "P-feynman",
+    "name": "理查德·费曼",
+    "domain": "科学",
+    "source_file": "军师卡_科学_费曼_v3.md",
+    "status": "approved",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "fisher",
+    "person_id": "P-fisher",
+    "name": "菲利普·费雪",
+    "domain": "投资",
+    "source_file": "军师卡_投资_费雪_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "ford",
+    "person_id": "P-ford",
+    "name": "亨利·福特",
+    "domain": "商业",
+    "source_file": "军师卡_商业_福特_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "frankl",
+    "person_id": "P-frankl",
+    "name": "弗兰克尔",
+    "domain": "历史",
+    "source_file": "军师卡_历史_弗兰克尔_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "goddard",
+    "person_id": "P-goddard",
+    "name": "戈达德",
+    "domain": "创新",
+    "source_file": "军师卡_创新_戈达德_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "graham",
+    "person_id": "P-graham",
+    "name": "本杰明·格雷厄姆",
+    "domain": "商业",
+    "source_file": "军师卡_商业_格雷厄姆_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "guanzhong",
+    "person_id": "P-guanzhong",
+    "name": "管仲",
+    "domain": "治理",
+    "source_file": "军师卡_治理_管仲_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "hanfeizi",
+    "person_id": "P-hanfeizi",
+    "name": "韩非子",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_韩非子_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "hannibal",
+    "person_id": "P-hannibal",
+    "name": "汉尼拔",
+    "domain": "战略",
+    "source_file": "军师卡_战略_汉尼拔_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "hanxin",
+    "person_id": "P-hanxin",
+    "name": "韩信",
+    "domain": "战略",
+    "source_file": "军师卡_战略_韩信_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "helenkeller",
+    "person_id": "P-helenkeller",
+    "name": "海伦·凯勒",
+    "domain": "历史",
+    "source_file": "军师卡_历史_海伦凯勒_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "hemingway",
+    "person_id": "P-hemingway",
+    "name": "海明威",
+    "domain": "创作",
+    "source_file": "军师卡_创作_海明威_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "honda",
+    "person_id": "P-honda",
+    "name": "本田宗一郎",
+    "domain": "商业",
+    "source_file": "军师卡_商业_本田宗一郎_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "hugo",
+    "person_id": "P-hugo",
+    "name": "雨果",
+    "domain": "创作",
+    "source_file": "军师卡_创作_雨果_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "inamori",
+    "person_id": "P-inamori",
+    "name": "稻盛和夫",
+    "domain": "商业",
+    "source_file": "军师卡_商业_稻盛和夫_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "jianzhen",
+    "person_id": "P-jianzhen",
+    "name": "鉴真",
+    "domain": "历史",
+    "source_file": "军师卡_历史_鉴真_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "jobs",
+    "person_id": "P-jobs",
+    "name": "史蒂夫·乔布斯",
+    "domain": "商业",
+    "source_file": "军师卡_商业_乔布斯_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "kant",
+    "person_id": "P-kant",
+    "name": "康德",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_康德_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "keynes",
+    "person_id": "P-keynes",
+    "name": "凯恩斯",
+    "domain": "投资",
+    "source_file": "军师卡_投资_凯恩斯_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "kroc",
+    "person_id": "P-kroc",
+    "name": "雷·克洛克",
+    "domain": "商业",
+    "source_file": "军师卡_商业_雷克洛克_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "laozi",
+    "person_id": "P-laozi",
+    "name": "老子",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_老子_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "lijing",
+    "person_id": "P-lijing",
+    "name": "李靖",
+    "domain": "战略",
+    "source_file": "军师卡_战略_李靖_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "lincoln",
+    "person_id": "P-lincoln",
+    "name": "林肯",
+    "domain": "治理",
+    "source_file": "军师卡_治理_林肯_v3.md",
+    "status": "approved",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "lishimin",
+    "person_id": "P-lishimin",
+    "name": "李世民",
+    "domain": "治理",
+    "source_file": "军师卡_治理_李世民_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "livermore",
+    "person_id": "P-livermore",
+    "name": "利弗莫尔",
+    "domain": "投资",
+    "source_file": "军师卡_投资_利弗莫尔_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "luzuofu",
+    "person_id": "P-luzuofu",
+    "name": "卢作孚",
+    "domain": "商业",
+    "source_file": "军师卡_商业_卢作孚_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "lynch",
+    "person_id": "P-lynch",
+    "name": "彼得林奇",
+    "domain": "投资",
+    "source_file": "军师卡_投资_彼得林奇_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "mandela",
+    "person_id": "P-mandela",
+    "name": "曼德拉",
+    "domain": "历史",
+    "source_file": "军师卡_历史_曼德拉_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "marcus",
+    "person_id": "P-marcus",
+    "name": "马可·奥勒留",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_马可奥勒留_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "matsushita",
+    "person_id": "P-matsushita",
+    "name": "松下幸之助",
+    "domain": "商业",
+    "source_file": "军师卡_商业_松下幸之助_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "maxwell",
+    "person_id": "P-maxwell",
+    "name": "麦克斯韦",
+    "domain": "科学",
+    "source_file": "军师卡_科学_麦克斯韦_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "mendel",
+    "person_id": "P-mendel",
+    "name": "孟德尔",
+    "domain": "科学",
+    "source_file": "军师卡_科学_孟德尔_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "mengzi",
+    "person_id": "P-mengzi",
+    "name": "孟子",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_孟子_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "moltke",
+    "person_id": "P-moltke",
+    "name": "毛奇",
+    "domain": "战略",
+    "source_file": "军师卡_战略_毛奇_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "morgan",
+    "person_id": "P-morgan",
+    "name": "J.P.摩根",
+    "domain": "商业",
+    "source_file": "军师卡_商业_摩根_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "morita",
+    "person_id": "P-morita",
+    "name": "盛田昭夫",
+    "domain": "商业",
+    "source_file": "军师卡_商业_盛田昭夫_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "mozi",
+    "person_id": "P-mozi",
+    "name": "墨子",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_墨子_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "munger",
+    "person_id": "P-munger",
+    "name": "查理·芒格",
+    "domain": "商业",
+    "source_file": "军师卡_商业_查理芒格_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "napoleon",
+    "person_id": "P-napoleon",
+    "name": "拿破仑",
+    "domain": "战略",
+    "source_file": "军师卡_战略_拿破仑_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "newton",
+    "person_id": "P-newton",
+    "name": "艾萨克·牛顿",
+    "domain": "科学",
+    "source_file": "军师卡_科学_牛顿_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "ohno",
+    "person_id": "P-ohno",
+    "name": "大野耐一",
+    "domain": "商业",
+    "source_file": "军师卡_商业_大野耐一_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "orwell",
+    "person_id": "P-orwell",
+    "name": "乔治·奥威尔",
+    "domain": "创作",
+    "source_file": "军师卡_创作_奥威尔_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "pericles",
+    "person_id": "P-pericles",
+    "name": "伯里克利",
+    "domain": "治理",
+    "source_file": "军师卡_治理_伯里克利_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "plato",
+    "person_id": "P-plato",
+    "name": "柏拉图",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_柏拉图_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "qijiguang",
+    "person_id": "P-qijiguang",
+    "name": "戚继光",
+    "domain": "战略",
+    "source_file": "军师卡_战略_戚继光_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "rockefeller",
+    "person_id": "P-rockefeller",
+    "name": "约翰·D·洛克菲勒",
+    "domain": "商业",
+    "source_file": "军师卡_商业_洛克菲勒_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "saladin",
+    "person_id": "P-saladin",
+    "name": "萨拉丁",
+    "domain": "治理",
+    "source_file": "军师卡_治理_萨拉丁_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "schweitzer",
+    "person_id": "P-schweitzer",
+    "name": "史怀哲",
+    "domain": "历史",
+    "source_file": "军师卡_历史_史怀哲_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "shackleton",
+    "person_id": "P-shackleton",
+    "name": "沙克尔顿",
+    "domain": "历史",
+    "source_file": "军师卡_历史_沙克尔顿_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "shakespeare",
+    "person_id": "P-shakespeare",
+    "name": "莎士比亚",
+    "domain": "创作",
+    "source_file": "军师卡_创作_莎士比亚_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "shangyang",
+    "person_id": "P-shangyang",
+    "name": "商鞅",
+    "domain": "治理",
+    "source_file": "军师卡_治理_商鞅_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "simaqian",
+    "person_id": "P-simaqian",
+    "name": "司马迁",
+    "domain": "历史",
+    "source_file": "军师卡_历史_司马迁_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "socrates",
+    "person_id": "P-socrates",
+    "name": "苏格拉底",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_苏格拉底_v3.md",
+    "status": "approved",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "soros",
+    "person_id": "P-soros",
+    "name": "索罗斯",
+    "domain": "投资",
+    "source_file": "军师卡_投资_索罗斯_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "sunzi",
+    "person_id": "P-sunzi",
+    "name": "孙子",
+    "domain": "战略",
+    "source_file": "军师卡_战略_孙子_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "sushi",
+    "person_id": "P-sushi",
+    "name": "苏轼",
+    "domain": "历史",
+    "source_file": "军师卡_历史_苏轼_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "tankahkee",
+    "person_id": "P-tankahkee",
+    "name": "陈嘉庚",
+    "domain": "商业",
+    "source_file": "军师卡_商业_陈嘉庚_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "templeton",
+    "person_id": "P-templeton",
+    "name": "约翰·邓普顿",
+    "domain": "投资",
+    "source_file": "军师卡_投资_邓普顿_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "tesla",
+    "person_id": "P-tesla",
+    "name": "特斯拉",
+    "domain": "创新",
+    "source_file": "军师卡_创新_特斯拉_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "tolstoy",
+    "person_id": "P-tolstoy",
+    "name": "托尔斯泰",
+    "domain": "创作",
+    "source_file": "军师卡_创作_托尔斯泰_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "turing",
+    "person_id": "P-turing",
+    "name": "艾伦·图灵",
+    "domain": "科学",
+    "source_file": "军师卡_科学_图灵_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "twain",
+    "person_id": "P-twain",
+    "name": "马克·吐温",
+    "domain": "创作",
+    "source_file": "军师卡_创作_马克吐温_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "vonneumann",
+    "person_id": "P-vonneumann",
+    "name": "约翰·冯·诺依曼",
+    "domain": "科学",
+    "source_file": "军师卡_科学_冯诺依曼_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "walton",
+    "person_id": "P-walton",
+    "name": "山姆·沃尔顿",
+    "domain": "商业",
+    "source_file": "军师卡_商业_山姆沃尔顿_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "wanganshi",
+    "person_id": "P-wanganshi",
+    "name": "王安石",
+    "domain": "治理",
+    "source_file": "军师卡_治理_王安石_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "wangyangming",
+    "person_id": "P-wangyangming",
+    "name": "王阳明",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_王阳明_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "wangyongqing",
+    "person_id": "P-wangyongqing",
+    "name": "王永庆",
+    "domain": "商业",
+    "source_file": "军师卡_商业_王永庆_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "washington",
+    "person_id": "P-washington",
+    "name": "乔治·华盛顿",
+    "domain": "治理",
+    "source_file": "军师卡_治理_华盛顿_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "wuqi",
+    "person_id": "P-wuqi",
+    "name": "吴起",
+    "domain": "战略",
+    "source_file": "军师卡_战略_吴起_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "xuanzang",
+    "person_id": "P-xuanzang",
+    "name": "玄奘",
+    "domain": "历史",
+    "source_file": "军师卡_历史_玄奘_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "xunzi",
+    "person_id": "P-xunzi",
+    "name": "荀子",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_荀子_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "xuxiake",
+    "person_id": "P-xuxiake",
+    "name": "徐霞客",
+    "domain": "历史",
+    "source_file": "军师卡_历史_徐霞客_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "yuefei",
+    "person_id": "P-yuefei",
+    "name": "岳飞",
+    "domain": "战略",
+    "source_file": "军师卡_战略_岳飞_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "zengguofan",
+    "person_id": "P-zengguofan",
+    "name": "曾国藩",
+    "domain": "历史",
+    "source_file": "军师卡_历史_曾国藩_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "zhangjuzheng",
+    "person_id": "P-zhangjuzheng",
+    "name": "张居正",
+    "domain": "治理",
+    "source_file": "军师卡_治理_张居正_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "zhangqian",
+    "person_id": "P-zhangqian",
+    "name": "张骞",
+    "domain": "历史",
+    "source_file": "军师卡_历史_张骞_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "zhenghe",
+    "person_id": "P-zhenghe",
+    "name": "郑和",
+    "domain": "历史",
+    "source_file": "军师卡_历史_郑和_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "zhuangzi",
+    "person_id": "P-zhuangzi",
+    "name": "庄子",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_庄子_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "zhugeliang",
+    "person_id": "P-zhugeliang",
+    "name": "诸葛亮",
+    "domain": "治理",
+    "source_file": "军师卡_治理_诸葛亮_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  },
+  {
+    "card_id": "zhuxi",
+    "person_id": "P-zhuxi",
+    "name": "朱熹",
+    "domain": "哲学",
+    "source_file": "军师卡_哲学_朱熹_v3.md",
+    "status": "in_review",
+    "schema_version": "A0-v5.9"
+  }
+]

@@ -14,6 +14,14 @@
 		"binding": "AI",
 		"remote": true
 	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "junshi-tiantuan-db",
+			"database_id": "2bab3dee-cf59-4b20-a2d6-ffb60004cb37",
+			"migrations_dir": "migrations"
+		}
+	],
 	"observability": {
 		"enabled": true,
 		"logs": {

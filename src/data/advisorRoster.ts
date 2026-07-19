@@ -1,10 +1,38 @@
 export interface AdvisorRosterEntry {
   id: string
+  cardId?: string
+  personId?: string
   name: string
   insight: string
   domainId: string
   domainName: string
   avatar?: string
+  sourceStatus?: string
+  knowledgeQcStatus?: string
+}
+
+export interface AdvisorApiItem {
+  cardId: string
+  personId: string
+  name: string
+  domainId: string
+  domainName: string
+  insight: string
+  avatarUrl: string
+  portraitUrl: string
+  sourceStatus: string
+  knowledgeQcStatus: string
+}
+
+export interface AdvisorApiResponse {
+  data: AdvisorApiItem[]
+  stats: {
+    advisors: number
+    portraits: number
+    knowledgeQcPassed: number
+    knowledgeQcPending: number
+    strategyCardsMissing: number
+  }
 }
 
 export interface AdvisorDomain {

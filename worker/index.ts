@@ -39,6 +39,15 @@ export default {
     if (url.pathname === '/api/health' && request.method === 'GET') {
       return json({ ok: true, service: 'junshi-tiantuan', time: new Date().toISOString() })
     }
+    if (url.pathname === '/api/advisors' && request.method === 'GET') {
+      return handleAdvisorList(env.DB)
+    }
+    if (url.pathname.startsWith('/api/advisors/') && request.method === 'GET') {
+      return handleAdvisorDetail(url.pathname.slice('/api/advisors/'.length), env.DB)
+    }
+    if (url.pathname === '/api/assets/status' && request.method === 'GET') {
+      return handleAssetStatus(env.DB)
+    }
     if (url.pathname === '/api/advice' && request.method === 'POST') {
       return handleAdvice(request, env)
     }
@@ -72,7 +81,7 @@ async function handleAdvice(request: Request, env: Env): Promise<Response> {
 
     let report: AdviceReport
     try {
-      const aiPayload = await runCouncil(env.AI, question, context, personaIds)
+      const aiPayload = await runCouncil(env.AI, env.DB, question, context, personaIds)
       report = normalizeAiReport(aiPayload, question, personaIds, professionalPattern.test(question + context))
     } catch (error) {
       console.warn(JSON.stringify({ event: 'ai_fallback', requestId, error: error instanceof Error ? error.name : 'unknown' }))
@@ -143,10 +152,15 @@ function normalizePersonaIds(value: unknown): string[] {
   return ids
 }
 
-async function runCouncil(ai: Ai, question: string, context: string, personaIds: string[]): Promise<AiPayload> {
+async function runCouncil(ai: Ai, db: D1Database, question: string, context: string, personaIds: string[]): Promise<AiPayload> {
+  const knowledge = await loadAdvisorKnowledge(db, personaIds)
   const council = personaIds.map((id) => {
     const persona = personaMap.get(id)!
-    return `${persona.id}｜${persona.name}｜视角：${persona.lens}｜追问：${persona.challenge}｜语气：${persona.tone}`
+    const profile = knowledge.get(id)
+    const knowledgeLine = profile
+      ? `｜知识库模型：${profile.models.join('、')}｜知识库追问：${profile.question}｜已知盲区：${profile.blindSpot}`
+      : ''
+    return `${persona.id}｜${persona.name}｜视角：${persona.lens}｜追问：${persona.challenge}｜语气：${persona.tone}${knowledgeLine}`
   }).join('\n')
   const system = `你是一名严谨的中文决策分析助手。你引用人物公开的方法论，不扮演人物本人，不虚构名言、经历或事实。不同视角必须有真实分歧，先澄清目标和约束，再给出可验证行动。不要替用户做最终决定。对于医疗、法律、金融等高风险主题，明确建议咨询合格专业人士。只输出合法 JSON，不要 Markdown。`
   const prompt = `问题：${question}\n背景：${context || '未提供'}\n\n本次视角：\n${council}\n\n输出对象必须包含：title（短标题）、diagnosis（核心矛盾，80-180字）、perspectives（每位军师一项，字段 personaId/personaName/headline/analysis/question）、synthesis（综合判断，100-220字）、options（恰好3项，字段 title/upside/risk/firstStep）、actions（恰好3项、未来7天内可执行）。不要输出 disclaimer、id、时间。`
@@ -163,6 +177,105 @@ async function runCouncil(ai: Ai, question: string, context: string, personaIds:
   const text = extractAiText(result)
   const cleaned = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '')
   return JSON.parse(cleaned) as AiPayload
+}
+
+interface AdvisorKnowledge {
+  models: string[]
+  question: string
+  blindSpot: string
+}
+
+async function loadAdvisorKnowledge(db: D1Database, personaIds: string[]): Promise<Map<string, AdvisorKnowledge>> {
+  const selected = personaIds
+    .map((personaId) => ({ personaId, advisorId: personaMap.get(personaId)?.advisorId }))
+    .filter((item): item is { personaId: string; advisorId: string } => Boolean(item.advisorId))
+  if (selected.length === 0) return new Map()
+  try {
+    const placeholders = selected.map(() => '?').join(', ')
+    const result = await db.prepare(`SELECT card_id, profile_json FROM advisors WHERE card_id IN (${placeholders})`)
+      .bind(...selected.map((item) => item.advisorId))
+      .all<{ card_id: string; profile_json: string }>()
+    const profiles = new Map(result.results.map((row) => [row.card_id, JSON.parse(row.profile_json) as Record<string, unknown>]))
+    return new Map(selected.flatMap(({ personaId, advisorId }) => {
+      const profile = profiles.get(advisorId)
+      if (!profile) return []
+      const models = Array.isArray(profile.core_models)
+        ? profile.core_models.slice(0, 3).flatMap((model) => typeof model === 'object' && model && typeof (model as { name?: unknown }).name === 'string' ? [(model as { name: string }).name] : [])
+        : []
+      const questions = Array.isArray(profile.inquiry_questions) ? profile.inquiry_questions : []
+      const blindSpots = Array.isArray(profile.blind_spots) ? profile.blind_spots : []
+      return [[personaId, {
+        models,
+        question: typeof questions[0] === 'string' ? questions[0] : '',
+        blindSpot: typeof blindSpots[0] === 'string' ? blindSpots[0] : '',
+      }] as const]
+    }))
+  } catch (error) {
+    console.warn(JSON.stringify({ event: 'knowledge_fallback', error: error instanceof Error ? error.name : 'unknown' }))
+    return new Map()
+  }
+}
+
+async function handleAdvisorList(db: D1Database): Promise<Response> {
+  const [advisorsResult, statsResult] = await db.batch([
+    db.prepare(`SELECT a.card_id, a.person_id, a.name, a.domain_id, d.name AS domain_name, a.insight,
+      a.avatar_url, a.portrait_url, a.source_status, a.knowledge_qc_status
+      FROM advisors a JOIN advisor_domains d ON d.domain_id = a.domain_id
+      ORDER BY d.display_order, a.display_order`),
+    db.prepare(`SELECT COUNT(*) AS advisors,
+      SUM(CASE WHEN knowledge_qc_status = 'pass' THEN 1 ELSE 0 END) AS knowledge_qc_passed,
+      SUM(CASE WHEN knowledge_qc_status = 'pending' THEN 1 ELSE 0 END) AS knowledge_qc_pending,
+      SUM(strategy_card_expected - strategy_card_available) AS strategy_cards_missing
+      FROM advisors`),
+  ])
+  const rows = advisorsResult.results as Array<Record<string, unknown>>
+  const stats = (statsResult.results[0] ?? {}) as Record<string, unknown>
+  return cachedJson({
+    data: rows.map((row) => ({
+      cardId: row.card_id,
+      personId: row.person_id,
+      name: row.name,
+      domainId: row.domain_id,
+      domainName: row.domain_name,
+      insight: row.insight,
+      avatarUrl: row.avatar_url,
+      portraitUrl: row.portrait_url,
+      sourceStatus: row.source_status,
+      knowledgeQcStatus: row.knowledge_qc_status,
+    })),
+    stats: {
+      advisors: Number(stats.advisors ?? 0),
+      portraits: rows.length,
+      knowledgeQcPassed: Number(stats.knowledge_qc_passed ?? 0),
+      knowledgeQcPending: Number(stats.knowledge_qc_pending ?? 0),
+      strategyCardsMissing: Number(stats.strategy_cards_missing ?? 0),
+    },
+  })
+}
+
+async function handleAdvisorDetail(rawId: string, db: D1Database): Promise<Response> {
+  const id = decodeURIComponent(rawId)
+  if (!/^[a-z0-9-]{1,64}$/.test(id)) return json({ error: '军师编号无效。' }, 400)
+  const [advisor, cases] = await db.batch([
+    db.prepare('SELECT profile_json, source_status, knowledge_qc_status FROM advisors WHERE card_id = ?').bind(id),
+    db.prepare('SELECT case_json FROM advisor_cases WHERE advisor_id = ? ORDER BY case_id').bind(id),
+  ])
+  const row = advisor.results[0] as { profile_json?: string; source_status?: string; knowledge_qc_status?: string } | undefined
+  if (!row?.profile_json) return json({ error: '未找到这位军师。' }, 404)
+  return cachedJson({
+    data: {
+      ...JSON.parse(row.profile_json),
+      source_review_status: row.source_status,
+      knowledge_qc_status: row.knowledge_qc_status,
+      cases: cases.results.map((item) => JSON.parse(String((item as { case_json: string }).case_json))),
+    },
+  })
+}
+
+async function handleAssetStatus(db: D1Database): Promise<Response> {
+  const result = await db.prepare(`SELECT role, availability, COUNT(*) AS count
+    FROM advisor_assets GROUP BY role, availability ORDER BY role, availability`).all()
+  return cachedJson({ data: result.results })
 }
 
 function extractAiText(result: unknown): string {
@@ -309,6 +422,16 @@ function json(data: unknown, status = 200): Response {
     status,
     headers: {
       'cache-control': 'no-store',
+      'x-content-type-options': 'nosniff',
+      'referrer-policy': 'strict-origin-when-cross-origin',
+    },
+  })
+}
+
+function cachedJson(data: unknown): Response {
+  return Response.json(data, {
+    headers: {
+      'cache-control': 'public, max-age=60, s-maxage=300',
       'x-content-type-options': 'nosniff',
       'referrer-policy': 'strict-origin-when-cross-origin',
     },

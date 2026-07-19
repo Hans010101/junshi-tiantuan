@@ -9,15 +9,16 @@
 ## 当前版本
 
 - 响应式 Web/H5：适配桌面、手机浏览器和微信内置浏览器
-- 109 位军师名录：按 10 个领域浏览和搜索，并公开展示素材完整度
-- 专业视觉资产：正式品牌 Logo 与现有 9 张金线圆徽头像
+- D1 军师知识库：109 份框架卡、545 个思维模型、451 条决策案例
+- 109 位军师名录：按 10 个领域浏览和搜索，数量实时由数据库返回
+- 专业视觉资产：正式品牌 Logo、109 张终版肖像与圆形金线裁切头像
 - Cloudflare Worker API：输入校验、大小限制、结构化日志和错误降级
 - Workers AI：通过 Cloudflare 绑定调用 Qwen，无需在前端保存 API Key
 - 安全边界：紧急健康/人身风险、违法规避与医疗/法律/金融主题分流
 - 本机历史：最近 10 份报告只保存在浏览器 `localStorage`
 - PWA 基础：manifest、favicon、安全响应头和 SPA 路由回退
 
-项目评估见 [docs/ASSESSMENT.md](docs/ASSESSMENT.md)，素材缺失和补齐指南见 [docs/ASSET_AUDIT_2026-07-19.md](docs/ASSET_AUDIT_2026-07-19.md)，架构与部署说明见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
+项目评估见 [docs/ASSESSMENT.md](docs/ASSESSMENT.md)，完整素材质检与补齐指南见 [docs/ASSET_AUDIT_2026-07-19_FULL.md](docs/ASSET_AUDIT_2026-07-19_FULL.md)，架构与部署说明见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
 
 ## 本地开发
 
@@ -30,6 +31,12 @@ pnpm dev
 ```
 
 打开 `http://localhost:5173`。`wrangler.jsonc` 中 AI 绑定设为远程模式，本地开发会调用 Cloudflare Workers AI 的远程资源。
+
+首次初始化本地知识库：
+
+```bash
+pnpm exec wrangler d1 migrations apply junshi-tiantuan-db --local
+```
 
 ## 验证与部署
 
@@ -53,7 +60,7 @@ pnpm run deploy
 
 ## 数据策略
 
-当前版本不设账号、数据库和用户画像。问题只在生成请求中发送给 Workers AI；服务端日志只记录请求 ID、模式、耗时和军师数量，不记录问题正文。未来若增加跨设备同步，应先引入明确授权、数据删除和留存策略。
+D1 只保存公开军师知识、案例与素材索引，不保存用户问题、报告或用户画像。问题只在生成请求中发送给 Workers AI；服务端日志只记录请求 ID、模式、耗时和军师数量，不记录问题正文。浏览器历史仍只保存在用户本机。未来若增加跨设备同步，应先引入明确授权、数据删除和留存策略。
 
 ## License
 

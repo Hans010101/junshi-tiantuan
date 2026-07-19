@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { AdvisorAvatar } from './components/AdvisorAvatar'
 import { advisorDomains, allAdvisors, availableAvatarCount } from './data/advisorRoster'
+import type { AdvisorApiResponse, AdvisorRosterEntry } from './data/advisorRoster'
 import { examples, personas, recommendPersonaIds } from './data/personas'
 import type { AdviceReport } from './types'
 
@@ -301,29 +302,68 @@ function History({ history, openReport, clear }: { history: AdviceReport[]; open
 function Roster() {
   const [query, setQuery] = useState('')
   const [domain, setDomain] = useState('all')
+  const [advisors, setAdvisors] = useState<AdvisorRosterEntry[]>(allAdvisors)
+  const [stats, setStats] = useState<AdvisorApiResponse['stats']>({
+    advisors: allAdvisors.length,
+    portraits: availableAvatarCount,
+    knowledgeQcPassed: 0,
+    knowledgeQcPending: allAdvisors.length,
+    strategyCardsMissing: 545,
+  })
+  const [databaseState, setDatabaseState] = useState<'loading' | 'ready' | 'fallback'>('loading')
+
+  useEffect(() => {
+    const controller = new AbortController()
+    fetch('/api/advisors', { signal: controller.signal })
+      .then(async (response) => {
+        if (!response.ok) throw new Error('ADVISOR_API_FAILED')
+        return response.json() as Promise<AdvisorApiResponse>
+      })
+      .then((payload) => {
+        setAdvisors(payload.data.map((item) => ({
+          id: item.cardId,
+          cardId: item.cardId,
+          personId: item.personId,
+          name: item.name,
+          insight: item.insight,
+          domainId: item.domainId,
+          domainName: item.domainName,
+          avatar: item.avatarUrl,
+          sourceStatus: item.sourceStatus,
+          knowledgeQcStatus: item.knowledgeQcStatus,
+        })))
+        setStats(payload.stats)
+        setDatabaseState('ready')
+      })
+      .catch((reason) => {
+        if ((reason as Error).name !== 'AbortError') setDatabaseState('fallback')
+      })
+    return () => controller.abort()
+  }, [])
+
   const normalizedQuery = query.trim().toLowerCase()
-  const visibleAdvisors = useMemo(() => allAdvisors.filter((advisor) => {
+  const visibleAdvisors = useMemo(() => advisors.filter((advisor) => {
     const matchesDomain = domain === 'all' || advisor.domainId === domain
     const matchesQuery = !normalizedQuery || `${advisor.name}${advisor.insight}${advisor.domainName}`.toLowerCase().includes(normalizedQuery)
     return matchesDomain && matchesQuery
-  }), [domain, normalizedQuery])
+  }), [advisors, domain, normalizedQuery])
 
   return (
     <section className="roster-page">
       <header className="roster-hero">
-        <span className="eyebrow">军师素材与方法论名录</span>
-        <h1>109 位思考者，<em>素材状态如实可见</em></h1>
-        <p>名录与一句思维简述已经完整录入。当前素材包只含 9 张专业设计头像；其余人物使用明确的中性占位，不用临时插画冒充正式交付。</p>
+        <span className="eyebrow">D1 知识库 · 军师方法论名录</span>
+        <h1>{stats.advisors} 位思考者，<em>知识与肖像已经入库</em></h1>
+        <p>109 份框架卡、451 条决策案例与 109 张终版肖像已完成交叉映射。头像位置直接裁切展示专业肖像原图，不再使用文字占位。</p>
         <div className="roster-stats">
-          <div><strong>{allAdvisors.length}</strong><span>名录已录入</span></div>
-          <div><strong>{availableAvatarCount}</strong><span>专业头像可用</span></div>
-          <div className="is-warning"><strong>{allAdvisors.length - availableAvatarCount}</strong><span>头像素材待补</span></div>
+          <div><strong>{stats.portraits}</strong><span>终版肖像可用</span></div>
+          <div><strong>{stats.knowledgeQcPassed}</strong><span>知识源卡已审核</span></div>
+          <div className="is-warning"><strong>{stats.knowledgeQcPending}</strong><span>知识源卡待复核</span></div>
         </div>
       </header>
 
       <div className="roster-notice">
-        <strong>内容完整度提醒</strong>
-        <p>这 109 位目前只有姓名、所属域和一句简述；完整框架卡、盲区、问诊方式与案例库尚未导入。因此名录用于浏览，不代表全部人物已经达到深度会商标准。</p>
+        <strong>质检状态如实说明</strong>
+        <p>结构化知识内容已经齐全，但源卡只有 3 人通过审核、106 人仍在复核；另有 {stats.strategyCardsMissing} 张“思维模型谋略图”只有文件清单、没有图片字节。当前页面先使用已齐全的终版肖像，后续补图可按清单无损入库。{databaseState === 'fallback' ? ' 当前数据库接口暂不可用，页面正在显示内置备用名录。' : ''}</p>
       </div>
 
       <div className="roster-tools">
@@ -334,12 +374,12 @@ function Roster() {
         </div>
       </div>
 
-      <div className="roster-result"><span>当前显示 {visibleAdvisors.length} 位</span><i><b />专业头像　<em />素材待补</i></div>
+      <div className="roster-result"><span>当前显示 {visibleAdvisors.length} 位 · {databaseState === 'ready' ? '来自 Cloudflare D1' : databaseState === 'loading' ? '正在读取 D1' : '备用名录'}</span><i><b />终版肖像　<em />知识待复核</i></div>
       <div className="advisor-roster-grid">
         {visibleAdvisors.map((advisor) => (
           <article className={`advisor-roster-card ${advisor.avatar ? 'has-asset' : 'missing-asset'}`} key={advisor.id}>
             <AdvisorAvatar name={advisor.name} src={advisor.avatar} size="lg" showMissingBadge />
-            <div><small>{advisor.domainName}</small><h2>{advisor.name}</h2><p>{advisor.insight}</p><span>{advisor.avatar ? '专业头像已入库' : '头像待从 COS 导出'}</span></div>
+            <div><small>{advisor.domainName}</small><h2>{advisor.name}</h2><p>{advisor.insight}</p><span>{advisor.sourceStatus === 'approved' ? '知识源卡已审核' : advisor.sourceStatus === 'in_review' ? '知识源卡待复核' : advisor.avatar ? '终版肖像已入库' : '肖像素材待补'}</span></div>
           </article>
         ))}
       </div>

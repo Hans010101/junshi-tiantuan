@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-07-19T09:41:47.055Z",
+  "knowledge": {
+    "advisors": 109,
+    "cases": 451,
+    "core_models": 545,
+    "references": 329,
+    "bundle_status": {
+      "published": 109
+    },
+    "source_status": {
+      "approved": 3,
+      "in_review": 106
+    },
+    "qc_status": {
+      "pass": 3,
+      "pending": 106
+    },
+    "case_source_tier": {
+      "primary": 217,
+      "secondary": 229,
+      "tertiary": 5
+    },
+    "case_historicity": {
+      "confirmed": 403,
+      "disputed": 43,
+      "legendary": 5
+    }
+  },
+  "assets": {
+    "inventory_total": 763,
+    "portraits_available": 109,
+    "thumbs_ready_made": 0,
+    "thumbs_derived_from_portrait": 109,
+    "strategy_cards_available": 0,
+    "strategy_cards_missing": 545
+  }
+}

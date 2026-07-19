@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
-import { PersonaPortrait } from './components/PersonaPortrait'
+import { useEffect, useMemo, useState } from 'react'
+import { AdvisorAvatar } from './components/AdvisorAvatar'
+import { advisorDomains, allAdvisors, availableAvatarCount } from './data/advisorRoster'
 import { examples, personas, recommendPersonaIds } from './data/personas'
 import type { AdviceReport } from './types'
 
-type View = 'home' | 'council' | 'report' | 'history' | 'about'
+type View = 'home' | 'council' | 'report' | 'roster' | 'history' | 'about'
 
 const HISTORY_KEY = 'junshi-tiantuan-history-v1'
 
@@ -117,6 +118,7 @@ function App() {
           />
         )}
         {view === 'report' && report && <Report report={report} onAgain={reset} />}
+        {view === 'roster' && <Roster />}
         {view === 'history' && (
           <History history={history} openReport={openReport} clear={() => {
             localStorage.removeItem(HISTORY_KEY)
@@ -135,11 +137,12 @@ function Header({ view, navigate, reset }: { view: View; navigate: (view: View) 
   return (
     <header className="site-header">
       <button className="brand" onClick={reset} aria-label="返回首页">
-        <img className="brand-mark" src="/brand-mark.svg" alt="" />
+        <img className="brand-mark" src="/brand/logo.png" alt="" />
         <span><strong>军师天团</strong><small>你的多元思维决策室</small></span>
       </button>
       <nav aria-label="主导航">
         <button className={view === 'home' ? 'active' : ''} onClick={() => navigate('home')}>首页</button>
+        <button className={view === 'roster' ? 'active' : ''} onClick={() => navigate('roster')}>军师名录</button>
         <button className={view === 'history' ? 'active' : ''} onClick={() => navigate('history')}>我的报告</button>
         <button className={view === 'about' ? 'active' : ''} onClick={() => navigate('about')}>方法说明</button>
       </nav>
@@ -183,7 +186,7 @@ function Home({ question, setQuestion, begin, error }: {
           <div className="center-seal"><strong>智</strong><span>多元思维</span></div>
           {personas.map((persona, index) => (
             <div className={`persona-dot dot-${index + 1}`} key={persona.id} title={persona.name}>
-              <PersonaPortrait personaId={persona.id} name={persona.name} size="sm" /><small>{persona.name}</small>
+              <AdvisorAvatar personaId={persona.id} name={persona.name} size="sm" /><small>{persona.name}</small>
             </div>
           ))}
         </div>
@@ -225,7 +228,7 @@ function Council({ question, context, setContext, selected, toggle, submit, load
           const checked = selected.includes(persona.id)
           return (
             <button key={persona.id} className={`persona-card ${checked ? 'selected' : ''}`} onClick={() => toggle(persona.id)} aria-pressed={checked}>
-              <PersonaPortrait personaId={persona.id} name={persona.name} size="md" />
+              <AdvisorAvatar personaId={persona.id} name={persona.name} size="md" />
               <span className="persona-content"><small>{persona.era} · {persona.role}</small><strong>{persona.name}</strong><p>{persona.lens}</p><i>{persona.challenge}</i></span>
               <span className="check">{checked ? '✓' : '+'}</span>
             </button>
@@ -234,7 +237,7 @@ function Council({ question, context, setContext, selected, toggle, submit, load
       </div>
       <div className="submit-bar">
         <div className="selected-stack">
-          {selectedPersonasFallback(selected).map((persona) => <PersonaPortrait key={persona.id} personaId={persona.id} name={persona.name} size="xs" decorative />)}
+          {selectedPersonasFallback(selected).map((persona) => <AdvisorAvatar key={persona.id} personaId={persona.id} name={persona.name} size="xs" decorative />)}
           <small>已选 {selected.length}/3 位</small>
         </div>
         <button className="primary" disabled={loading || selected.length === 0} onClick={submit}>{loading ? '军师正在会商…' : '开始会商 →'}</button>
@@ -267,7 +270,7 @@ function Report({ report, onAgain }: { report: AdviceReport; onAgain: () => void
         <div className="perspective-list">
           {report.perspectives.map((item) => (
             <div className="perspective" key={`${item.personaId}-${item.headline}`}>
-              <PersonaPortrait personaId={item.personaId} name={item.personaName} size="md" />
+              <AdvisorAvatar personaId={item.personaId} name={item.personaName} size="md" />
               <div><small>{item.personaName}</small><h3>{item.headline}</h3><p>{item.analysis}</p><blockquote>{item.question}</blockquote></div>
             </div>
           ))}
@@ -295,6 +298,55 @@ function History({ history, openReport, clear }: { history: AdviceReport[]; open
   )
 }
 
+function Roster() {
+  const [query, setQuery] = useState('')
+  const [domain, setDomain] = useState('all')
+  const normalizedQuery = query.trim().toLowerCase()
+  const visibleAdvisors = useMemo(() => allAdvisors.filter((advisor) => {
+    const matchesDomain = domain === 'all' || advisor.domainId === domain
+    const matchesQuery = !normalizedQuery || `${advisor.name}${advisor.insight}${advisor.domainName}`.toLowerCase().includes(normalizedQuery)
+    return matchesDomain && matchesQuery
+  }), [domain, normalizedQuery])
+
+  return (
+    <section className="roster-page">
+      <header className="roster-hero">
+        <span className="eyebrow">军师素材与方法论名录</span>
+        <h1>109 位思考者，<em>素材状态如实可见</em></h1>
+        <p>名录与一句思维简述已经完整录入。当前素材包只含 9 张专业设计头像；其余人物使用明确的中性占位，不用临时插画冒充正式交付。</p>
+        <div className="roster-stats">
+          <div><strong>{allAdvisors.length}</strong><span>名录已录入</span></div>
+          <div><strong>{availableAvatarCount}</strong><span>专业头像可用</span></div>
+          <div className="is-warning"><strong>{allAdvisors.length - availableAvatarCount}</strong><span>头像素材待补</span></div>
+        </div>
+      </header>
+
+      <div className="roster-notice">
+        <strong>内容完整度提醒</strong>
+        <p>这 109 位目前只有姓名、所属域和一句简述；完整框架卡、盲区、问诊方式与案例库尚未导入。因此名录用于浏览，不代表全部人物已经达到深度会商标准。</p>
+      </div>
+
+      <div className="roster-tools">
+        <label><span>搜索军师</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="姓名、领域或思维关键词" /></label>
+        <div className="domain-tabs" role="group" aria-label="按领域筛选">
+          <button className={domain === 'all' ? 'active' : ''} onClick={() => setDomain('all')}>全部</button>
+          {advisorDomains.map((item) => <button key={item.id} className={domain === item.id ? 'active' : ''} onClick={() => setDomain(item.id)}>{item.name}<small>{item.advisors.length}</small></button>)}
+        </div>
+      </div>
+
+      <div className="roster-result"><span>当前显示 {visibleAdvisors.length} 位</span><i><b />专业头像　<em />素材待补</i></div>
+      <div className="advisor-roster-grid">
+        {visibleAdvisors.map((advisor) => (
+          <article className={`advisor-roster-card ${advisor.avatar ? 'has-asset' : 'missing-asset'}`} key={advisor.id}>
+            <AdvisorAvatar name={advisor.name} src={advisor.avatar} size="lg" showMissingBadge />
+            <div><small>{advisor.domainName}</small><h2>{advisor.name}</h2><p>{advisor.insight}</p><span>{advisor.avatar ? '专业头像已入库' : '头像待从 COS 导出'}</span></div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function About() {
   return (
     <section className="simple-page prose">
@@ -308,7 +360,7 @@ function About() {
 }
 
 function MobileNav({ view, navigate }: { view: View; navigate: (view: View) => void }) {
-  return <nav className="mobile-nav" aria-label="移动端导航"><button className={view === 'home' ? 'active' : ''} onClick={() => navigate('home')}>问问题</button><button className={view === 'history' ? 'active' : ''} onClick={() => navigate('history')}>报告</button><button className={view === 'about' ? 'active' : ''} onClick={() => navigate('about')}>说明</button></nav>
+  return <nav className="mobile-nav" aria-label="移动端导航"><button className={view === 'home' ? 'active' : ''} onClick={() => navigate('home')}>问问题</button><button className={view === 'roster' ? 'active' : ''} onClick={() => navigate('roster')}>军师</button><button className={view === 'history' ? 'active' : ''} onClick={() => navigate('history')}>报告</button><button className={view === 'about' ? 'active' : ''} onClick={() => navigate('about')}>说明</button></nav>
 }
 
 export default App

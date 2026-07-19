@@ -9,13 +9,15 @@
 ## 当前版本
 
 - 响应式 Web/H5：适配桌面、手机浏览器和微信内置浏览器
+- 109 位军师名录：按 10 个领域浏览和搜索，并公开展示素材完整度
+- 专业视觉资产：正式品牌 Logo 与现有 9 张金线圆徽头像
 - Cloudflare Worker API：输入校验、大小限制、结构化日志和错误降级
 - Workers AI：通过 Cloudflare 绑定调用 Qwen，无需在前端保存 API Key
 - 安全边界：紧急健康/人身风险、违法规避与医疗/法律/金融主题分流
 - 本机历史：最近 10 份报告只保存在浏览器 `localStorage`
 - PWA 基础：manifest、favicon、安全响应头和 SPA 路由回退
 
-项目评估见 [docs/ASSESSMENT.md](docs/ASSESSMENT.md)，架构与部署说明见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
+项目评估见 [docs/ASSESSMENT.md](docs/ASSESSMENT.md)，素材缺失和补齐指南见 [docs/ASSET_AUDIT_2026-07-19.md](docs/ASSET_AUDIT_2026-07-19.md)，架构与部署说明见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
 
 ## 本地开发
 

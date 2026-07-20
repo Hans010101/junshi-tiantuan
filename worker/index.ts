@@ -225,6 +225,7 @@ async function handleAdvisorList(db: D1Database): Promise<Response> {
     db.prepare(`SELECT COUNT(*) AS advisors,
       SUM(CASE WHEN knowledge_qc_status = 'pass' THEN 1 ELSE 0 END) AS knowledge_qc_passed,
       SUM(CASE WHEN knowledge_qc_status = 'pending' THEN 1 ELSE 0 END) AS knowledge_qc_pending,
+      SUM(strategy_card_available) AS strategy_cards_available,
       SUM(strategy_card_expected - strategy_card_available) AS strategy_cards_missing
       FROM advisors`),
   ])
@@ -245,9 +246,11 @@ async function handleAdvisorList(db: D1Database): Promise<Response> {
     })),
     stats: {
       advisors: Number(stats.advisors ?? 0),
+      avatars: rows.length,
       portraits: rows.length,
       knowledgeQcPassed: Number(stats.knowledge_qc_passed ?? 0),
       knowledgeQcPending: Number(stats.knowledge_qc_pending ?? 0),
+      strategyCardsAvailable: Number(stats.strategy_cards_available ?? 0),
       strategyCardsMissing: Number(stats.strategy_cards_missing ?? 0),
     },
   })
@@ -262,9 +265,18 @@ async function handleAdvisorDetail(rawId: string, db: D1Database): Promise<Respo
   ])
   const row = advisor.results[0] as { profile_json?: string; source_status?: string; knowledge_qc_status?: string } | undefined
   if (!row?.profile_json) return json({ error: '未找到这位军师。' }, 404)
+  const profile = JSON.parse(row.profile_json) as Record<string, unknown>
+  const models = Array.isArray(profile.core_models) ? profile.core_models : []
   return cachedJson({
     data: {
-      ...JSON.parse(row.profile_json),
+      ...profile,
+      avatar: `/advisors/avatars/${id}.png`,
+      avatar_thumb: `/advisors/avatars/${id}.png`,
+      portrait: `/advisors/portraits/${id}.png`,
+      core_models: models.map((model, index) => ({
+        ...(typeof model === 'object' && model ? model : {}),
+        strategy_card_image: `/advisors/strategy/${id}/model-${index + 1}.png`,
+      })),
       source_review_status: row.source_status,
       knowledge_qc_status: row.knowledge_qc_status,
       cases: cases.results.map((item) => JSON.parse(String((item as { case_json: string }).case_json))),

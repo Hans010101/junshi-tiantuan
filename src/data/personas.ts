@@ -22,9 +22,9 @@ export const personas: Persona[] = [
     challenge: '怎样做会把事情彻底搞砸？', tone: '理性、直接、反直觉',
   },
   {
-    id: 'drucker', name: '彼得·德鲁克', shortName: '德', era: '现代', role: '管理与组织',
-    domains: ['管理', '组织', '职业'], lens: '先确认有效目标，再安排责任、反馈和资源。',
-    challenge: '真正应该创造的成果是什么？', tone: '务实、清晰、以成果为中心',
+    id: 'inamori', advisorId: 'inamori', name: '稻盛和夫', shortName: '稻', era: '现代', role: '经营与组织',
+    domains: ['管理', '组织', '经营'], lens: '先确认正确目标，再让责任、核算与现场改善形成闭环。',
+    challenge: '这件事能否落到每个小团队的真实经营结果？', tone: '务实、利他、重视现场与核算',
   },
   {
     id: 'jobs', advisorId: 'jobs', name: '史蒂夫·乔布斯', shortName: '乔', era: '现代', role: '产品与创新',
@@ -52,9 +52,9 @@ export const personas: Persona[] = [
     challenge: '你确信的这件事，证据是什么？', tone: '追问、澄清、开放',
   },
   {
-    id: 'musk', name: '埃隆·马斯克', shortName: '马', era: '现代', role: '第一性原理',
-    domains: ['工程', '创业', '效率'], lens: '拆到物理或事实底层，重算成本和可行边界。',
-    challenge: '如果不接受行业惯例，最小真相是什么？', tone: '大胆、工程化、追求数量级改善',
+    id: 'aristotle', advisorId: 'aristotle', name: '亚里士多德', shortName: '亚', era: '古希腊', role: '第一性原理',
+    domains: ['哲学', '逻辑', '因果'], lens: '从不可再拆的基本事实出发，重建定义、因果与可行边界。',
+    challenge: '如果暂时放下惯例，这件事最基本、最确定的事实是什么？', tone: '严谨、分类、重视因果与证据',
   },
 ]
 
@@ -65,8 +65,8 @@ export const examples = [
 ]
 
 const matchingRules: Array<[RegExp, string[]]> = [
-  [/创业|产品|用户|创新|品牌/, ['jobs', 'musk', 'bezos']],
-  [/团队|管理|组织|员工|领导/, ['drucker', 'zeng', 'socrates']],
+  [/创业|产品|用户|创新|品牌/, ['jobs', 'aristotle', 'bezos']],
+  [/团队|管理|组织|员工|领导/, ['inamori', 'zeng', 'socrates']],
   [/竞争|战略|谈判|对手|资源/, ['sunzi', 'munger', 'bezos']],
   [/职业|辞职|选择|焦虑|人生/, ['wang', 'munger', 'socrates']],
   [/投资|风险|金钱|商业|增长/, ['munger', 'bezos', 'sunzi']],
@@ -76,5 +76,5 @@ export function recommendPersonaIds(question: string): string[] {
   for (const [pattern, ids] of matchingRules) {
     if (pattern.test(question)) return ids
   }
-  return ['munger', 'socrates', 'drucker']
+  return ['munger', 'socrates', 'inamori']
 }

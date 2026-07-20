@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { AdvisorAvatar } from './components/AdvisorAvatar'
 import { advisorDomains, allAdvisors, availableAvatarCount } from './data/advisorRoster'
-import type { AdvisorApiResponse, AdvisorRosterEntry } from './data/advisorRoster'
+import type { AdvisorApiResponse, AdvisorDetail, AdvisorDetailResponse, AdvisorRosterEntry } from './data/advisorRoster'
 import { examples, personas, recommendPersonaIds } from './data/personas'
 import type { AdviceReport } from './types'
 
@@ -305,12 +305,17 @@ function Roster() {
   const [advisors, setAdvisors] = useState<AdvisorRosterEntry[]>(allAdvisors)
   const [stats, setStats] = useState<AdvisorApiResponse['stats']>({
     advisors: allAdvisors.length,
+    avatars: availableAvatarCount,
     portraits: availableAvatarCount,
     knowledgeQcPassed: 0,
     knowledgeQcPending: allAdvisors.length,
-    strategyCardsMissing: 545,
+    strategyCardsAvailable: 545,
+    strategyCardsMissing: 0,
   })
   const [databaseState, setDatabaseState] = useState<'loading' | 'ready' | 'fallback'>('loading')
+  const [detail, setDetail] = useState<AdvisorDetail | null>(null)
+  const [detailState, setDetailState] = useState<'idle' | 'loading' | 'error'>('idle')
+  const [detailError, setDetailError] = useState('')
 
   useEffect(() => {
     const controller = new AbortController()
@@ -341,6 +346,38 @@ function Roster() {
     return () => controller.abort()
   }, [])
 
+  useEffect(() => {
+    if (!detail && detailState === 'idle') return
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') closeDetail()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [detail, detailState])
+
+  function closeDetail() {
+    setDetail(null)
+    setDetailState('idle')
+    setDetailError('')
+  }
+
+  async function openDetail(advisor: AdvisorRosterEntry) {
+    const cardId = advisor.cardId ?? advisor.id
+    setDetail(null)
+    setDetailState('loading')
+    setDetailError('')
+    try {
+      const response = await fetch(`/api/advisors/${encodeURIComponent(cardId)}`)
+      const payload = await response.json() as AdvisorDetailResponse & { error?: string }
+      if (!response.ok) throw new Error(payload.error || '军师详情暂时无法读取。')
+      setDetail(payload.data)
+      setDetailState('idle')
+    } catch (reason) {
+      setDetailError(reason instanceof Error ? reason.message : '军师详情暂时无法读取。')
+      setDetailState('error')
+    }
+  }
+
   const normalizedQuery = query.trim().toLowerCase()
   const visibleAdvisors = useMemo(() => advisors.filter((advisor) => {
     const matchesDomain = domain === 'all' || advisor.domainId === domain
@@ -352,18 +389,18 @@ function Roster() {
     <section className="roster-page">
       <header className="roster-hero">
         <span className="eyebrow">D1 知识库 · 军师方法论名录</span>
-        <h1>{stats.advisors} 位思考者，<em>知识与肖像已经入库</em></h1>
-        <p>109 份框架卡、451 条决策案例与 109 张终版肖像已完成交叉映射。头像位置直接裁切展示专业肖像原图，不再使用文字占位。</p>
+        <h1>{stats.advisors} 位思考者，<em>完整视觉资产已经入库</em></h1>
+        <p>109 份框架卡、451 条决策案例、109 个专业圆头像、109 张终版肖像与 545 张思维模型谋略图已完成一一映射。</p>
         <div className="roster-stats">
-          <div><strong>{stats.portraits}</strong><span>终版肖像可用</span></div>
-          <div><strong>{stats.knowledgeQcPassed}</strong><span>知识源卡已审核</span></div>
+          <div><strong>{stats.avatars}</strong><span>专业圆头像可用</span></div>
+          <div><strong>{stats.strategyCardsAvailable}</strong><span>思维模型谋略图</span></div>
           <div className="is-warning"><strong>{stats.knowledgeQcPending}</strong><span>知识源卡待复核</span></div>
         </div>
       </header>
 
       <div className="roster-notice">
         <strong>质检状态如实说明</strong>
-        <p>结构化知识内容已经齐全，但源卡只有 3 人通过审核、106 人仍在复核；另有 {stats.strategyCardsMissing} 张“思维模型谋略图”只有文件清单、没有图片字节。当前页面先使用已齐全的终版肖像，后续补图可按清单无损入库。{databaseState === 'fallback' ? ' 当前数据库接口暂不可用，页面正在显示内置备用名录。' : ''}</p>
+        <p>视觉素材已完成 763/763 项质检：圆头像、终版肖像和思维模型谋略图均无缺失，当前缺图数为 {stats.strategyCardsMissing}。知识内容虽然齐全，但源卡仍只有 {stats.knowledgeQcPassed} 人通过审核、{stats.knowledgeQcPending} 人等待人工复核；这不会影响浏览，引用时仍应留意审核状态。{databaseState === 'fallback' ? ' 当前数据库接口暂不可用，页面正在显示内置备用名录。' : ''}</p>
       </div>
 
       <div className="roster-tools">
@@ -374,15 +411,47 @@ function Roster() {
         </div>
       </div>
 
-      <div className="roster-result"><span>当前显示 {visibleAdvisors.length} 位 · {databaseState === 'ready' ? '来自 Cloudflare D1' : databaseState === 'loading' ? '正在读取 D1' : '备用名录'}</span><i><b />终版肖像　<em />知识待复核</i></div>
+      <div className="roster-result"><span>当前显示 {visibleAdvisors.length} 位 · {databaseState === 'ready' ? '来自 Cloudflare D1' : databaseState === 'loading' ? '正在读取 D1' : '备用名录'}</span><i><b />视觉素材齐全　<em />知识待复核</i></div>
       <div className="advisor-roster-grid">
         {visibleAdvisors.map((advisor) => (
           <article className={`advisor-roster-card ${advisor.avatar ? 'has-asset' : 'missing-asset'}`} key={advisor.id}>
             <AdvisorAvatar name={advisor.name} src={advisor.avatar} size="lg" showMissingBadge />
-            <div><small>{advisor.domainName}</small><h2>{advisor.name}</h2><p>{advisor.insight}</p><span>{advisor.sourceStatus === 'approved' ? '知识源卡已审核' : advisor.sourceStatus === 'in_review' ? '知识源卡待复核' : advisor.avatar ? '终版肖像已入库' : '肖像素材待补'}</span></div>
+            <div><small>{advisor.domainName}</small><h2>{advisor.name}</h2><p>{advisor.insight}</p><span>{advisor.sourceStatus === 'approved' ? '知识源卡已审核' : advisor.sourceStatus === 'in_review' ? '知识源卡待复核' : advisor.avatar ? '视觉素材已入库' : '头像素材待补'}</span><button className="advisor-detail-trigger" onClick={() => openDetail(advisor)}>查看 5 个思维模型</button></div>
           </article>
         ))}
       </div>
+
+      {(detailState !== 'idle' || detail) && (
+        <div className="advisor-detail-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) closeDetail() }}>
+          <section className="advisor-detail-panel" role="dialog" aria-modal="true" aria-label={detail ? `${detail.name}军师详情` : '军师详情'}>
+            <button className="advisor-detail-close" onClick={closeDetail} aria-label="关闭详情">×</button>
+            {detailState === 'loading' && <div className="advisor-detail-message"><strong>正在调取军师档案</strong><span>同步读取思维模型与谋略图…</span></div>}
+            {detailState === 'error' && <div className="advisor-detail-message"><strong>暂时无法打开</strong><span>{detailError}</span></div>}
+            {detail && (
+              <>
+                <header className="advisor-detail-header">
+                  <AdvisorAvatar name={detail.name} src={detail.avatar} size="lg" />
+                  <div><span>{detail.domain} · {detail.era}</span><h2>{detail.name}</h2><p>{detail.title}</p><small className={detail.source_review_status === 'approved' ? 'is-approved' : ''}>{detail.source_review_status === 'approved' ? '知识源卡已审核' : '知识源卡待复核'}</small></div>
+                </header>
+                <div className="advisor-model-heading"><span>核心方法</span><h3>5 个思维模型与谋略图</h3></div>
+                <div className="advisor-model-grid">
+                  {detail.core_models.map((model, index) => (
+                    <article key={`${model.name}-${index}`}>
+                      <img src={model.strategy_card_image} alt={`${detail.name}思维模型：${model.name}`} loading="lazy" />
+                      <div><small>{String(index + 1).padStart(2, '0')}</small><h4>{model.name}</h4><p>{model.definition}</p>{model.modern_transfer && <blockquote>{model.modern_transfer}</blockquote>}</div>
+                    </article>
+                  ))}
+                </div>
+                <div className="advisor-detail-columns">
+                  <section><h3>决策原则</h3><ul>{detail.decision_principles.map((item) => <li key={item}>{item}</li>)}</ul></section>
+                  <section><h3>使用盲区</h3><ul>{detail.blind_spots.map((item) => <li key={item}>{item}</li>)}</ul></section>
+                </div>
+                {detail.cases.length > 0 && <section className="advisor-case-list"><h3>相关案例</h3>{detail.cases.map((item) => <article key={item.case_id}><h4>{item.title_period}</h4><p>{item.key_judgment}</p><blockquote>{item.transferable_lesson}</blockquote></article>)}</section>}
+              </>
+            )}
+          </section>
+        </div>
+      )}
     </section>
   )
 }

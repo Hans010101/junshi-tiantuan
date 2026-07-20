@@ -28,11 +28,48 @@ export interface AdvisorApiResponse {
   data: AdvisorApiItem[]
   stats: {
     advisors: number
+    avatars: number
     portraits: number
     knowledgeQcPassed: number
     knowledgeQcPending: number
+    strategyCardsAvailable: number
     strategyCardsMissing: number
   }
+}
+
+export interface AdvisorCoreModel {
+  name: string
+  definition: string
+  trigger?: string
+  modern_transfer?: string
+  strategy_card_image: string
+}
+
+export interface AdvisorCase {
+  case_id: string
+  title_period: string
+  key_judgment: string
+  transferable_lesson: string
+}
+
+export interface AdvisorDetail {
+  card_id: string
+  name: string
+  title: string
+  era: string
+  domain: string
+  avatar: string
+  portrait: string
+  source_review_status: string
+  knowledge_qc_status: string
+  core_models: AdvisorCoreModel[]
+  decision_principles: string[]
+  blind_spots: string[]
+  cases: AdvisorCase[]
+}
+
+export interface AdvisorDetailResponse {
+  data: AdvisorDetail
 }
 
 export interface AdvisorDomain {

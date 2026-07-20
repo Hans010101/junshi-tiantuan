@@ -11,14 +11,14 @@
 - 响应式 Web/H5：适配桌面、手机浏览器和微信内置浏览器
 - D1 军师知识库：109 份框架卡、545 个思维模型、451 条决策案例
 - 109 位军师名录：按 10 个领域浏览和搜索，数量实时由数据库返回
-- 专业视觉资产：正式品牌 Logo、109 张终版肖像与圆形金线裁切头像
+- 专业视觉资产：正式品牌 Logo、109 个独立圆头像、109 张终版肖像与 545 张思维模型谋略图
 - Cloudflare Worker API：输入校验、大小限制、结构化日志和错误降级
 - Workers AI：通过 Cloudflare 绑定调用 Qwen，无需在前端保存 API Key
 - 安全边界：紧急健康/人身风险、违法规避与医疗/法律/金融主题分流
 - 本机历史：最近 10 份报告只保存在浏览器 `localStorage`
 - PWA 基础：manifest、favicon、安全响应头和 SPA 路由回退
 
-项目评估见 [docs/ASSESSMENT.md](docs/ASSESSMENT.md)，完整素材质检与补齐指南见 [docs/ASSET_AUDIT_2026-07-19_FULL.md](docs/ASSET_AUDIT_2026-07-19_FULL.md)，架构与部署说明见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
+项目评估见 [docs/ASSESSMENT.md](docs/ASSESSMENT.md)，最新素材入库结果见 [docs/ASSET_AUDIT_2026-07-20_SUPPLEMENT.md](docs/ASSET_AUDIT_2026-07-20_SUPPLEMENT.md)，架构与部署说明见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
 
 ## 本地开发
 
@@ -37,6 +37,8 @@ pnpm dev
 ```bash
 pnpm exec wrangler d1 migrations apply junshi-tiantuan-db --local
 ```
+
+补充视觉包可用 `scripts/import-junshi-visual-supplement.mjs` 做 109 人、763 项资源的完整性校验并生成版本化 D1 迁移；不要手工改线上素材索引。
 
 ## 验证与部署
 

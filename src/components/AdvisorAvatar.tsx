@@ -8,13 +8,15 @@ interface AdvisorAvatarProps {
 }
 
 const deepPersonaAvatar: Record<string, string> = {
-  sunzi: '/advisors/portraits/sunzi.png',
-  munger: '/advisors/portraits/munger.png',
-  jobs: '/advisors/portraits/jobs.png',
-  bezos: '/advisors/portraits/bezos.png',
-  zeng: '/advisors/portraits/zengguofan.png',
-  wang: '/advisors/portraits/wangyangming.png',
-  socrates: '/advisors/portraits/socrates.png',
+  sunzi: '/advisors/avatars/sunzi.png',
+  munger: '/advisors/avatars/munger.png',
+  inamori: '/advisors/avatars/inamori.png',
+  jobs: '/advisors/avatars/jobs.png',
+  bezos: '/advisors/avatars/bezos.png',
+  zeng: '/advisors/avatars/zengguofan.png',
+  wang: '/advisors/avatars/wangyangming.png',
+  socrates: '/advisors/avatars/socrates.png',
+  aristotle: '/advisors/avatars/aristotle.png',
 }
 
 export function AdvisorAvatar({
@@ -29,7 +31,7 @@ export function AdvisorAvatar({
   const usesPortraitCrop = image?.startsWith('/advisors/portraits/') ?? false
   const accessibleProps = decorative
     ? { 'aria-hidden': true as const }
-    : { role: 'img', 'aria-label': image ? `${name}专业设计肖像` : `${name}头像素材待补` }
+    : { role: 'img', 'aria-label': image ? `${name}专业设计头像` : `${name}头像素材待补` }
 
   return (
     <span className={`advisor-avatar avatar-${size} ${image ? 'has-art' : 'is-placeholder'} ${usesPortraitCrop ? 'portrait-crop' : ''}`} {...accessibleProps}>

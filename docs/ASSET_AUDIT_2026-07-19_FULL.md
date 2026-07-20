@@ -1,5 +1,7 @@
 # 军师天团 · 109 人完整素材复核与入库报告
 
+> 历史报告：这里记录的是 2026-07-19 第一批附件的实际状态。2026-07-20 补充包已补齐本文所列 109 个独立圆头像和 545 张谋略图，最新结论见 [`ASSET_AUDIT_2026-07-20_SUPPLEMENT.md`](ASSET_AUDIT_2026-07-20_SUPPLEMENT.md)。
+
 复核时间：2026-07-19  
 入库目标：Cloudflare D1 `junshi-tiantuan-db`
 
@@ -97,4 +99,3 @@ kb-assets/{card_id}/model-5.png
 ## 后续导入方式
 
 仓库内 [`scripts/import-junshi-assets.mjs`](../scripts/import-junshi-assets.mjs) 会验证 109/451/763 三组计数、人物映射、PNG 尺寸和 SHA-256，再生成 D1 种子迁移。后续补图时应继续使用同一清单，不要手工改线上路径。
-

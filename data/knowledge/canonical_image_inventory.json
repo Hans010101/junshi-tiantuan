@@ -1,0 +1,5670 @@
+[
+  {
+    "card_id": "alexander",
+    "person_id": "P-alexander",
+    "type": "portrait",
+    "file": "images/portraits/alexander.png"
+  },
+  {
+    "card_id": "alexander",
+    "person_id": "P-alexander",
+    "type": "avatar",
+    "file": "images/avatars/alexander.png"
+  },
+  {
+    "card_id": "alexander",
+    "person_id": "P-alexander",
+    "type": "strategy_diagram",
+    "model": "决战定乾坤",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/alexander/决战定乾坤.png"
+  },
+  {
+    "card_id": "alexander",
+    "person_id": "P-alexander",
+    "type": "strategy_diagram",
+    "model": "亲冲锋陷阵",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/alexander/亲冲锋陷阵.png"
+  },
+  {
+    "card_id": "alexander",
+    "person_id": "P-alexander",
+    "type": "strategy_diagram",
+    "model": "锤砧协同",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/alexander/锤砧协同.png"
+  },
+  {
+    "card_id": "alexander",
+    "person_id": "P-alexander",
+    "type": "strategy_diagram",
+    "model": "文化融合统治",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/alexander/文化融合统治.png"
+  },
+  {
+    "card_id": "alexander",
+    "person_id": "P-alexander",
+    "type": "strategy_diagram",
+    "model": "以速度与气势压制",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/alexander/以速度与气势压制.png"
+  },
+  {
+    "card_id": "aristotle",
+    "person_id": "P-aristotle",
+    "type": "portrait",
+    "file": "images/portraits/aristotle.png"
+  },
+  {
+    "card_id": "aristotle",
+    "person_id": "P-aristotle",
+    "type": "avatar",
+    "file": "images/avatars/aristotle.png"
+  },
+  {
+    "card_id": "aristotle",
+    "person_id": "P-aristotle",
+    "type": "strategy_diagram",
+    "model": "逻辑三段论",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/aristotle/逻辑三段论.png"
+  },
+  {
+    "card_id": "aristotle",
+    "person_id": "P-aristotle",
+    "type": "strategy_diagram",
+    "model": "经验归纳",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/aristotle/经验归纳.png"
+  },
+  {
+    "card_id": "aristotle",
+    "person_id": "P-aristotle",
+    "type": "strategy_diagram",
+    "model": "中道",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/aristotle/中道.png"
+  },
+  {
+    "card_id": "aristotle",
+    "person_id": "P-aristotle",
+    "type": "strategy_diagram",
+    "model": "四因说",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/aristotle/四因说.png"
+  },
+  {
+    "card_id": "aristotle",
+    "person_id": "P-aristotle",
+    "type": "strategy_diagram",
+    "model": "实践智慧",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/aristotle/实践智慧.png"
+  },
+  {
+    "card_id": "augustus",
+    "person_id": "P-augustus",
+    "type": "portrait",
+    "file": "images/portraits/augustus.png"
+  },
+  {
+    "card_id": "augustus",
+    "person_id": "P-augustus",
+    "type": "avatar",
+    "file": "images/avatars/augustus.png"
+  },
+  {
+    "card_id": "augustus",
+    "person_id": "P-augustus",
+    "type": "strategy_diagram",
+    "model": "实权而非虚名",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/augustus/实权而非虚名.png"
+  },
+  {
+    "card_id": "augustus",
+    "person_id": "P-augustus",
+    "type": "strategy_diagram",
+    "model": "旧瓶装新酒",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/augustus/旧瓶装新酒.png"
+  },
+  {
+    "card_id": "augustus",
+    "person_id": "P-augustus",
+    "type": "strategy_diagram",
+    "model": "渐进积累而非一步到位",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/augustus/渐进积累而非一步到位.png"
+  },
+  {
+    "card_id": "augustus",
+    "person_id": "P-augustus",
+    "type": "strategy_diagram",
+    "model": "制度建设固长治",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/augustus/制度建设固长治.png"
+  },
+  {
+    "card_id": "augustus",
+    "person_id": "P-augustus",
+    "type": "strategy_diagram",
+    "model": "软性塑造认同",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/augustus/软性塑造认同.png"
+  },
+  {
+    "card_id": "bezos",
+    "person_id": "P-bezos",
+    "type": "portrait",
+    "file": "images/portraits/bezos.png"
+  },
+  {
+    "card_id": "bezos",
+    "person_id": "P-bezos",
+    "type": "avatar",
+    "file": "images/avatars/bezos.png"
+  },
+  {
+    "card_id": "bezos",
+    "person_id": "P-bezos",
+    "type": "strategy_diagram",
+    "model": "Day 1哲学",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/bezos/Day 1哲学.png"
+  },
+  {
+    "card_id": "bezos",
+    "person_id": "P-bezos",
+    "type": "strategy_diagram",
+    "model": "客户痴迷",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/bezos/客户痴迷.png"
+  },
+  {
+    "card_id": "bezos",
+    "person_id": "P-bezos",
+    "type": "strategy_diagram",
+    "model": "后悔最小化",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/bezos/后悔最小化.png"
+  },
+  {
+    "card_id": "bezos",
+    "person_id": "P-bezos",
+    "type": "strategy_diagram",
+    "model": "长期主义",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/bezos/长期主义.png"
+  },
+  {
+    "card_id": "bezos",
+    "person_id": "P-bezos",
+    "type": "strategy_diagram",
+    "model": "单双向门决策",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/bezos/单双向门决策.png"
+  },
+  {
+    "card_id": "bismarck",
+    "person_id": "P-bismarck",
+    "type": "portrait",
+    "file": "images/portraits/bismarck.png"
+  },
+  {
+    "card_id": "bismarck",
+    "person_id": "P-bismarck",
+    "type": "avatar",
+    "file": "images/avatars/bismarck.png"
+  },
+  {
+    "card_id": "bismarck",
+    "person_id": "P-bismarck",
+    "type": "strategy_diagram",
+    "model": "现实政治",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/bismarck/现实政治.png"
+  },
+  {
+    "card_id": "bismarck",
+    "person_id": "P-bismarck",
+    "type": "strategy_diagram",
+    "model": "铁血",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/bismarck/铁血.png"
+  },
+  {
+    "card_id": "bismarck",
+    "person_id": "P-bismarck",
+    "type": "strategy_diagram",
+    "model": "操控均势",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/bismarck/操控均势.png"
+  },
+  {
+    "card_id": "bismarck",
+    "person_id": "P-bismarck",
+    "type": "strategy_diagram",
+    "model": "见好就收有限目标",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/bismarck/见好就收有限目标.png"
+  },
+  {
+    "card_id": "bismarck",
+    "person_id": "P-bismarck",
+    "type": "strategy_diagram",
+    "model": "制造正当性的时机",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/bismarck/制造正当性的时机.png"
+  },
+  {
+    "card_id": "bogle",
+    "person_id": "P-bogle",
+    "type": "portrait",
+    "file": "images/portraits/bogle.png"
+  },
+  {
+    "card_id": "bogle",
+    "person_id": "P-bogle",
+    "type": "avatar",
+    "file": "images/avatars/bogle.png"
+  },
+  {
+    "card_id": "bogle",
+    "person_id": "P-bogle",
+    "type": "strategy_diagram",
+    "model": "成本是确定的敌人",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/bogle/成本是确定的敌人.png"
+  },
+  {
+    "card_id": "bogle",
+    "person_id": "P-bogle",
+    "type": "strategy_diagram",
+    "model": "买下整个草垛",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/bogle/买下整个草垛.png"
+  },
+  {
+    "card_id": "bogle",
+    "person_id": "P-bogle",
+    "type": "strategy_diagram",
+    "model": "长期复利与坚守",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/bogle/长期复利与坚守.png"
+  },
+  {
+    "card_id": "bogle",
+    "person_id": "P-bogle",
+    "type": "strategy_diagram",
+    "model": "简单胜过复杂",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/bogle/简单胜过复杂.png"
+  },
+  {
+    "card_id": "bogle",
+    "person_id": "P-bogle",
+    "type": "strategy_diagram",
+    "model": "把客户利益放第一",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/bogle/把客户利益放第一.png"
+  },
+  {
+    "card_id": "bohr",
+    "person_id": "P-bohr",
+    "type": "portrait",
+    "file": "images/portraits/bohr.png"
+  },
+  {
+    "card_id": "bohr",
+    "person_id": "P-bohr",
+    "type": "avatar",
+    "file": "images/avatars/bohr.png"
+  },
+  {
+    "card_id": "bohr",
+    "person_id": "P-bohr",
+    "type": "strategy_diagram",
+    "model": "互补原理",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/bohr/互补原理.png"
+  },
+  {
+    "card_id": "bohr",
+    "person_id": "P-bohr",
+    "type": "strategy_diagram",
+    "model": "对应原理",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/bohr/对应原理.png"
+  },
+  {
+    "card_id": "bohr",
+    "person_id": "P-bohr",
+    "type": "strategy_diagram",
+    "model": "以对话异见为方法",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/bohr/以对话异见为方法.png"
+  },
+  {
+    "card_id": "bohr",
+    "person_id": "P-bohr",
+    "type": "strategy_diagram",
+    "model": "观测与现象不可分",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/bohr/观测与现象不可分.png"
+  },
+  {
+    "card_id": "bohr",
+    "person_id": "P-bohr",
+    "type": "strategy_diagram",
+    "model": "汇聚共创",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/bohr/汇聚共创.png"
+  },
+  {
+    "card_id": "buffett",
+    "person_id": "P-buffett",
+    "type": "portrait",
+    "file": "images/portraits/buffett.png"
+  },
+  {
+    "card_id": "buffett",
+    "person_id": "P-buffett",
+    "type": "avatar",
+    "file": "images/avatars/buffett.png"
+  },
+  {
+    "card_id": "buffett",
+    "person_id": "P-buffett",
+    "type": "strategy_diagram",
+    "model": "能力圈",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/buffett/能力圈.png"
+  },
+  {
+    "card_id": "buffett",
+    "person_id": "P-buffett",
+    "type": "strategy_diagram",
+    "model": "经济护城河",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/buffett/经济护城河.png"
+  },
+  {
+    "card_id": "buffett",
+    "person_id": "P-buffett",
+    "type": "strategy_diagram",
+    "model": "好生意合理价",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/buffett/好生意合理价.png"
+  },
+  {
+    "card_id": "buffett",
+    "person_id": "P-buffett",
+    "type": "strategy_diagram",
+    "model": "浮存金与配置",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/buffett/浮存金与配置.png"
+  },
+  {
+    "card_id": "buffett",
+    "person_id": "P-buffett",
+    "type": "strategy_diagram",
+    "model": "贪婪恐惧反向",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/buffett/贪婪恐惧反向.png"
+  },
+  {
+    "card_id": "caesar",
+    "person_id": "P-caesar",
+    "type": "portrait",
+    "file": "images/portraits/caesar.png"
+  },
+  {
+    "card_id": "caesar",
+    "person_id": "P-caesar",
+    "type": "avatar",
+    "file": "images/avatars/caesar.png"
+  },
+  {
+    "card_id": "caesar",
+    "person_id": "P-caesar",
+    "type": "strategy_diagram",
+    "model": "速度即战力",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/caesar/速度即战力.png"
+  },
+  {
+    "card_id": "caesar",
+    "person_id": "P-caesar",
+    "type": "strategy_diagram",
+    "model": "宽恕政策",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/caesar/宽恕政策.png"
+  },
+  {
+    "card_id": "caesar",
+    "person_id": "P-caesar",
+    "type": "strategy_diagram",
+    "model": "亲临一线",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/caesar/亲临一线.png"
+  },
+  {
+    "card_id": "caesar",
+    "person_id": "P-caesar",
+    "type": "strategy_diagram",
+    "model": "制造既成事实",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/caesar/制造既成事实.png"
+  },
+  {
+    "card_id": "caesar",
+    "person_id": "P-caesar",
+    "type": "strategy_diagram",
+    "model": "笔即第二战场",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/caesar/笔即第二战场.png"
+  },
+  {
+    "card_id": "caocao",
+    "person_id": "P-caocao",
+    "type": "portrait",
+    "file": "images/portraits/caocao.png"
+  },
+  {
+    "card_id": "caocao",
+    "person_id": "P-caocao",
+    "type": "avatar",
+    "file": "images/avatars/caocao.png"
+  },
+  {
+    "card_id": "caocao",
+    "person_id": "P-caocao",
+    "type": "strategy_diagram",
+    "model": "唯才是举不拘品行",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/caocao/唯才是举不拘品行.png"
+  },
+  {
+    "card_id": "caocao",
+    "person_id": "P-caocao",
+    "type": "strategy_diagram",
+    "model": "兵无常势因敌制胜",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/caocao/兵无常势因敌制胜.png"
+  },
+  {
+    "card_id": "caocao",
+    "person_id": "P-caocao",
+    "type": "strategy_diagram",
+    "model": "屯田固本",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/caocao/屯田固本.png"
+  },
+  {
+    "card_id": "caocao",
+    "person_id": "P-caocao",
+    "type": "strategy_diagram",
+    "model": "挟天子以令诸侯",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/caocao/挟天子以令诸侯.png"
+  },
+  {
+    "card_id": "caocao",
+    "person_id": "P-caocao",
+    "type": "strategy_diagram",
+    "model": "赏罚分明令行禁止",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/caocao/赏罚分明令行禁止.png"
+  },
+  {
+    "card_id": "caoxueqin",
+    "person_id": "P-caoxueqin",
+    "type": "portrait",
+    "file": "images/portraits/caoxueqin.png"
+  },
+  {
+    "card_id": "caoxueqin",
+    "person_id": "P-caoxueqin",
+    "type": "avatar",
+    "file": "images/avatars/caoxueqin.png"
+  },
+  {
+    "card_id": "caoxueqin",
+    "person_id": "P-caoxueqin",
+    "type": "strategy_diagram",
+    "model": "草蛇灰线伏延千里",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/caoxueqin/草蛇灰线伏延千里.png"
+  },
+  {
+    "card_id": "caoxueqin",
+    "person_id": "P-caoxueqin",
+    "type": "strategy_diagram",
+    "model": "真假虚实的辩证",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/caoxueqin/真假虚实的辩证.png"
+  },
+  {
+    "card_id": "caoxueqin",
+    "person_id": "P-caoxueqin",
+    "type": "strategy_diagram",
+    "model": "群像与个体命运",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/caoxueqin/群像与个体命运.png"
+  },
+  {
+    "card_id": "caoxueqin",
+    "person_id": "P-caoxueqin",
+    "type": "strategy_diagram",
+    "model": "以家族兴衰映照时代",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/caoxueqin/以家族兴衰映照时代.png"
+  },
+  {
+    "card_id": "caoxueqin",
+    "person_id": "P-caoxueqin",
+    "type": "strategy_diagram",
+    "model": "极致的细节写实",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/caoxueqin/极致的细节写实.png"
+  },
+  {
+    "card_id": "carnegie",
+    "person_id": "P-carnegie",
+    "type": "portrait",
+    "file": "images/portraits/carnegie.png"
+  },
+  {
+    "card_id": "carnegie",
+    "person_id": "P-carnegie",
+    "type": "avatar",
+    "file": "images/avatars/carnegie.png"
+  },
+  {
+    "card_id": "carnegie",
+    "person_id": "P-carnegie",
+    "type": "strategy_diagram",
+    "model": "成本即一切",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/carnegie/成本即一切.png"
+  },
+  {
+    "card_id": "carnegie",
+    "person_id": "P-carnegie",
+    "type": "strategy_diagram",
+    "model": "纵向一体化",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/carnegie/纵向一体化.png"
+  },
+  {
+    "card_id": "carnegie",
+    "person_id": "P-carnegie",
+    "type": "strategy_diagram",
+    "model": "逆周期扩张",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/carnegie/逆周期扩张.png"
+  },
+  {
+    "card_id": "carnegie",
+    "person_id": "P-carnegie",
+    "type": "strategy_diagram",
+    "model": "拥抱新技术",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/carnegie/拥抱新技术.png"
+  },
+  {
+    "card_id": "carnegie",
+    "person_id": "P-carnegie",
+    "type": "strategy_diagram",
+    "model": "财富的福音",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/carnegie/财富的福音.png"
+  },
+  {
+    "card_id": "chanel",
+    "person_id": "P-chanel",
+    "type": "portrait",
+    "file": "images/portraits/chanel.png"
+  },
+  {
+    "card_id": "chanel",
+    "person_id": "P-chanel",
+    "type": "avatar",
+    "file": "images/avatars/chanel.png"
+  },
+  {
+    "card_id": "chanel",
+    "person_id": "P-chanel",
+    "type": "strategy_diagram",
+    "model": "简约即奢华",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/chanel/简约即奢华.png"
+  },
+  {
+    "card_id": "chanel",
+    "person_id": "P-chanel",
+    "type": "strategy_diagram",
+    "model": "解放束缚",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/chanel/解放束缚.png"
+  },
+  {
+    "card_id": "chanel",
+    "person_id": "P-chanel",
+    "type": "strategy_diagram",
+    "model": "把自己活成品牌",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/chanel/把自己活成品牌.png"
+  },
+  {
+    "card_id": "chanel",
+    "person_id": "P-chanel",
+    "type": "strategy_diagram",
+    "model": "经典抗潮流",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/chanel/经典抗潮流.png"
+  },
+  {
+    "card_id": "chanel",
+    "person_id": "P-chanel",
+    "type": "strategy_diagram",
+    "model": "细节定义风格",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/chanel/细节定义风格.png"
+  },
+  {
+    "card_id": "churchill",
+    "person_id": "P-churchill",
+    "type": "portrait",
+    "file": "images/portraits/churchill.png"
+  },
+  {
+    "card_id": "churchill",
+    "person_id": "P-churchill",
+    "type": "avatar",
+    "file": "images/avatars/churchill.png"
+  },
+  {
+    "card_id": "churchill",
+    "person_id": "P-churchill",
+    "type": "strategy_diagram",
+    "model": "绝不屈服的意志",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/churchill/绝不屈服的意志.png"
+  },
+  {
+    "card_id": "churchill",
+    "person_id": "P-churchill",
+    "type": "strategy_diagram",
+    "model": "言语动员人心",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/churchill/言语动员人心.png"
+  },
+  {
+    "card_id": "churchill",
+    "person_id": "P-churchill",
+    "type": "strategy_diagram",
+    "model": "直面而非绥靖",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/churchill/直面而非绥靖.png"
+  },
+  {
+    "card_id": "churchill",
+    "person_id": "P-churchill",
+    "type": "strategy_diagram",
+    "model": "联合一切可联合",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/churchill/联合一切可联合.png"
+  },
+  {
+    "card_id": "churchill",
+    "person_id": "P-churchill",
+    "type": "strategy_diagram",
+    "model": "着眼历史的远见",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/churchill/着眼历史的远见.png"
+  },
+  {
+    "card_id": "clausewitz",
+    "person_id": "P-clausewitz",
+    "type": "portrait",
+    "file": "images/portraits/clausewitz.png"
+  },
+  {
+    "card_id": "clausewitz",
+    "person_id": "P-clausewitz",
+    "type": "avatar",
+    "file": "images/avatars/clausewitz.png"
+  },
+  {
+    "card_id": "clausewitz",
+    "person_id": "P-clausewitz",
+    "type": "strategy_diagram",
+    "model": "战争是政治的延续",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/clausewitz/战争是政治的延续.png"
+  },
+  {
+    "card_id": "clausewitz",
+    "person_id": "P-clausewitz",
+    "type": "strategy_diagram",
+    "model": "摩擦",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/clausewitz/摩擦.png"
+  },
+  {
+    "card_id": "clausewitz",
+    "person_id": "P-clausewitz",
+    "type": "strategy_diagram",
+    "model": "重心",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/clausewitz/重心.png"
+  },
+  {
+    "card_id": "clausewitz",
+    "person_id": "P-clausewitz",
+    "type": "strategy_diagram",
+    "model": "绝对战争与现实战争",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/clausewitz/绝对战争与现实战争.png"
+  },
+  {
+    "card_id": "clausewitz",
+    "person_id": "P-clausewitz",
+    "type": "strategy_diagram",
+    "model": "防御强于进攻",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/clausewitz/防御强于进攻.png"
+  },
+  {
+    "card_id": "columbus",
+    "person_id": "P-columbus",
+    "type": "portrait",
+    "file": "images/portraits/columbus.png"
+  },
+  {
+    "card_id": "columbus",
+    "person_id": "P-columbus",
+    "type": "avatar",
+    "file": "images/avatars/columbus.png"
+  },
+  {
+    "card_id": "columbus",
+    "person_id": "P-columbus",
+    "type": "strategy_diagram",
+    "model": "锲而不舍推销愿景",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/columbus/锲而不舍推销愿景.png"
+  },
+  {
+    "card_id": "columbus",
+    "person_id": "P-columbus",
+    "type": "strategy_diagram",
+    "model": "敢于驶向未知",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/columbus/敢于驶向未知.png"
+  },
+  {
+    "card_id": "columbus",
+    "person_id": "P-columbus",
+    "type": "strategy_diagram",
+    "model": "信念坚定与稳住人心",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/columbus/信念坚定与稳住人心.png"
+  },
+  {
+    "card_id": "columbus",
+    "person_id": "P-columbus",
+    "type": "strategy_diagram",
+    "model": "务实的专业准备",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/columbus/务实的专业准备.png"
+  },
+  {
+    "card_id": "columbus",
+    "person_id": "P-columbus",
+    "type": "strategy_diagram",
+    "model": "把握并放大机会",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/columbus/把握并放大机会.png"
+  },
+  {
+    "card_id": "confucius",
+    "person_id": "P-confucius",
+    "type": "portrait",
+    "file": "images/portraits/confucius.png"
+  },
+  {
+    "card_id": "confucius",
+    "person_id": "P-confucius",
+    "type": "avatar",
+    "file": "images/avatars/confucius.png"
+  },
+  {
+    "card_id": "confucius",
+    "person_id": "P-confucius",
+    "type": "strategy_diagram",
+    "model": "正名",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/confucius/正名.png"
+  },
+  {
+    "card_id": "confucius",
+    "person_id": "P-confucius",
+    "type": "strategy_diagram",
+    "model": "推己及人忠恕",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/confucius/推己及人忠恕.png"
+  },
+  {
+    "card_id": "confucius",
+    "person_id": "P-confucius",
+    "type": "strategy_diagram",
+    "model": "修己以安人",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/confucius/修己以安人.png"
+  },
+  {
+    "card_id": "confucius",
+    "person_id": "P-confucius",
+    "type": "strategy_diagram",
+    "model": "中庸执两用中",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/confucius/中庸执两用中.png"
+  },
+  {
+    "card_id": "confucius",
+    "person_id": "P-confucius",
+    "type": "strategy_diagram",
+    "model": "因材施教",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/confucius/因材施教.png"
+  },
+  {
+    "card_id": "curie",
+    "person_id": "P-curie",
+    "type": "portrait",
+    "file": "images/portraits/curie.png"
+  },
+  {
+    "card_id": "curie",
+    "person_id": "P-curie",
+    "type": "avatar",
+    "file": "images/avatars/curie.png"
+  },
+  {
+    "card_id": "curie",
+    "person_id": "P-curie",
+    "type": "strategy_diagram",
+    "model": "极致严谨的实验",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/curie/极致严谨的实验.png"
+  },
+  {
+    "card_id": "curie",
+    "person_id": "P-curie",
+    "type": "strategy_diagram",
+    "model": "苦功与坚韧",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/curie/苦功与坚韧.png"
+  },
+  {
+    "card_id": "curie",
+    "person_id": "P-curie",
+    "type": "strategy_diagram",
+    "model": "纯粹的求知而非名利",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/curie/纯粹的求知而非名利.png"
+  },
+  {
+    "card_id": "curie",
+    "person_id": "P-curie",
+    "type": "strategy_diagram",
+    "model": "大胆假设新现象",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/curie/大胆假设新现象.png"
+  },
+  {
+    "card_id": "curie",
+    "person_id": "P-curie",
+    "type": "strategy_diagram",
+    "model": "在偏见中坚持",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/curie/在偏见中坚持.png"
+  },
+  {
+    "card_id": "dalio",
+    "person_id": "P-dalio",
+    "type": "portrait",
+    "file": "images/portraits/dalio.png"
+  },
+  {
+    "card_id": "dalio",
+    "person_id": "P-dalio",
+    "type": "avatar",
+    "file": "images/avatars/dalio.png"
+  },
+  {
+    "card_id": "dalio",
+    "person_id": "P-dalio",
+    "type": "strategy_diagram",
+    "model": "痛苦加反思等于进步",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/dalio/痛苦加反思等于进步.png"
+  },
+  {
+    "card_id": "dalio",
+    "person_id": "P-dalio",
+    "type": "strategy_diagram",
+    "model": "极度求真与极度透明",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/dalio/极度求真与极度透明.png"
+  },
+  {
+    "card_id": "dalio",
+    "person_id": "P-dalio",
+    "type": "strategy_diagram",
+    "model": "把原则写下来系统化",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/dalio/把原则写下来系统化.png"
+  },
+  {
+    "card_id": "dalio",
+    "person_id": "P-dalio",
+    "type": "strategy_diagram",
+    "model": "可信度加权的决策",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/dalio/可信度加权的决策.png"
+  },
+  {
+    "card_id": "dalio",
+    "person_id": "P-dalio",
+    "type": "strategy_diagram",
+    "model": "像看机器一样理解系统",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/dalio/像看机器一样理解系统.png"
+  },
+  {
+    "card_id": "darwin",
+    "person_id": "P-darwin",
+    "type": "portrait",
+    "file": "images/portraits/darwin.png"
+  },
+  {
+    "card_id": "darwin",
+    "person_id": "P-darwin",
+    "type": "avatar",
+    "file": "images/avatars/darwin.png"
+  },
+  {
+    "card_id": "darwin",
+    "person_id": "P-darwin",
+    "type": "strategy_diagram",
+    "model": "反对意见优先记录",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/darwin/反对意见优先记录.png"
+  },
+  {
+    "card_id": "darwin",
+    "person_id": "P-darwin",
+    "type": "strategy_diagram",
+    "model": "变异-选择-时间",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/darwin/变异-选择-时间.png"
+  },
+  {
+    "card_id": "darwin",
+    "person_id": "P-darwin",
+    "type": "strategy_diagram",
+    "model": "长期渐进累积",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/darwin/长期渐进累积.png"
+  },
+  {
+    "card_id": "darwin",
+    "person_id": "P-darwin",
+    "type": "strategy_diagram",
+    "model": "审慎类比迁移",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/darwin/审慎类比迁移.png"
+  },
+  {
+    "card_id": "darwin",
+    "person_id": "P-darwin",
+    "type": "strategy_diagram",
+    "model": "预先直面最强反例",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/darwin/预先直面最强反例.png"
+  },
+  {
+    "card_id": "davinci",
+    "person_id": "P-davinci",
+    "type": "portrait",
+    "file": "images/portraits/davinci.png"
+  },
+  {
+    "card_id": "davinci",
+    "person_id": "P-davinci",
+    "type": "avatar",
+    "file": "images/avatars/davinci.png"
+  },
+  {
+    "card_id": "davinci",
+    "person_id": "P-davinci",
+    "type": "strategy_diagram",
+    "model": "极致观察",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/davinci/极致观察.png"
+  },
+  {
+    "card_id": "davinci",
+    "person_id": "P-davinci",
+    "type": "strategy_diagram",
+    "model": "艺术与科学交融",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/davinci/艺术与科学交融.png"
+  },
+  {
+    "card_id": "davinci",
+    "person_id": "P-davinci",
+    "type": "strategy_diagram",
+    "model": "类比自然找原理",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/davinci/类比自然找原理.png"
+  },
+  {
+    "card_id": "davinci",
+    "person_id": "P-davinci",
+    "type": "strategy_diagram",
+    "model": "手脑并用·画以致知",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/davinci/手脑并用·画以致知.png"
+  },
+  {
+    "card_id": "davinci",
+    "person_id": "P-davinci",
+    "type": "strategy_diagram",
+    "model": "永不满足的好奇",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/davinci/永不满足的好奇.png"
+  },
+  {
+    "card_id": "degaulle",
+    "person_id": "P-degaulle",
+    "type": "portrait",
+    "file": "images/portraits/degaulle.png"
+  },
+  {
+    "card_id": "degaulle",
+    "person_id": "P-degaulle",
+    "type": "avatar",
+    "file": "images/avatars/degaulle.png"
+  },
+  {
+    "card_id": "degaulle",
+    "person_id": "P-degaulle",
+    "type": "strategy_diagram",
+    "model": "危亡中坚持正统",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/degaulle/危亡中坚持正统.png"
+  },
+  {
+    "card_id": "degaulle",
+    "person_id": "P-degaulle",
+    "type": "strategy_diagram",
+    "model": "独立自主不做附庸",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/degaulle/独立自主不做附庸.png"
+  },
+  {
+    "card_id": "degaulle",
+    "person_id": "P-degaulle",
+    "type": "strategy_diagram",
+    "model": "超越党派的整体利益",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/degaulle/超越党派的整体利益.png"
+  },
+  {
+    "card_id": "degaulle",
+    "person_id": "P-degaulle",
+    "type": "strategy_diagram",
+    "model": "重塑制度以匹配现实",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/degaulle/重塑制度以匹配现实.png"
+  },
+  {
+    "card_id": "degaulle",
+    "person_id": "P-degaulle",
+    "type": "strategy_diagram",
+    "model": "树立伟大愿景凝聚人心",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/degaulle/树立伟大愿景凝聚人心.png"
+  },
+  {
+    "card_id": "dickens",
+    "person_id": "P-dickens",
+    "type": "portrait",
+    "file": "images/portraits/dickens.png"
+  },
+  {
+    "card_id": "dickens",
+    "person_id": "P-dickens",
+    "type": "avatar",
+    "file": "images/avatars/dickens.png"
+  },
+  {
+    "card_id": "dickens",
+    "person_id": "P-dickens",
+    "type": "strategy_diagram",
+    "model": "社会议题叙事",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/dickens/社会议题叙事.png"
+  },
+  {
+    "card_id": "dickens",
+    "person_id": "P-dickens",
+    "type": "strategy_diagram",
+    "model": "连载悬念",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/dickens/连载悬念.png"
+  },
+  {
+    "card_id": "dickens",
+    "person_id": "P-dickens",
+    "type": "strategy_diagram",
+    "model": "人物群像",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/dickens/人物群像.png"
+  },
+  {
+    "card_id": "dickens",
+    "person_id": "P-dickens",
+    "type": "strategy_diagram",
+    "model": "情感共鸣",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/dickens/情感共鸣.png"
+  },
+  {
+    "card_id": "dickens",
+    "person_id": "P-dickens",
+    "type": "strategy_diagram",
+    "model": "亲身体验入文",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/dickens/亲身体验入文.png"
+  },
+  {
+    "card_id": "disney",
+    "person_id": "P-disney",
+    "type": "portrait",
+    "file": "images/portraits/disney.png"
+  },
+  {
+    "card_id": "disney",
+    "person_id": "P-disney",
+    "type": "avatar",
+    "file": "images/avatars/disney.png"
+  },
+  {
+    "card_id": "disney",
+    "person_id": "P-disney",
+    "type": "strategy_diagram",
+    "model": "叙事工程",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/disney/叙事工程.png"
+  },
+  {
+    "card_id": "disney",
+    "person_id": "P-disney",
+    "type": "strategy_diagram",
+    "model": "押注式跃迁",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/disney/押注式跃迁.png"
+  },
+  {
+    "card_id": "disney",
+    "person_id": "P-disney",
+    "type": "strategy_diagram",
+    "model": "技术服务体验",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/disney/技术服务体验.png"
+  },
+  {
+    "card_id": "disney",
+    "person_id": "P-disney",
+    "type": "strategy_diagram",
+    "model": "整合式体验",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/disney/整合式体验.png"
+  },
+  {
+    "card_id": "disney",
+    "person_id": "P-disney",
+    "type": "strategy_diagram",
+    "model": "永远在建造",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/disney/永远在建造.png"
+  },
+  {
+    "card_id": "edison",
+    "person_id": "P-edison",
+    "type": "portrait",
+    "file": "images/portraits/edison.png"
+  },
+  {
+    "card_id": "edison",
+    "person_id": "P-edison",
+    "type": "avatar",
+    "file": "images/avatars/edison.png"
+  },
+  {
+    "card_id": "edison",
+    "person_id": "P-edison",
+    "type": "strategy_diagram",
+    "model": "系统化试错",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/edison/系统化试错.png"
+  },
+  {
+    "card_id": "edison",
+    "person_id": "P-edison",
+    "type": "strategy_diagram",
+    "model": "发明即生意",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/edison/发明即生意.png"
+  },
+  {
+    "card_id": "edison",
+    "person_id": "P-edison",
+    "type": "strategy_diagram",
+    "model": "发明工厂",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/edison/发明工厂.png"
+  },
+  {
+    "card_id": "edison",
+    "person_id": "P-edison",
+    "type": "strategy_diagram",
+    "model": "占领整个系统",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/edison/占领整个系统.png"
+  },
+  {
+    "card_id": "edison",
+    "person_id": "P-edison",
+    "type": "strategy_diagram",
+    "model": "快速可见演示",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/edison/快速可见演示.png"
+  },
+  {
+    "card_id": "einstein",
+    "person_id": "P-einstein",
+    "type": "portrait",
+    "file": "images/portraits/einstein.png"
+  },
+  {
+    "card_id": "einstein",
+    "person_id": "P-einstein",
+    "type": "avatar",
+    "file": "images/avatars/einstein.png"
+  },
+  {
+    "card_id": "einstein",
+    "person_id": "P-einstein",
+    "type": "strategy_diagram",
+    "model": "思想实验",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/einstein/思想实验.png"
+  },
+  {
+    "card_id": "einstein",
+    "person_id": "P-einstein",
+    "type": "strategy_diagram",
+    "model": "追问不变量",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/einstein/追问不变量.png"
+  },
+  {
+    "card_id": "einstein",
+    "person_id": "P-einstein",
+    "type": "strategy_diagram",
+    "model": "原理性理论",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/einstein/原理性理论.png"
+  },
+  {
+    "card_id": "einstein",
+    "person_id": "P-einstein",
+    "type": "strategy_diagram",
+    "model": "把矛盾推到底",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/einstein/把矛盾推到底.png"
+  },
+  {
+    "card_id": "einstein",
+    "person_id": "P-einstein",
+    "type": "strategy_diagram",
+    "model": "想象力高于知识",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/einstein/想象力高于知识.png"
+  },
+  {
+    "card_id": "engelbart",
+    "person_id": "P-engelbart",
+    "type": "portrait",
+    "file": "images/portraits/engelbart.png"
+  },
+  {
+    "card_id": "engelbart",
+    "person_id": "P-engelbart",
+    "type": "avatar",
+    "file": "images/avatars/engelbart.png"
+  },
+  {
+    "card_id": "engelbart",
+    "person_id": "P-engelbart",
+    "type": "strategy_diagram",
+    "model": "增强人类智力",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/engelbart/增强人类智力.png"
+  },
+  {
+    "card_id": "engelbart",
+    "person_id": "P-engelbart",
+    "type": "strategy_diagram",
+    "model": "人工具协同进化",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/engelbart/人工具协同进化.png"
+  },
+  {
+    "card_id": "engelbart",
+    "person_id": "P-engelbart",
+    "type": "strategy_diagram",
+    "model": "自举",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/engelbart/自举.png"
+  },
+  {
+    "card_id": "engelbart",
+    "person_id": "P-engelbart",
+    "type": "strategy_diagram",
+    "model": "集体智能提升",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/engelbart/集体智能提升.png"
+  },
+  {
+    "card_id": "engelbart",
+    "person_id": "P-engelbart",
+    "type": "strategy_diagram",
+    "model": "看得见的整体演示",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/engelbart/看得见的整体演示.png"
+  },
+  {
+    "card_id": "fanli",
+    "person_id": "P-fanli",
+    "type": "portrait",
+    "file": "images/portraits/fanli.png"
+  },
+  {
+    "card_id": "fanli",
+    "person_id": "P-fanli",
+    "type": "avatar",
+    "file": "images/avatars/fanli.png"
+  },
+  {
+    "card_id": "fanli",
+    "person_id": "P-fanli",
+    "type": "strategy_diagram",
+    "model": "功成身退",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/fanli/功成身退.png"
+  },
+  {
+    "card_id": "fanli",
+    "person_id": "P-fanli",
+    "type": "strategy_diagram",
+    "model": "识人定去留",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/fanli/识人定去留.png"
+  },
+  {
+    "card_id": "fanli",
+    "person_id": "P-fanli",
+    "type": "strategy_diagram",
+    "model": "彻底重启",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/fanli/彻底重启.png"
+  },
+  {
+    "card_id": "fanli",
+    "person_id": "P-fanli",
+    "type": "strategy_diagram",
+    "model": "聚散有道",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/fanli/聚散有道.png"
+  },
+  {
+    "card_id": "fanli",
+    "person_id": "P-fanli",
+    "type": "strategy_diagram",
+    "model": "待时而动",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/fanli/待时而动.png"
+  },
+  {
+    "card_id": "faraday",
+    "person_id": "P-faraday",
+    "type": "portrait",
+    "file": "images/portraits/faraday.png"
+  },
+  {
+    "card_id": "faraday",
+    "person_id": "P-faraday",
+    "type": "avatar",
+    "file": "images/avatars/faraday.png"
+  },
+  {
+    "card_id": "faraday",
+    "person_id": "P-faraday",
+    "type": "strategy_diagram",
+    "model": "以实验追问自然",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/faraday/以实验追问自然.png"
+  },
+  {
+    "card_id": "faraday",
+    "person_id": "P-faraday",
+    "type": "strategy_diagram",
+    "model": "用物理图像而非公式思考",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/faraday/用物理图像而非公式思考.png"
+  },
+  {
+    "card_id": "faraday",
+    "person_id": "P-faraday",
+    "type": "strategy_diagram",
+    "model": "转换视角问反问题",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/faraday/转换视角问反问题.png"
+  },
+  {
+    "card_id": "faraday",
+    "person_id": "P-faraday",
+    "type": "strategy_diagram",
+    "model": "化繁为简的极致专注",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/faraday/化繁为简的极致专注.png"
+  },
+  {
+    "card_id": "faraday",
+    "person_id": "P-faraday",
+    "type": "strategy_diagram",
+    "model": "出身寒微而自学不辍",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/faraday/出身寒微而自学不辍.png"
+  },
+  {
+    "card_id": "feynman",
+    "person_id": "P-feynman",
+    "type": "portrait",
+    "file": "images/portraits/feynman.png"
+  },
+  {
+    "card_id": "feynman",
+    "person_id": "P-feynman",
+    "type": "avatar",
+    "file": "images/avatars/feynman.png"
+  },
+  {
+    "card_id": "feynman",
+    "person_id": "P-feynman",
+    "type": "strategy_diagram",
+    "model": "重构式理解",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/feynman/重构式理解.png"
+  },
+  {
+    "card_id": "feynman",
+    "person_id": "P-feynman",
+    "type": "strategy_diagram",
+    "model": "不自欺原则",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/feynman/不自欺原则.png"
+  },
+  {
+    "card_id": "feynman",
+    "person_id": "P-feynman",
+    "type": "strategy_diagram",
+    "model": "草包族判据",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/feynman/草包族判据.png"
+  },
+  {
+    "card_id": "feynman",
+    "person_id": "P-feynman",
+    "type": "strategy_diagram",
+    "model": "猜测—计算—比对",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/feynman/猜测—计算—比对.png"
+  },
+  {
+    "card_id": "feynman",
+    "person_id": "P-feynman",
+    "type": "strategy_diagram",
+    "model": "玩耍式探索",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/feynman/玩耍式探索.png"
+  },
+  {
+    "card_id": "fisher",
+    "person_id": "P-fisher",
+    "type": "portrait",
+    "file": "images/portraits/fisher.png"
+  },
+  {
+    "card_id": "fisher",
+    "person_id": "P-fisher",
+    "type": "avatar",
+    "file": "images/avatars/fisher.png"
+  },
+  {
+    "card_id": "fisher",
+    "person_id": "P-fisher",
+    "type": "strategy_diagram",
+    "model": "闲聊法调研",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/fisher/闲聊法调研.png"
+  },
+  {
+    "card_id": "fisher",
+    "person_id": "P-fisher",
+    "type": "strategy_diagram",
+    "model": "十五要点定性评估",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/fisher/十五要点定性评估.png"
+  },
+  {
+    "card_id": "fisher",
+    "person_id": "P-fisher",
+    "type": "strategy_diagram",
+    "model": "管理层品格优先",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/fisher/管理层品格优先.png"
+  },
+  {
+    "card_id": "fisher",
+    "person_id": "P-fisher",
+    "type": "strategy_diagram",
+    "model": "长期持有优质成长",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/fisher/长期持有优质成长.png"
+  },
+  {
+    "card_id": "fisher",
+    "person_id": "P-fisher",
+    "type": "strategy_diagram",
+    "model": "集中而非分散",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/fisher/集中而非分散.png"
+  },
+  {
+    "card_id": "ford",
+    "person_id": "P-ford",
+    "type": "portrait",
+    "file": "images/portraits/ford.png"
+  },
+  {
+    "card_id": "ford",
+    "person_id": "P-ford",
+    "type": "avatar",
+    "file": "images/avatars/ford.png"
+  },
+  {
+    "card_id": "ford",
+    "person_id": "P-ford",
+    "type": "strategy_diagram",
+    "model": "大众化使命",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/ford/大众化使命.png"
+  },
+  {
+    "card_id": "ford",
+    "person_id": "P-ford",
+    "type": "strategy_diagram",
+    "model": "移动流水线",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/ford/移动流水线.png"
+  },
+  {
+    "card_id": "ford",
+    "person_id": "P-ford",
+    "type": "strategy_diagram",
+    "model": "标准化简化",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/ford/标准化简化.png"
+  },
+  {
+    "card_id": "ford",
+    "person_id": "P-ford",
+    "type": "strategy_diagram",
+    "model": "高工资逻辑",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/ford/高工资逻辑.png"
+  },
+  {
+    "card_id": "ford",
+    "person_id": "P-ford",
+    "type": "strategy_diagram",
+    "model": "纵向一体化",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/ford/纵向一体化.png"
+  },
+  {
+    "card_id": "frankl",
+    "person_id": "P-frankl",
+    "type": "portrait",
+    "file": "images/portraits/frankl.png"
+  },
+  {
+    "card_id": "frankl",
+    "person_id": "P-frankl",
+    "type": "avatar",
+    "file": "images/avatars/frankl.png"
+  },
+  {
+    "card_id": "frankl",
+    "person_id": "P-frankl",
+    "type": "strategy_diagram",
+    "model": "刺激回应之隙",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/frankl/刺激回应之隙.png"
+  },
+  {
+    "card_id": "frankl",
+    "person_id": "P-frankl",
+    "type": "strategy_diagram",
+    "model": "意义三来源",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/frankl/意义三来源.png"
+  },
+  {
+    "card_id": "frankl",
+    "person_id": "P-frankl",
+    "type": "strategy_diagram",
+    "model": "为何而活",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/frankl/为何而活.png"
+  },
+  {
+    "card_id": "frankl",
+    "person_id": "P-frankl",
+    "type": "strategy_diagram",
+    "model": "自我超越",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/frankl/自我超越.png"
+  },
+  {
+    "card_id": "frankl",
+    "person_id": "P-frankl",
+    "type": "strategy_diagram",
+    "model": "矛盾意向",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/frankl/矛盾意向.png"
+  },
+  {
+    "card_id": "goddard",
+    "person_id": "P-goddard",
+    "type": "portrait",
+    "file": "images/portraits/goddard.png"
+  },
+  {
+    "card_id": "goddard",
+    "person_id": "P-goddard",
+    "type": "avatar",
+    "file": "images/avatars/goddard.png"
+  },
+  {
+    "card_id": "goddard",
+    "person_id": "P-goddard",
+    "type": "strategy_diagram",
+    "model": "理论实验闭环",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/goddard/理论实验闭环.png"
+  },
+  {
+    "card_id": "goddard",
+    "person_id": "P-goddard",
+    "type": "strategy_diagram",
+    "model": "押注液体燃料",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/goddard/押注液体燃料.png"
+  },
+  {
+    "card_id": "goddard",
+    "person_id": "P-goddard",
+    "type": "strategy_diagram",
+    "model": "模块化攻关",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/goddard/模块化攻关.png"
+  },
+  {
+    "card_id": "goddard",
+    "person_id": "P-goddard",
+    "type": "strategy_diagram",
+    "model": "不理嘲笑坚持",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/goddard/不理嘲笑坚持.png"
+  },
+  {
+    "card_id": "goddard",
+    "person_id": "P-goddard",
+    "type": "strategy_diagram",
+    "model": "远期目标锚定",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/goddard/远期目标锚定.png"
+  },
+  {
+    "card_id": "graham",
+    "person_id": "P-graham",
+    "type": "portrait",
+    "file": "images/portraits/graham.png"
+  },
+  {
+    "card_id": "graham",
+    "person_id": "P-graham",
+    "type": "avatar",
+    "file": "images/avatars/graham.png"
+  },
+  {
+    "card_id": "graham",
+    "person_id": "P-graham",
+    "type": "strategy_diagram",
+    "model": "安全边际",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/graham/安全边际.png"
+  },
+  {
+    "card_id": "graham",
+    "person_id": "P-graham",
+    "type": "strategy_diagram",
+    "model": "市场先生",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/graham/市场先生.png"
+  },
+  {
+    "card_id": "graham",
+    "person_id": "P-graham",
+    "type": "strategy_diagram",
+    "model": "内在价值",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/graham/内在价值.png"
+  },
+  {
+    "card_id": "graham",
+    "person_id": "P-graham",
+    "type": "strategy_diagram",
+    "model": "烟蒂股法",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/graham/烟蒂股法.png"
+  },
+  {
+    "card_id": "graham",
+    "person_id": "P-graham",
+    "type": "strategy_diagram",
+    "model": "防御型投资",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/graham/防御型投资.png"
+  },
+  {
+    "card_id": "guanzhong",
+    "person_id": "P-guanzhong",
+    "type": "portrait",
+    "file": "images/portraits/guanzhong.png"
+  },
+  {
+    "card_id": "guanzhong",
+    "person_id": "P-guanzhong",
+    "type": "avatar",
+    "file": "images/avatars/guanzhong.png"
+  },
+  {
+    "card_id": "guanzhong",
+    "person_id": "P-guanzhong",
+    "type": "strategy_diagram",
+    "model": "富民为先",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/guanzhong/富民为先.png"
+  },
+  {
+    "card_id": "guanzhong",
+    "person_id": "P-guanzhong",
+    "type": "strategy_diagram",
+    "model": "轻重之术",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/guanzhong/轻重之术.png"
+  },
+  {
+    "card_id": "guanzhong",
+    "person_id": "P-guanzhong",
+    "type": "strategy_diagram",
+    "model": "因地制宜差别化",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/guanzhong/因地制宜差别化.png"
+  },
+  {
+    "card_id": "guanzhong",
+    "person_id": "P-guanzhong",
+    "type": "strategy_diagram",
+    "model": "借大义旗号取领导",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/guanzhong/借大义旗号取领导.png"
+  },
+  {
+    "card_id": "guanzhong",
+    "person_id": "P-guanzhong",
+    "type": "strategy_diagram",
+    "model": "专业分工与经验累积",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/guanzhong/专业分工与经验累积.png"
+  },
+  {
+    "card_id": "hanfeizi",
+    "person_id": "P-hanfeizi",
+    "type": "portrait",
+    "file": "images/portraits/hanfeizi.png"
+  },
+  {
+    "card_id": "hanfeizi",
+    "person_id": "P-hanfeizi",
+    "type": "avatar",
+    "file": "images/avatars/hanfeizi.png"
+  },
+  {
+    "card_id": "hanfeizi",
+    "person_id": "P-hanfeizi",
+    "type": "strategy_diagram",
+    "model": "法",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/hanfeizi/法.png"
+  },
+  {
+    "card_id": "hanfeizi",
+    "person_id": "P-hanfeizi",
+    "type": "strategy_diagram",
+    "model": "术",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/hanfeizi/术.png"
+  },
+  {
+    "card_id": "hanfeizi",
+    "person_id": "P-hanfeizi",
+    "type": "strategy_diagram",
+    "model": "势",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/hanfeizi/势.png"
+  },
+  {
+    "card_id": "hanfeizi",
+    "person_id": "P-hanfeizi",
+    "type": "strategy_diagram",
+    "model": "性恶趋利避害",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/hanfeizi/性恶趋利避害.png"
+  },
+  {
+    "card_id": "hanfeizi",
+    "person_id": "P-hanfeizi",
+    "type": "strategy_diagram",
+    "model": "循名责实",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/hanfeizi/循名责实.png"
+  },
+  {
+    "card_id": "hannibal",
+    "person_id": "P-hannibal",
+    "type": "portrait",
+    "file": "images/portraits/hannibal.png"
+  },
+  {
+    "card_id": "hannibal",
+    "person_id": "P-hannibal",
+    "type": "avatar",
+    "file": "images/avatars/hannibal.png"
+  },
+  {
+    "card_id": "hannibal",
+    "person_id": "P-hannibal",
+    "type": "strategy_diagram",
+    "model": "包围歼灭",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/hannibal/包围歼灭.png"
+  },
+  {
+    "card_id": "hannibal",
+    "person_id": "P-hannibal",
+    "type": "strategy_diagram",
+    "model": "出敌意料的战略机动",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/hannibal/出敌意料的战略机动.png"
+  },
+  {
+    "card_id": "hannibal",
+    "person_id": "P-hannibal",
+    "type": "strategy_diagram",
+    "model": "因地形设伏",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/hannibal/因地形设伏.png"
+  },
+  {
+    "card_id": "hannibal",
+    "person_id": "P-hannibal",
+    "type": "strategy_diagram",
+    "model": "攻心与离间",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/hannibal/攻心与离间.png"
+  },
+  {
+    "card_id": "hannibal",
+    "person_id": "P-hannibal",
+    "type": "strategy_diagram",
+    "model": "以战养战·客境持久",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/hannibal/以战养战·客境持久.png"
+  },
+  {
+    "card_id": "hanxin",
+    "person_id": "P-hanxin",
+    "type": "portrait",
+    "file": "images/portraits/hanxin.png"
+  },
+  {
+    "card_id": "hanxin",
+    "person_id": "P-hanxin",
+    "type": "avatar",
+    "file": "images/avatars/hanxin.png"
+  },
+  {
+    "card_id": "hanxin",
+    "person_id": "P-hanxin",
+    "type": "strategy_diagram",
+    "model": "置之死地而后生",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/hanxin/置之死地而后生.png"
+  },
+  {
+    "card_id": "hanxin",
+    "person_id": "P-hanxin",
+    "type": "strategy_diagram",
+    "model": "奇正并用·背水设伏",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/hanxin/奇正并用·背水设伏.png"
+  },
+  {
+    "card_id": "hanxin",
+    "person_id": "P-hanxin",
+    "type": "strategy_diagram",
+    "model": "多多益善·因材编组",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/hanxin/多多益善·因材编组.png"
+  },
+  {
+    "card_id": "hanxin",
+    "person_id": "P-hanxin",
+    "type": "strategy_diagram",
+    "model": "先声后实·不战收城",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/hanxin/先声后实·不战收城.png"
+  },
+  {
+    "card_id": "hanxin",
+    "person_id": "P-hanxin",
+    "type": "strategy_diagram",
+    "model": "避实击虚·攻其无备",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/hanxin/避实击虚·攻其无备.png"
+  },
+  {
+    "card_id": "helenkeller",
+    "person_id": "P-helenkeller",
+    "type": "portrait",
+    "file": "images/portraits/helenkeller.png"
+  },
+  {
+    "card_id": "helenkeller",
+    "person_id": "P-helenkeller",
+    "type": "avatar",
+    "file": "images/avatars/helenkeller.png"
+  },
+  {
+    "card_id": "helenkeller",
+    "person_id": "P-helenkeller",
+    "type": "strategy_diagram",
+    "model": "命名即钥匙",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/helenkeller/命名即钥匙.png"
+  },
+  {
+    "card_id": "helenkeller",
+    "person_id": "P-helenkeller",
+    "type": "strategy_diagram",
+    "model": "替代通道",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/helenkeller/替代通道.png"
+  },
+  {
+    "card_id": "helenkeller",
+    "person_id": "P-helenkeller",
+    "type": "strategy_diagram",
+    "model": "互赖即杠杆",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/helenkeller/互赖即杠杆.png"
+  },
+  {
+    "card_id": "helenkeller",
+    "person_id": "P-helenkeller",
+    "type": "strategy_diagram",
+    "model": "经验公共化",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/helenkeller/经验公共化.png"
+  },
+  {
+    "card_id": "helenkeller",
+    "person_id": "P-helenkeller",
+    "type": "strategy_diagram",
+    "model": "想象补经验",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/helenkeller/想象补经验.png"
+  },
+  {
+    "card_id": "hemingway",
+    "person_id": "P-hemingway",
+    "type": "portrait",
+    "file": "images/portraits/hemingway.png"
+  },
+  {
+    "card_id": "hemingway",
+    "person_id": "P-hemingway",
+    "type": "avatar",
+    "file": "images/avatars/hemingway.png"
+  },
+  {
+    "card_id": "hemingway",
+    "person_id": "P-hemingway",
+    "type": "strategy_diagram",
+    "model": "冰山理论",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/hemingway/冰山理论.png"
+  },
+  {
+    "card_id": "hemingway",
+    "person_id": "P-hemingway",
+    "type": "strategy_diagram",
+    "model": "简洁有力的表达",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/hemingway/简洁有力的表达.png"
+  },
+  {
+    "card_id": "hemingway",
+    "person_id": "P-hemingway",
+    "type": "strategy_diagram",
+    "model": "用具体动作与细节代替抽象",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/hemingway/用具体动作与细节代替抽象.png"
+  },
+  {
+    "card_id": "hemingway",
+    "person_id": "P-hemingway",
+    "type": "strategy_diagram",
+    "model": "重压下的优雅",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/hemingway/重压下的优雅.png"
+  },
+  {
+    "card_id": "hemingway",
+    "person_id": "P-hemingway",
+    "type": "strategy_diagram",
+    "model": "写你真正懂的真实的",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/hemingway/写你真正懂的真实的.png"
+  },
+  {
+    "card_id": "honda",
+    "person_id": "P-honda",
+    "type": "portrait",
+    "file": "images/portraits/honda.png"
+  },
+  {
+    "card_id": "honda",
+    "person_id": "P-honda",
+    "type": "avatar",
+    "file": "images/avatars/honda.png"
+  },
+  {
+    "card_id": "honda",
+    "person_id": "P-honda",
+    "type": "strategy_diagram",
+    "model": "技术第一亲手实干",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/honda/技术第一亲手实干.png"
+  },
+  {
+    "card_id": "honda",
+    "person_id": "P-honda",
+    "type": "strategy_diagram",
+    "model": "三个喜悦",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/honda/三个喜悦.png"
+  },
+  {
+    "card_id": "honda",
+    "person_id": "P-honda",
+    "type": "strategy_diagram",
+    "model": "不怕失败的试错",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/honda/不怕失败的试错.png"
+  },
+  {
+    "card_id": "honda",
+    "person_id": "P-honda",
+    "type": "strategy_diagram",
+    "model": "挑战极限立品牌",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/honda/挑战极限立品牌.png"
+  },
+  {
+    "card_id": "honda",
+    "person_id": "P-honda",
+    "type": "strategy_diagram",
+    "model": "专业分工授权",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/honda/专业分工授权.png"
+  },
+  {
+    "card_id": "hugo",
+    "person_id": "P-hugo",
+    "type": "portrait",
+    "file": "images/portraits/hugo.png"
+  },
+  {
+    "card_id": "hugo",
+    "person_id": "P-hugo",
+    "type": "avatar",
+    "file": "images/avatars/hugo.png"
+  },
+  {
+    "card_id": "hugo",
+    "person_id": "P-hugo",
+    "type": "strategy_diagram",
+    "model": "美丑对照",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/hugo/美丑对照.png"
+  },
+  {
+    "card_id": "hugo",
+    "person_id": "P-hugo",
+    "type": "strategy_diagram",
+    "model": "为弱者与受苦者发声",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/hugo/为弱者与受苦者发声.png"
+  },
+  {
+    "card_id": "hugo",
+    "person_id": "P-hugo",
+    "type": "strategy_diagram",
+    "model": "以情动人的激情",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/hugo/以情动人的激情.png"
+  },
+  {
+    "card_id": "hugo",
+    "person_id": "P-hugo",
+    "type": "strategy_diagram",
+    "model": "人道主义的信念",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/hugo/人道主义的信念.png"
+  },
+  {
+    "card_id": "hugo",
+    "person_id": "P-hugo",
+    "type": "strategy_diagram",
+    "model": "把个体故事接入宏大的社会议题",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/hugo/把个体故事接入宏大的社会议题.png"
+  },
+  {
+    "card_id": "inamori",
+    "person_id": "P-inamori",
+    "type": "portrait",
+    "file": "images/portraits/inamori.png"
+  },
+  {
+    "card_id": "inamori",
+    "person_id": "P-inamori",
+    "type": "avatar",
+    "file": "images/avatars/inamori.png"
+  },
+  {
+    "card_id": "inamori",
+    "person_id": "P-inamori",
+    "type": "strategy_diagram",
+    "model": "敬天爱人",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/inamori/敬天爱人.png"
+  },
+  {
+    "card_id": "inamori",
+    "person_id": "P-inamori",
+    "type": "strategy_diagram",
+    "model": "利他经营",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/inamori/利他经营.png"
+  },
+  {
+    "card_id": "inamori",
+    "person_id": "P-inamori",
+    "type": "strategy_diagram",
+    "model": "人生方程式",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/inamori/人生方程式.png"
+  },
+  {
+    "card_id": "inamori",
+    "person_id": "P-inamori",
+    "type": "strategy_diagram",
+    "model": "阿米巴经营",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/inamori/阿米巴经营.png"
+  },
+  {
+    "card_id": "inamori",
+    "person_id": "P-inamori",
+    "type": "strategy_diagram",
+    "model": "极致努力",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/inamori/极致努力.png"
+  },
+  {
+    "card_id": "jianzhen",
+    "person_id": "P-jianzhen",
+    "type": "portrait",
+    "file": "images/portraits/jianzhen.png"
+  },
+  {
+    "card_id": "jianzhen",
+    "person_id": "P-jianzhen",
+    "type": "avatar",
+    "file": "images/avatars/jianzhen.png"
+  },
+  {
+    "card_id": "jianzhen",
+    "person_id": "P-jianzhen",
+    "type": "strategy_diagram",
+    "model": "受托即赴",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/jianzhen/受托即赴.png"
+  },
+  {
+    "card_id": "jianzhen",
+    "person_id": "P-jianzhen",
+    "type": "strategy_diagram",
+    "model": "屡败屡试",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/jianzhen/屡败屡试.png"
+  },
+  {
+    "card_id": "jianzhen",
+    "person_id": "P-jianzhen",
+    "type": "strategy_diagram",
+    "model": "志不随损",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/jianzhen/志不随损.png"
+  },
+  {
+    "card_id": "jianzhen",
+    "person_id": "P-jianzhen",
+    "type": "strategy_diagram",
+    "model": "传系统非己",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/jianzhen/传系统非己.png"
+  },
+  {
+    "card_id": "jianzhen",
+    "person_id": "P-jianzhen",
+    "type": "strategy_diagram",
+    "model": "亲赴亲证",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/jianzhen/亲赴亲证.png"
+  },
+  {
+    "card_id": "jobs",
+    "person_id": "P-jobs",
+    "type": "portrait",
+    "file": "images/portraits/jobs.png"
+  },
+  {
+    "card_id": "jobs",
+    "person_id": "P-jobs",
+    "type": "avatar",
+    "file": "images/avatars/jobs.png"
+  },
+  {
+    "card_id": "jobs",
+    "person_id": "P-jobs",
+    "type": "strategy_diagram",
+    "model": "聚焦即说不",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/jobs/聚焦即说不.png"
+  },
+  {
+    "card_id": "jobs",
+    "person_id": "P-jobs",
+    "type": "strategy_diagram",
+    "model": "完美主义",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/jobs/完美主义.png"
+  },
+  {
+    "card_id": "jobs",
+    "person_id": "P-jobs",
+    "type": "strategy_diagram",
+    "model": "软硬一体整合",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/jobs/软硬一体整合.png"
+  },
+  {
+    "card_id": "jobs",
+    "person_id": "P-jobs",
+    "type": "strategy_diagram",
+    "model": "科技人文交叉",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/jobs/科技人文交叉.png"
+  },
+  {
+    "card_id": "jobs",
+    "person_id": "P-jobs",
+    "type": "strategy_diagram",
+    "model": "创造需求",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/jobs/创造需求.png"
+  },
+  {
+    "card_id": "kant",
+    "person_id": "P-kant",
+    "type": "portrait",
+    "file": "images/portraits/kant.png"
+  },
+  {
+    "card_id": "kant",
+    "person_id": "P-kant",
+    "type": "avatar",
+    "file": "images/avatars/kant.png"
+  },
+  {
+    "card_id": "kant",
+    "person_id": "P-kant",
+    "type": "strategy_diagram",
+    "model": "绝对律令",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/kant/绝对律令.png"
+  },
+  {
+    "card_id": "kant",
+    "person_id": "P-kant",
+    "type": "strategy_diagram",
+    "model": "人是目的",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/kant/人是目的.png"
+  },
+  {
+    "card_id": "kant",
+    "person_id": "P-kant",
+    "type": "strategy_diagram",
+    "model": "哥白尼式转向",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/kant/哥白尼式转向.png"
+  },
+  {
+    "card_id": "kant",
+    "person_id": "P-kant",
+    "type": "strategy_diagram",
+    "model": "现象与物自体",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/kant/现象与物自体.png"
+  },
+  {
+    "card_id": "kant",
+    "person_id": "P-kant",
+    "type": "strategy_diagram",
+    "model": "二律背反",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/kant/二律背反.png"
+  },
+  {
+    "card_id": "keynes",
+    "person_id": "P-keynes",
+    "type": "portrait",
+    "file": "images/portraits/keynes.png"
+  },
+  {
+    "card_id": "keynes",
+    "person_id": "P-keynes",
+    "type": "avatar",
+    "file": "images/avatars/keynes.png"
+  },
+  {
+    "card_id": "keynes",
+    "person_id": "P-keynes",
+    "type": "strategy_diagram",
+    "model": "选美理论",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/keynes/选美理论.png"
+  },
+  {
+    "card_id": "keynes",
+    "person_id": "P-keynes",
+    "type": "strategy_diagram",
+    "model": "逆向投资",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/keynes/逆向投资.png"
+  },
+  {
+    "card_id": "keynes",
+    "person_id": "P-keynes",
+    "type": "strategy_diagram",
+    "model": "能力圈集中持有",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/keynes/能力圈集中持有.png"
+  },
+  {
+    "card_id": "keynes",
+    "person_id": "P-keynes",
+    "type": "strategy_diagram",
+    "model": "承认动物精神",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/keynes/承认动物精神.png"
+  },
+  {
+    "card_id": "keynes",
+    "person_id": "P-keynes",
+    "type": "strategy_diagram",
+    "model": "长期着眼但务实应变",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/keynes/长期着眼但务实应变.png"
+  },
+  {
+    "card_id": "kroc",
+    "person_id": "P-kroc",
+    "type": "portrait",
+    "file": "images/portraits/kroc.png"
+  },
+  {
+    "card_id": "kroc",
+    "person_id": "P-kroc",
+    "type": "avatar",
+    "file": "images/avatars/kroc.png"
+  },
+  {
+    "card_id": "kroc",
+    "person_id": "P-kroc",
+    "type": "strategy_diagram",
+    "model": "标准化可复制",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/kroc/标准化可复制.png"
+  },
+  {
+    "card_id": "kroc",
+    "person_id": "P-kroc",
+    "type": "strategy_diagram",
+    "model": "卖系统而非卖产品",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/kroc/卖系统而非卖产品.png"
+  },
+  {
+    "card_id": "kroc",
+    "person_id": "P-kroc",
+    "type": "strategy_diagram",
+    "model": "加盟双赢共生",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/kroc/加盟双赢共生.png"
+  },
+  {
+    "card_id": "kroc",
+    "person_id": "P-kroc",
+    "type": "strategy_diagram",
+    "model": "细节即品质",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/kroc/细节即品质.png"
+  },
+  {
+    "card_id": "kroc",
+    "person_id": "P-kroc",
+    "type": "strategy_diagram",
+    "model": "永不言弃的大器晚成",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/kroc/永不言弃的大器晚成.png"
+  },
+  {
+    "card_id": "laozi",
+    "person_id": "P-laozi",
+    "type": "portrait",
+    "file": "images/portraits/laozi.png"
+  },
+  {
+    "card_id": "laozi",
+    "person_id": "P-laozi",
+    "type": "avatar",
+    "file": "images/avatars/laozi.png"
+  },
+  {
+    "card_id": "laozi",
+    "person_id": "P-laozi",
+    "type": "strategy_diagram",
+    "model": "无为而治",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/laozi/无为而治.png"
+  },
+  {
+    "card_id": "laozi",
+    "person_id": "P-laozi",
+    "type": "strategy_diagram",
+    "model": "反者道之动",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/laozi/反者道之动.png"
+  },
+  {
+    "card_id": "laozi",
+    "person_id": "P-laozi",
+    "type": "strategy_diagram",
+    "model": "柔弱胜刚强",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/laozi/柔弱胜刚强.png"
+  },
+  {
+    "card_id": "laozi",
+    "person_id": "P-laozi",
+    "type": "strategy_diagram",
+    "model": "知止不殆",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/laozi/知止不殆.png"
+  },
+  {
+    "card_id": "laozi",
+    "person_id": "P-laozi",
+    "type": "strategy_diagram",
+    "model": "为而不争",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/laozi/为而不争.png"
+  },
+  {
+    "card_id": "lijing",
+    "person_id": "P-lijing",
+    "type": "portrait",
+    "file": "images/portraits/lijing.png"
+  },
+  {
+    "card_id": "lijing",
+    "person_id": "P-lijing",
+    "type": "avatar",
+    "file": "images/avatars/lijing.png"
+  },
+  {
+    "card_id": "lijing",
+    "person_id": "P-lijing",
+    "type": "strategy_diagram",
+    "model": "奇正相生",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/lijing/奇正相生.png"
+  },
+  {
+    "card_id": "lijing",
+    "person_id": "P-lijing",
+    "type": "strategy_diagram",
+    "model": "避实击虚",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/lijing/避实击虚.png"
+  },
+  {
+    "card_id": "lijing",
+    "person_id": "P-lijing",
+    "type": "strategy_diagram",
+    "model": "料敌于先·庙算先胜",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/lijing/料敌于先·庙算先胜.png"
+  },
+  {
+    "card_id": "lijing",
+    "person_id": "P-lijing",
+    "type": "strategy_diagram",
+    "model": "示形动敌",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/lijing/示形动敌.png"
+  },
+  {
+    "card_id": "lijing",
+    "person_id": "P-lijing",
+    "type": "strategy_diagram",
+    "model": "因情用兵不拘成法",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/lijing/因情用兵不拘成法.png"
+  },
+  {
+    "card_id": "lincoln",
+    "person_id": "P-lincoln",
+    "type": "portrait",
+    "file": "images/portraits/lincoln.png"
+  },
+  {
+    "card_id": "lincoln",
+    "person_id": "P-lincoln",
+    "type": "avatar",
+    "file": "images/avatars/lincoln.png"
+  },
+  {
+    "card_id": "lincoln",
+    "person_id": "P-lincoln",
+    "type": "strategy_diagram",
+    "model": "目的坚定·手段灵活",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/lincoln/目的坚定·手段灵活.png"
+  },
+  {
+    "card_id": "lincoln",
+    "person_id": "P-lincoln",
+    "type": "strategy_diagram",
+    "model": "待时而动",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/lincoln/待时而动.png"
+  },
+  {
+    "card_id": "lincoln",
+    "person_id": "P-lincoln",
+    "type": "strategy_diagram",
+    "model": "纳政敌入核心",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/lincoln/纳政敌入核心.png"
+  },
+  {
+    "card_id": "lincoln",
+    "person_id": "P-lincoln",
+    "type": "strategy_diagram",
+    "model": "冷信不发",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/lincoln/冷信不发.png"
+  },
+  {
+    "card_id": "lincoln",
+    "person_id": "P-lincoln",
+    "type": "strategy_diagram",
+    "model": "以叙事赋予意义",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/lincoln/以叙事赋予意义.png"
+  },
+  {
+    "card_id": "lishimin",
+    "person_id": "P-lishimin",
+    "type": "portrait",
+    "file": "images/portraits/lishimin.png"
+  },
+  {
+    "card_id": "lishimin",
+    "person_id": "P-lishimin",
+    "type": "avatar",
+    "file": "images/avatars/lishimin.png"
+  },
+  {
+    "card_id": "lishimin",
+    "person_id": "P-lishimin",
+    "type": "strategy_diagram",
+    "model": "兼听则明",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/lishimin/兼听则明.png"
+  },
+  {
+    "card_id": "lishimin",
+    "person_id": "P-lishimin",
+    "type": "strategy_diagram",
+    "model": "知人善任",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/lishimin/知人善任.png"
+  },
+  {
+    "card_id": "lishimin",
+    "person_id": "P-lishimin",
+    "type": "strategy_diagram",
+    "model": "以人为镜",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/lishimin/以人为镜.png"
+  },
+  {
+    "card_id": "lishimin",
+    "person_id": "P-lishimin",
+    "type": "strategy_diagram",
+    "model": "居安思危载舟覆舟",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/lishimin/居安思危载舟覆舟.png"
+  },
+  {
+    "card_id": "lishimin",
+    "person_id": "P-lishimin",
+    "type": "strategy_diagram",
+    "model": "纳谏制度化",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/lishimin/纳谏制度化.png"
+  },
+  {
+    "card_id": "livermore",
+    "person_id": "P-livermore",
+    "type": "portrait",
+    "file": "images/portraits/livermore.png"
+  },
+  {
+    "card_id": "livermore",
+    "person_id": "P-livermore",
+    "type": "avatar",
+    "file": "images/avatars/livermore.png"
+  },
+  {
+    "card_id": "livermore",
+    "person_id": "P-livermore",
+    "type": "strategy_diagram",
+    "model": "顺势而为",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/livermore/顺势而为.png"
+  },
+  {
+    "card_id": "livermore",
+    "person_id": "P-livermore",
+    "type": "strategy_diagram",
+    "model": "截断亏损让利润奔跑",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/livermore/截断亏损让利润奔跑.png"
+  },
+  {
+    "card_id": "livermore",
+    "person_id": "P-livermore",
+    "type": "strategy_diagram",
+    "model": "市场心理与情绪",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/livermore/市场心理与情绪.png"
+  },
+  {
+    "card_id": "livermore",
+    "person_id": "P-livermore",
+    "type": "strategy_diagram",
+    "model": "等待关键点",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/livermore/等待关键点.png"
+  },
+  {
+    "card_id": "livermore",
+    "person_id": "P-livermore",
+    "type": "strategy_diagram",
+    "model": "独立判断不听消息",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/livermore/独立判断不听消息.png"
+  },
+  {
+    "card_id": "luzuofu",
+    "person_id": "P-luzuofu",
+    "type": "portrait",
+    "file": "images/portraits/luzuofu.png"
+  },
+  {
+    "card_id": "luzuofu",
+    "person_id": "P-luzuofu",
+    "type": "avatar",
+    "file": "images/avatars/luzuofu.png"
+  },
+  {
+    "card_id": "luzuofu",
+    "person_id": "P-luzuofu",
+    "type": "strategy_diagram",
+    "model": "实业救国",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/luzuofu/实业救国.png"
+  },
+  {
+    "card_id": "luzuofu",
+    "person_id": "P-luzuofu",
+    "type": "strategy_diagram",
+    "model": "化零为整统一航运",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/luzuofu/化零为整统一航运.png"
+  },
+  {
+    "card_id": "luzuofu",
+    "person_id": "P-luzuofu",
+    "type": "strategy_diagram",
+    "model": "乡村现代化试验",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/luzuofu/乡村现代化试验.png"
+  },
+  {
+    "card_id": "luzuofu",
+    "person_id": "P-luzuofu",
+    "type": "strategy_diagram",
+    "model": "化危为机的组织动员",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/luzuofu/化危为机的组织动员.png"
+  },
+  {
+    "card_id": "luzuofu",
+    "person_id": "P-luzuofu",
+    "type": "strategy_diagram",
+    "model": "廉洁奉公表率",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/luzuofu/廉洁奉公表率.png"
+  },
+  {
+    "card_id": "lynch",
+    "person_id": "P-lynch",
+    "type": "portrait",
+    "file": "images/portraits/lynch.png"
+  },
+  {
+    "card_id": "lynch",
+    "person_id": "P-lynch",
+    "type": "avatar",
+    "file": "images/avatars/lynch.png"
+  },
+  {
+    "card_id": "lynch",
+    "person_id": "P-lynch",
+    "type": "strategy_diagram",
+    "model": "投资你了解的",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/lynch/投资你了解的.png"
+  },
+  {
+    "card_id": "lynch",
+    "person_id": "P-lynch",
+    "type": "strategy_diagram",
+    "model": "成长股与合理价格",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/lynch/成长股与合理价格.png"
+  },
+  {
+    "card_id": "lynch",
+    "person_id": "P-lynch",
+    "type": "strategy_diagram",
+    "model": "寻找十倍股",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/lynch/寻找十倍股.png"
+  },
+  {
+    "card_id": "lynch",
+    "person_id": "P-lynch",
+    "type": "strategy_diagram",
+    "model": "亲自做功课调研",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/lynch/亲自做功课调研.png"
+  },
+  {
+    "card_id": "lynch",
+    "person_id": "P-lynch",
+    "type": "strategy_diagram",
+    "model": "给公司分类对症下药",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/lynch/给公司分类对症下药.png"
+  },
+  {
+    "card_id": "mandela",
+    "person_id": "P-mandela",
+    "type": "portrait",
+    "file": "images/portraits/mandela.png"
+  },
+  {
+    "card_id": "mandela",
+    "person_id": "P-mandela",
+    "type": "avatar",
+    "file": "images/avatars/mandela.png"
+  },
+  {
+    "card_id": "mandela",
+    "person_id": "P-mandela",
+    "type": "strategy_diagram",
+    "model": "战略性和解",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/mandela/战略性和解.png"
+  },
+  {
+    "card_id": "mandela",
+    "person_id": "P-mandela",
+    "type": "strategy_diagram",
+    "model": "守标活法",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/mandela/守标活法.png"
+  },
+  {
+    "card_id": "mandela",
+    "person_id": "P-mandela",
+    "type": "strategy_diagram",
+    "model": "长线耐心",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/mandela/长线耐心.png"
+  },
+  {
+    "card_id": "mandela",
+    "person_id": "P-mandela",
+    "type": "strategy_diagram",
+    "model": "学敌赢敌",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/mandela/学敌赢敌.png"
+  },
+  {
+    "card_id": "mandela",
+    "person_id": "P-mandela",
+    "type": "strategy_diagram",
+    "model": "象征政治",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/mandela/象征政治.png"
+  },
+  {
+    "card_id": "marcus",
+    "person_id": "P-marcus",
+    "type": "portrait",
+    "file": "images/portraits/marcus.png"
+  },
+  {
+    "card_id": "marcus",
+    "person_id": "P-marcus",
+    "type": "avatar",
+    "file": "images/avatars/marcus.png"
+  },
+  {
+    "card_id": "marcus",
+    "person_id": "P-marcus",
+    "type": "strategy_diagram",
+    "model": "控制二分法",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/marcus/控制二分法.png"
+  },
+  {
+    "card_id": "marcus",
+    "person_id": "P-marcus",
+    "type": "strategy_diagram",
+    "model": "客观看待",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/marcus/客观看待.png"
+  },
+  {
+    "card_id": "marcus",
+    "person_id": "P-marcus",
+    "type": "strategy_diagram",
+    "model": "记忆死亡",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/marcus/记忆死亡.png"
+  },
+  {
+    "card_id": "marcus",
+    "person_id": "P-marcus",
+    "type": "strategy_diagram",
+    "model": "着眼当下尽责",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/marcus/着眼当下尽责.png"
+  },
+  {
+    "card_id": "marcus",
+    "person_id": "P-marcus",
+    "type": "strategy_diagram",
+    "model": "障碍即道路",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/marcus/障碍即道路.png"
+  },
+  {
+    "card_id": "matsushita",
+    "person_id": "P-matsushita",
+    "type": "portrait",
+    "file": "images/portraits/matsushita.png"
+  },
+  {
+    "card_id": "matsushita",
+    "person_id": "P-matsushita",
+    "type": "avatar",
+    "file": "images/avatars/matsushita.png"
+  },
+  {
+    "card_id": "matsushita",
+    "person_id": "P-matsushita",
+    "type": "strategy_diagram",
+    "model": "自来水哲学",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/matsushita/自来水哲学.png"
+  },
+  {
+    "card_id": "matsushita",
+    "person_id": "P-matsushita",
+    "type": "strategy_diagram",
+    "model": "水坝式经营",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/matsushita/水坝式经营.png"
+  },
+  {
+    "card_id": "matsushita",
+    "person_id": "P-matsushita",
+    "type": "strategy_diagram",
+    "model": "事业部制",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/matsushita/事业部制.png"
+  },
+  {
+    "card_id": "matsushita",
+    "person_id": "P-matsushita",
+    "type": "strategy_diagram",
+    "model": "企业是社会公器",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/matsushita/企业是社会公器.png"
+  },
+  {
+    "card_id": "matsushita",
+    "person_id": "P-matsushita",
+    "type": "strategy_diagram",
+    "model": "素直之心",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/matsushita/素直之心.png"
+  },
+  {
+    "card_id": "maxwell",
+    "person_id": "P-maxwell",
+    "type": "portrait",
+    "file": "images/portraits/maxwell.png"
+  },
+  {
+    "card_id": "maxwell",
+    "person_id": "P-maxwell",
+    "type": "avatar",
+    "file": "images/avatars/maxwell.png"
+  },
+  {
+    "card_id": "maxwell",
+    "person_id": "P-maxwell",
+    "type": "strategy_diagram",
+    "model": "用数学统一看似无关的现象",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/maxwell/用数学统一看似无关的现象.png"
+  },
+  {
+    "card_id": "maxwell",
+    "person_id": "P-maxwell",
+    "type": "strategy_diagram",
+    "model": "把直觉图像翻译成精确数学",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/maxwell/把直觉图像翻译成精确数学.png"
+  },
+  {
+    "card_id": "maxwell",
+    "person_id": "P-maxwell",
+    "type": "strategy_diagram",
+    "model": "由方程预言未知",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/maxwell/由方程预言未知.png"
+  },
+  {
+    "card_id": "maxwell",
+    "person_id": "P-maxwell",
+    "type": "strategy_diagram",
+    "model": "抓住本质建简洁模型",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/maxwell/抓住本质建简洁模型.png"
+  },
+  {
+    "card_id": "maxwell",
+    "person_id": "P-maxwell",
+    "type": "strategy_diagram",
+    "model": "用类比启发但不拘泥",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/maxwell/用类比启发但不拘泥.png"
+  },
+  {
+    "card_id": "mendel",
+    "person_id": "P-mendel",
+    "type": "portrait",
+    "file": "images/portraits/mendel.png"
+  },
+  {
+    "card_id": "mendel",
+    "person_id": "P-mendel",
+    "type": "avatar",
+    "file": "images/avatars/mendel.png"
+  },
+  {
+    "card_id": "mendel",
+    "person_id": "P-mendel",
+    "type": "strategy_diagram",
+    "model": "定量统计找规律",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/mendel/定量统计找规律.png"
+  },
+  {
+    "card_id": "mendel",
+    "person_id": "P-mendel",
+    "type": "strategy_diagram",
+    "model": "控制变量的简化实验",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/mendel/控制变量的简化实验.png"
+  },
+  {
+    "card_id": "mendel",
+    "person_id": "P-mendel",
+    "type": "strategy_diagram",
+    "model": "假设看不见的因子",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/mendel/假设看不见的因子.png"
+  },
+  {
+    "card_id": "mendel",
+    "person_id": "P-mendel",
+    "type": "strategy_diagram",
+    "model": "长期专注的笨功夫",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/mendel/长期专注的笨功夫.png"
+  },
+  {
+    "card_id": "mendel",
+    "person_id": "P-mendel",
+    "type": "strategy_diagram",
+    "model": "坚持不被理解的真理",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/mendel/坚持不被理解的真理.png"
+  },
+  {
+    "card_id": "mengzi",
+    "person_id": "P-mengzi",
+    "type": "portrait",
+    "file": "images/portraits/mengzi.png"
+  },
+  {
+    "card_id": "mengzi",
+    "person_id": "P-mengzi",
+    "type": "avatar",
+    "file": "images/avatars/mengzi.png"
+  },
+  {
+    "card_id": "mengzi",
+    "person_id": "P-mengzi",
+    "type": "strategy_diagram",
+    "model": "性善四端",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/mengzi/性善四端.png"
+  },
+  {
+    "card_id": "mengzi",
+    "person_id": "P-mengzi",
+    "type": "strategy_diagram",
+    "model": "仁政得民心",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/mengzi/仁政得民心.png"
+  },
+  {
+    "card_id": "mengzi",
+    "person_id": "P-mengzi",
+    "type": "strategy_diagram",
+    "model": "浩然之气",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/mengzi/浩然之气.png"
+  },
+  {
+    "card_id": "mengzi",
+    "person_id": "P-mengzi",
+    "type": "strategy_diagram",
+    "model": "义利之辨",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/mengzi/义利之辨.png"
+  },
+  {
+    "card_id": "mengzi",
+    "person_id": "P-mengzi",
+    "type": "strategy_diagram",
+    "model": "民贵君轻",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/mengzi/民贵君轻.png"
+  },
+  {
+    "card_id": "moltke",
+    "person_id": "P-moltke",
+    "type": "portrait",
+    "file": "images/portraits/moltke.png"
+  },
+  {
+    "card_id": "moltke",
+    "person_id": "P-moltke",
+    "type": "avatar",
+    "file": "images/avatars/moltke.png"
+  },
+  {
+    "card_id": "moltke",
+    "person_id": "P-moltke",
+    "type": "strategy_diagram",
+    "model": "总参谋部制度",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/moltke/总参谋部制度.png"
+  },
+  {
+    "card_id": "moltke",
+    "person_id": "P-moltke",
+    "type": "strategy_diagram",
+    "model": "计划周详但因敌应变",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/moltke/计划周详但因敌应变.png"
+  },
+  {
+    "card_id": "moltke",
+    "person_id": "P-moltke",
+    "type": "strategy_diagram",
+    "model": "任务式指挥",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/moltke/任务式指挥.png"
+  },
+  {
+    "card_id": "moltke",
+    "person_id": "P-moltke",
+    "type": "strategy_diagram",
+    "model": "分进合击",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/moltke/分进合击.png"
+  },
+  {
+    "card_id": "moltke",
+    "person_id": "P-moltke",
+    "type": "strategy_diagram",
+    "model": "用好新技术",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/moltke/用好新技术.png"
+  },
+  {
+    "card_id": "morgan",
+    "person_id": "P-morgan",
+    "type": "portrait",
+    "file": "images/portraits/morgan.png"
+  },
+  {
+    "card_id": "morgan",
+    "person_id": "P-morgan",
+    "type": "avatar",
+    "file": "images/avatars/morgan.png"
+  },
+  {
+    "card_id": "morgan",
+    "person_id": "P-morgan",
+    "type": "strategy_diagram",
+    "model": "资本整合重组",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/morgan/资本整合重组.png"
+  },
+  {
+    "card_id": "morgan",
+    "person_id": "P-morgan",
+    "type": "strategy_diagram",
+    "model": "信用即资产",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/morgan/信用即资产.png"
+  },
+  {
+    "card_id": "morgan",
+    "person_id": "P-morgan",
+    "type": "strategy_diagram",
+    "model": "危机中挺身组织救援",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/morgan/危机中挺身组织救援.png"
+  },
+  {
+    "card_id": "morgan",
+    "person_id": "P-morgan",
+    "type": "strategy_diagram",
+    "model": "秩序优于竞争",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/morgan/秩序优于竞争.png"
+  },
+  {
+    "card_id": "morgan",
+    "person_id": "P-morgan",
+    "type": "strategy_diagram",
+    "model": "关系网络控制",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/morgan/关系网络控制.png"
+  },
+  {
+    "card_id": "morita",
+    "person_id": "P-morita",
+    "type": "portrait",
+    "file": "images/portraits/morita.png"
+  },
+  {
+    "card_id": "morita",
+    "person_id": "P-morita",
+    "type": "avatar",
+    "file": "images/avatars/morita.png"
+  },
+  {
+    "card_id": "morita",
+    "person_id": "P-morita",
+    "type": "strategy_diagram",
+    "model": "创造市场而非跟随调研",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/morita/创造市场而非跟随调研.png"
+  },
+  {
+    "card_id": "morita",
+    "person_id": "P-morita",
+    "type": "strategy_diagram",
+    "model": "品牌优先拒代工",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/morita/品牌优先拒代工.png"
+  },
+  {
+    "card_id": "morita",
+    "person_id": "P-morita",
+    "type": "strategy_diagram",
+    "model": "全球本土化",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/morita/全球本土化.png"
+  },
+  {
+    "card_id": "morita",
+    "person_id": "P-morita",
+    "type": "strategy_diagram",
+    "model": "技术营销双驱",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/morita/技术营销双驱.png"
+  },
+  {
+    "card_id": "morita",
+    "person_id": "P-morita",
+    "type": "strategy_diagram",
+    "model": "敢为天下先",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/morita/敢为天下先.png"
+  },
+  {
+    "card_id": "mozi",
+    "person_id": "P-mozi",
+    "type": "portrait",
+    "file": "images/portraits/mozi.png"
+  },
+  {
+    "card_id": "mozi",
+    "person_id": "P-mozi",
+    "type": "avatar",
+    "file": "images/avatars/mozi.png"
+  },
+  {
+    "card_id": "mozi",
+    "person_id": "P-mozi",
+    "type": "strategy_diagram",
+    "model": "兼爱",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/mozi/兼爱.png"
+  },
+  {
+    "card_id": "mozi",
+    "person_id": "P-mozi",
+    "type": "strategy_diagram",
+    "model": "交相利",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/mozi/交相利.png"
+  },
+  {
+    "card_id": "mozi",
+    "person_id": "P-mozi",
+    "type": "strategy_diagram",
+    "model": "三表法",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/mozi/三表法.png"
+  },
+  {
+    "card_id": "mozi",
+    "person_id": "P-mozi",
+    "type": "strategy_diagram",
+    "model": "非攻与实力自卫",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/mozi/非攻与实力自卫.png"
+  },
+  {
+    "card_id": "mozi",
+    "person_id": "P-mozi",
+    "type": "strategy_diagram",
+    "model": "节用尚实",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/mozi/节用尚实.png"
+  },
+  {
+    "card_id": "munger",
+    "person_id": "P-munger",
+    "type": "portrait",
+    "file": "images/portraits/munger.png"
+  },
+  {
+    "card_id": "munger",
+    "person_id": "P-munger",
+    "type": "avatar",
+    "file": "images/avatars/munger.png"
+  },
+  {
+    "card_id": "munger",
+    "person_id": "P-munger",
+    "type": "strategy_diagram",
+    "model": "多元思维格栅",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/munger/多元思维格栅.png"
+  },
+  {
+    "card_id": "munger",
+    "person_id": "P-munger",
+    "type": "strategy_diagram",
+    "model": "逆向思维",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/munger/逆向思维.png"
+  },
+  {
+    "card_id": "munger",
+    "person_id": "P-munger",
+    "type": "strategy_diagram",
+    "model": "能力圈与太难堆",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/munger/能力圈与太难堆.png"
+  },
+  {
+    "card_id": "munger",
+    "person_id": "P-munger",
+    "type": "strategy_diagram",
+    "model": "误判心理学",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/munger/误判心理学.png"
+  },
+  {
+    "card_id": "munger",
+    "person_id": "P-munger",
+    "type": "strategy_diagram",
+    "model": "Lollapalooza效应",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/munger/Lollapalooza效应.png"
+  },
+  {
+    "card_id": "napoleon",
+    "person_id": "P-napoleon",
+    "type": "portrait",
+    "file": "images/portraits/napoleon.png"
+  },
+  {
+    "card_id": "napoleon",
+    "person_id": "P-napoleon",
+    "type": "avatar",
+    "file": "images/avatars/napoleon.png"
+  },
+  {
+    "card_id": "napoleon",
+    "person_id": "P-napoleon",
+    "type": "strategy_diagram",
+    "model": "集中优势兵力于决定点",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/napoleon/集中优势兵力于决定点.png"
+  },
+  {
+    "card_id": "napoleon",
+    "person_id": "P-napoleon",
+    "type": "strategy_diagram",
+    "model": "速度与机动",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/napoleon/速度与机动.png"
+  },
+  {
+    "card_id": "napoleon",
+    "person_id": "P-napoleon",
+    "type": "strategy_diagram",
+    "model": "士气与荣誉激励",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/napoleon/士气与荣誉激励.png"
+  },
+  {
+    "card_id": "napoleon",
+    "person_id": "P-napoleon",
+    "type": "strategy_diagram",
+    "model": "制度法典化",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/napoleon/制度法典化.png"
+  },
+  {
+    "card_id": "napoleon",
+    "person_id": "P-napoleon",
+    "type": "strategy_diagram",
+    "model": "抓住机会窗口",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/napoleon/抓住机会窗口.png"
+  },
+  {
+    "card_id": "newton",
+    "person_id": "P-newton",
+    "type": "portrait",
+    "file": "images/portraits/newton.png"
+  },
+  {
+    "card_id": "newton",
+    "person_id": "P-newton",
+    "type": "avatar",
+    "file": "images/avatars/newton.png"
+  },
+  {
+    "card_id": "newton",
+    "person_id": "P-newton",
+    "type": "strategy_diagram",
+    "model": "公理化数学演绎",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/newton/公理化数学演绎.png"
+  },
+  {
+    "card_id": "newton",
+    "person_id": "P-newton",
+    "type": "strategy_diagram",
+    "model": "不杜撰假设",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/newton/不杜撰假设.png"
+  },
+  {
+    "card_id": "newton",
+    "person_id": "P-newton",
+    "type": "strategy_diagram",
+    "model": "统一普遍化",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/newton/统一普遍化.png"
+  },
+  {
+    "card_id": "newton",
+    "person_id": "P-newton",
+    "type": "strategy_diagram",
+    "model": "分析-综合",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/newton/分析-综合.png"
+  },
+  {
+    "card_id": "newton",
+    "person_id": "P-newton",
+    "type": "strategy_diagram",
+    "model": "持续专注钻透",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/newton/持续专注钻透.png"
+  },
+  {
+    "card_id": "ohno",
+    "person_id": "P-ohno",
+    "type": "portrait",
+    "file": "images/portraits/ohno.png"
+  },
+  {
+    "card_id": "ohno",
+    "person_id": "P-ohno",
+    "type": "avatar",
+    "file": "images/avatars/ohno.png"
+  },
+  {
+    "card_id": "ohno",
+    "person_id": "P-ohno",
+    "type": "strategy_diagram",
+    "model": "消除浪费",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/ohno/消除浪费.png"
+  },
+  {
+    "card_id": "ohno",
+    "person_id": "P-ohno",
+    "type": "strategy_diagram",
+    "model": "准时化",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/ohno/准时化.png"
+  },
+  {
+    "card_id": "ohno",
+    "person_id": "P-ohno",
+    "type": "strategy_diagram",
+    "model": "自働化",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/ohno/自働化.png"
+  },
+  {
+    "card_id": "ohno",
+    "person_id": "P-ohno",
+    "type": "strategy_diagram",
+    "model": "现地现物",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/ohno/现地现物.png"
+  },
+  {
+    "card_id": "ohno",
+    "person_id": "P-ohno",
+    "type": "strategy_diagram",
+    "model": "五个为什么",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/ohno/五个为什么.png"
+  },
+  {
+    "card_id": "orwell",
+    "person_id": "P-orwell",
+    "type": "portrait",
+    "file": "images/portraits/orwell.png"
+  },
+  {
+    "card_id": "orwell",
+    "person_id": "P-orwell",
+    "type": "avatar",
+    "file": "images/avatars/orwell.png"
+  },
+  {
+    "card_id": "orwell",
+    "person_id": "P-orwell",
+    "type": "strategy_diagram",
+    "model": "清晰语言对抗操纵",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/orwell/清晰语言对抗操纵.png"
+  },
+  {
+    "card_id": "orwell",
+    "person_id": "P-orwell",
+    "type": "strategy_diagram",
+    "model": "写作六规则",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/orwell/写作六规则.png"
+  },
+  {
+    "card_id": "orwell",
+    "person_id": "P-orwell",
+    "type": "strategy_diagram",
+    "model": "诚实直面不适的真相",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/orwell/诚实直面不适的真相.png"
+  },
+  {
+    "card_id": "orwell",
+    "person_id": "P-orwell",
+    "type": "strategy_diagram",
+    "model": "具象化抽象",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/orwell/具象化抽象.png"
+  },
+  {
+    "card_id": "orwell",
+    "person_id": "P-orwell",
+    "type": "strategy_diagram",
+    "model": "警惕语言腐败",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/orwell/警惕语言腐败.png"
+  },
+  {
+    "card_id": "pericles",
+    "person_id": "P-pericles",
+    "type": "portrait",
+    "file": "images/portraits/pericles.png"
+  },
+  {
+    "card_id": "pericles",
+    "person_id": "P-pericles",
+    "type": "avatar",
+    "file": "images/avatars/pericles.png"
+  },
+  {
+    "card_id": "pericles",
+    "person_id": "P-pericles",
+    "type": "strategy_diagram",
+    "model": "公民参与的民主治理",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/pericles/公民参与的民主治理.png"
+  },
+  {
+    "card_id": "pericles",
+    "person_id": "P-pericles",
+    "type": "strategy_diagram",
+    "model": "任人唯能不唯出身",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/pericles/任人唯能不唯出身.png"
+  },
+  {
+    "card_id": "pericles",
+    "person_id": "P-pericles",
+    "type": "strategy_diagram",
+    "model": "投资文化软实力",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/pericles/投资文化软实力.png"
+  },
+  {
+    "card_id": "pericles",
+    "person_id": "P-pericles",
+    "type": "strategy_diagram",
+    "model": "扬长避短的战略",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/pericles/扬长避短的战略.png"
+  },
+  {
+    "card_id": "pericles",
+    "person_id": "P-pericles",
+    "type": "strategy_diagram",
+    "model": "以理性演说凝聚共识",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/pericles/以理性演说凝聚共识.png"
+  },
+  {
+    "card_id": "plato",
+    "person_id": "P-plato",
+    "type": "portrait",
+    "file": "images/portraits/plato.png"
+  },
+  {
+    "card_id": "plato",
+    "person_id": "P-plato",
+    "type": "avatar",
+    "file": "images/avatars/plato.png"
+  },
+  {
+    "card_id": "plato",
+    "person_id": "P-plato",
+    "type": "strategy_diagram",
+    "model": "理念论",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/plato/理念论.png"
+  },
+  {
+    "card_id": "plato",
+    "person_id": "P-plato",
+    "type": "strategy_diagram",
+    "model": "洞穴喻",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/plato/洞穴喻.png"
+  },
+  {
+    "card_id": "plato",
+    "person_id": "P-plato",
+    "type": "strategy_diagram",
+    "model": "辩证法",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/plato/辩证法.png"
+  },
+  {
+    "card_id": "plato",
+    "person_id": "P-plato",
+    "type": "strategy_diagram",
+    "model": "灵魂三分与正义",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/plato/灵魂三分与正义.png"
+  },
+  {
+    "card_id": "plato",
+    "person_id": "P-plato",
+    "type": "strategy_diagram",
+    "model": "哲学王",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/plato/哲学王.png"
+  },
+  {
+    "card_id": "qijiguang",
+    "person_id": "P-qijiguang",
+    "type": "portrait",
+    "file": "images/portraits/qijiguang.png"
+  },
+  {
+    "card_id": "qijiguang",
+    "person_id": "P-qijiguang",
+    "type": "avatar",
+    "file": "images/avatars/qijiguang.png"
+  },
+  {
+    "card_id": "qijiguang",
+    "person_id": "P-qijiguang",
+    "type": "strategy_diagram",
+    "model": "募兵练兵成军",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/qijiguang/募兵练兵成军.png"
+  },
+  {
+    "card_id": "qijiguang",
+    "person_id": "P-qijiguang",
+    "type": "strategy_diagram",
+    "model": "阵法与协同",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/qijiguang/阵法与协同.png"
+  },
+  {
+    "card_id": "qijiguang",
+    "person_id": "P-qijiguang",
+    "type": "strategy_diagram",
+    "model": "严明纪律赏罚",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/qijiguang/严明纪律赏罚.png"
+  },
+  {
+    "card_id": "qijiguang",
+    "person_id": "P-qijiguang",
+    "type": "strategy_diagram",
+    "model": "因地因敌制宜",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/qijiguang/因地因敌制宜.png"
+  },
+  {
+    "card_id": "qijiguang",
+    "person_id": "P-qijiguang",
+    "type": "strategy_diagram",
+    "model": "著书立制传承",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/qijiguang/著书立制传承.png"
+  },
+  {
+    "card_id": "rockefeller",
+    "person_id": "P-rockefeller",
+    "type": "portrait",
+    "file": "images/portraits/rockefeller.png"
+  },
+  {
+    "card_id": "rockefeller",
+    "person_id": "P-rockefeller",
+    "type": "avatar",
+    "file": "images/avatars/rockefeller.png"
+  },
+  {
+    "card_id": "rockefeller",
+    "person_id": "P-rockefeller",
+    "type": "strategy_diagram",
+    "model": "横向整合",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/rockefeller/横向整合.png"
+  },
+  {
+    "card_id": "rockefeller",
+    "person_id": "P-rockefeller",
+    "type": "strategy_diagram",
+    "model": "纵向一体化",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/rockefeller/纵向一体化.png"
+  },
+  {
+    "card_id": "rockefeller",
+    "person_id": "P-rockefeller",
+    "type": "strategy_diagram",
+    "model": "极致成本效率",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/rockefeller/极致成本效率.png"
+  },
+  {
+    "card_id": "rockefeller",
+    "person_id": "P-rockefeller",
+    "type": "strategy_diagram",
+    "model": "现金与隐忍",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/rockefeller/现金与隐忍.png"
+  },
+  {
+    "card_id": "rockefeller",
+    "person_id": "P-rockefeller",
+    "type": "strategy_diagram",
+    "model": "系统性慈善",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/rockefeller/系统性慈善.png"
+  },
+  {
+    "card_id": "saladin",
+    "person_id": "P-saladin",
+    "type": "portrait",
+    "file": "images/portraits/saladin.png"
+  },
+  {
+    "card_id": "saladin",
+    "person_id": "P-saladin",
+    "type": "avatar",
+    "file": "images/avatars/saladin.png"
+  },
+  {
+    "card_id": "saladin",
+    "person_id": "P-saladin",
+    "type": "strategy_diagram",
+    "model": "团结分裂的力量",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/saladin/团结分裂的力量.png"
+  },
+  {
+    "card_id": "saladin",
+    "person_id": "P-saladin",
+    "type": "strategy_diagram",
+    "model": "宽容与气度服人",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/saladin/宽容与气度服人.png"
+  },
+  {
+    "card_id": "saladin",
+    "person_id": "P-saladin",
+    "type": "strategy_diagram",
+    "model": "以共同信念凝聚",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/saladin/以共同信念凝聚.png"
+  },
+  {
+    "card_id": "saladin",
+    "person_id": "P-saladin",
+    "type": "strategy_diagram",
+    "model": "坚韧与长期经营",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/saladin/坚韧与长期经营.png"
+  },
+  {
+    "card_id": "saladin",
+    "person_id": "P-saladin",
+    "type": "strategy_diagram",
+    "model": "以身作则的节制",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/saladin/以身作则的节制.png"
+  },
+  {
+    "card_id": "schweitzer",
+    "person_id": "P-schweitzer",
+    "type": "portrait",
+    "file": "images/portraits/schweitzer.png"
+  },
+  {
+    "card_id": "schweitzer",
+    "person_id": "P-schweitzer",
+    "type": "avatar",
+    "file": "images/avatars/schweitzer.png"
+  },
+  {
+    "card_id": "schweitzer",
+    "person_id": "P-schweitzer",
+    "type": "strategy_diagram",
+    "model": "敬畏生命",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/schweitzer/敬畏生命.png"
+  },
+  {
+    "card_id": "schweitzer",
+    "person_id": "P-schweitzer",
+    "type": "strategy_diagram",
+    "model": "行动还债",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/schweitzer/行动还债.png"
+  },
+  {
+    "card_id": "schweitzer",
+    "person_id": "P-schweitzer",
+    "type": "strategy_diagram",
+    "model": "以生命为论证",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/schweitzer/以生命为论证.png"
+  },
+  {
+    "card_id": "schweitzer",
+    "person_id": "P-schweitzer",
+    "type": "strategy_diagram",
+    "model": "预定的转向",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/schweitzer/预定的转向.png"
+  },
+  {
+    "card_id": "schweitzer",
+    "person_id": "P-schweitzer",
+    "type": "strategy_diagram",
+    "model": "多能归一用",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/schweitzer/多能归一用.png"
+  },
+  {
+    "card_id": "shackleton",
+    "person_id": "P-shackleton",
+    "type": "portrait",
+    "file": "images/portraits/shackleton.png"
+  },
+  {
+    "card_id": "shackleton",
+    "person_id": "P-shackleton",
+    "type": "avatar",
+    "file": "images/avatars/shackleton.png"
+  },
+  {
+    "card_id": "shackleton",
+    "person_id": "P-shackleton",
+    "type": "strategy_diagram",
+    "model": "目标果断降级",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/shackleton/目标果断降级.png"
+  },
+  {
+    "card_id": "shackleton",
+    "person_id": "P-shackleton",
+    "type": "strategy_diagram",
+    "model": "士气即资源",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/shackleton/士气即资源.png"
+  },
+  {
+    "card_id": "shackleton",
+    "person_id": "P-shackleton",
+    "type": "strategy_diagram",
+    "model": "只走下一程",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/shackleton/只走下一程.png"
+  },
+  {
+    "card_id": "shackleton",
+    "person_id": "P-shackleton",
+    "type": "strategy_diagram",
+    "model": "表演性镇定",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/shackleton/表演性镇定.png"
+  },
+  {
+    "card_id": "shackleton",
+    "person_id": "P-shackleton",
+    "type": "strategy_diagram",
+    "model": "异见者近身",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/shackleton/异见者近身.png"
+  },
+  {
+    "card_id": "shakespeare",
+    "person_id": "P-shakespeare",
+    "type": "portrait",
+    "file": "images/portraits/shakespeare.png"
+  },
+  {
+    "card_id": "shakespeare",
+    "person_id": "P-shakespeare",
+    "type": "avatar",
+    "file": "images/avatars/shakespeare.png"
+  },
+  {
+    "card_id": "shakespeare",
+    "person_id": "P-shakespeare",
+    "type": "strategy_diagram",
+    "model": "人物的多面与矛盾",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/shakespeare/人物的多面与矛盾.png"
+  },
+  {
+    "card_id": "shakespeare",
+    "person_id": "P-shakespeare",
+    "type": "strategy_diagram",
+    "model": "冲突驱动",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/shakespeare/冲突驱动.png"
+  },
+  {
+    "card_id": "shakespeare",
+    "person_id": "P-shakespeare",
+    "type": "strategy_diagram",
+    "model": "普遍人性的母题",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/shakespeare/普遍人性的母题.png"
+  },
+  {
+    "card_id": "shakespeare",
+    "person_id": "P-shakespeare",
+    "type": "strategy_diagram",
+    "model": "语言的力量与意象",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/shakespeare/语言的力量与意象.png"
+  },
+  {
+    "card_id": "shakespeare",
+    "person_id": "P-shakespeare",
+    "type": "strategy_diagram",
+    "model": "以小见大的人物弧光",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/shakespeare/以小见大的人物弧光.png"
+  },
+  {
+    "card_id": "shangyang",
+    "person_id": "P-shangyang",
+    "type": "portrait",
+    "file": "images/portraits/shangyang.png"
+  },
+  {
+    "card_id": "shangyang",
+    "person_id": "P-shangyang",
+    "type": "avatar",
+    "file": "images/avatars/shangyang.png"
+  },
+  {
+    "card_id": "shangyang",
+    "person_id": "P-shangyang",
+    "type": "strategy_diagram",
+    "model": "徙木立信",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/shangyang/徙木立信.png"
+  },
+  {
+    "card_id": "shangyang",
+    "person_id": "P-shangyang",
+    "type": "strategy_diagram",
+    "model": "刑赏二柄",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/shangyang/刑赏二柄.png"
+  },
+  {
+    "card_id": "shangyang",
+    "person_id": "P-shangyang",
+    "type": "strategy_diagram",
+    "model": "耕战立国",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/shangyang/耕战立国.png"
+  },
+  {
+    "card_id": "shangyang",
+    "person_id": "P-shangyang",
+    "type": "strategy_diagram",
+    "model": "不别亲疏一断于法",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/shangyang/不别亲疏一断于法.png"
+  },
+  {
+    "card_id": "shangyang",
+    "person_id": "P-shangyang",
+    "type": "strategy_diagram",
+    "model": "不法古因时变法",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/shangyang/不法古因时变法.png"
+  },
+  {
+    "card_id": "simaqian",
+    "person_id": "P-simaqian",
+    "type": "portrait",
+    "file": "images/portraits/simaqian.png"
+  },
+  {
+    "card_id": "simaqian",
+    "person_id": "P-simaqian",
+    "type": "avatar",
+    "file": "images/avatars/simaqian.png"
+  },
+  {
+    "card_id": "simaqian",
+    "person_id": "P-simaqian",
+    "type": "strategy_diagram",
+    "model": "轻重权衡",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/simaqian/轻重权衡.png"
+  },
+  {
+    "card_id": "simaqian",
+    "person_id": "P-simaqian",
+    "type": "strategy_diagram",
+    "model": "长远评判优先",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/simaqian/长远评判优先.png"
+  },
+  {
+    "card_id": "simaqian",
+    "person_id": "P-simaqian",
+    "type": "strategy_diagram",
+    "model": "天人之分",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/simaqian/天人之分.png"
+  },
+  {
+    "card_id": "simaqian",
+    "person_id": "P-simaqian",
+    "type": "strategy_diagram",
+    "model": "直面真实",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/simaqian/直面真实.png"
+  },
+  {
+    "card_id": "simaqian",
+    "person_id": "P-simaqian",
+    "type": "strategy_diagram",
+    "model": "复盘成败之理",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/simaqian/复盘成败之理.png"
+  },
+  {
+    "card_id": "socrates",
+    "person_id": "P-socrates",
+    "type": "portrait",
+    "file": "images/portraits/socrates.png"
+  },
+  {
+    "card_id": "socrates",
+    "person_id": "P-socrates",
+    "type": "avatar",
+    "file": "images/avatars/socrates.png"
+  },
+  {
+    "card_id": "socrates",
+    "person_id": "P-socrates",
+    "type": "strategy_diagram",
+    "model": "反诘法",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/socrates/反诘法.png"
+  },
+  {
+    "card_id": "socrates",
+    "person_id": "P-socrates",
+    "type": "strategy_diagram",
+    "model": "承认无知",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/socrates/承认无知.png"
+  },
+  {
+    "card_id": "socrates",
+    "person_id": "P-socrates",
+    "type": "strategy_diagram",
+    "model": "求本质定义",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/socrates/求本质定义.png"
+  },
+  {
+    "card_id": "socrates",
+    "person_id": "P-socrates",
+    "type": "strategy_diagram",
+    "model": "德性即知识",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/socrates/德性即知识.png"
+  },
+  {
+    "card_id": "socrates",
+    "person_id": "P-socrates",
+    "type": "strategy_diagram",
+    "model": "经过省察的人生",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/socrates/经过省察的人生.png"
+  },
+  {
+    "card_id": "soros",
+    "person_id": "P-soros",
+    "type": "portrait",
+    "file": "images/portraits/soros.png"
+  },
+  {
+    "card_id": "soros",
+    "person_id": "P-soros",
+    "type": "avatar",
+    "file": "images/avatars/soros.png"
+  },
+  {
+    "card_id": "soros",
+    "person_id": "P-soros",
+    "type": "strategy_diagram",
+    "model": "反身性",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/soros/反身性.png"
+  },
+  {
+    "card_id": "soros",
+    "person_id": "P-soros",
+    "type": "strategy_diagram",
+    "model": "可错性",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/soros/可错性.png"
+  },
+  {
+    "card_id": "soros",
+    "person_id": "P-soros",
+    "type": "strategy_diagram",
+    "model": "发现并下注于泡沫拐点",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/soros/发现并下注于泡沫拐点.png"
+  },
+  {
+    "card_id": "soros",
+    "person_id": "P-soros",
+    "type": "strategy_diagram",
+    "model": "错了认赔对了重仓",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/soros/错了认赔对了重仓.png"
+  },
+  {
+    "card_id": "soros",
+    "person_id": "P-soros",
+    "type": "strategy_diagram",
+    "model": "大胆假设小心求证",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/soros/大胆假设小心求证.png"
+  },
+  {
+    "card_id": "sunzi",
+    "person_id": "P-sunzi",
+    "type": "portrait",
+    "file": "images/portraits/sunzi.png"
+  },
+  {
+    "card_id": "sunzi",
+    "person_id": "P-sunzi",
+    "type": "avatar",
+    "file": "images/avatars/sunzi.png"
+  },
+  {
+    "card_id": "sunzi",
+    "person_id": "P-sunzi",
+    "type": "strategy_diagram",
+    "model": "先胜后战",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/sunzi/先胜后战.png"
+  },
+  {
+    "card_id": "sunzi",
+    "person_id": "P-sunzi",
+    "type": "strategy_diagram",
+    "model": "不战而屈人之兵",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/sunzi/不战而屈人之兵.png"
+  },
+  {
+    "card_id": "sunzi",
+    "person_id": "P-sunzi",
+    "type": "strategy_diagram",
+    "model": "庙算五事",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/sunzi/庙算五事.png"
+  },
+  {
+    "card_id": "sunzi",
+    "person_id": "P-sunzi",
+    "type": "strategy_diagram",
+    "model": "奇正相生",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/sunzi/奇正相生.png"
+  },
+  {
+    "card_id": "sunzi",
+    "person_id": "P-sunzi",
+    "type": "strategy_diagram",
+    "model": "慎战非利不动",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/sunzi/慎战非利不动.png"
+  },
+  {
+    "card_id": "sushi",
+    "person_id": "P-sushi",
+    "type": "portrait",
+    "file": "images/portraits/sushi.png"
+  },
+  {
+    "card_id": "sushi",
+    "person_id": "P-sushi",
+    "type": "avatar",
+    "file": "images/avatars/sushi.png"
+  },
+  {
+    "card_id": "sushi",
+    "person_id": "P-sushi",
+    "type": "strategy_diagram",
+    "model": "变不变之辨",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/sushi/变不变之辨.png"
+  },
+  {
+    "card_id": "sushi",
+    "person_id": "P-sushi",
+    "type": "strategy_diagram",
+    "model": "此心安处",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/sushi/此心安处.png"
+  },
+  {
+    "card_id": "sushi",
+    "person_id": "P-sushi",
+    "type": "strategy_diagram",
+    "model": "即事实干",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/sushi/即事实干.png"
+  },
+  {
+    "card_id": "sushi",
+    "person_id": "P-sushi",
+    "type": "strategy_diagram",
+    "model": "旷达含悲",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/sushi/旷达含悲.png"
+  },
+  {
+    "card_id": "sushi",
+    "person_id": "P-sushi",
+    "type": "strategy_diagram",
+    "model": "三家融通",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/sushi/三家融通.png"
+  },
+  {
+    "card_id": "tankahkee",
+    "person_id": "P-tankahkee",
+    "type": "portrait",
+    "file": "images/portraits/tankahkee.png"
+  },
+  {
+    "card_id": "tankahkee",
+    "person_id": "P-tankahkee",
+    "type": "avatar",
+    "file": "images/avatars/tankahkee.png"
+  },
+  {
+    "card_id": "tankahkee",
+    "person_id": "P-tankahkee",
+    "type": "strategy_diagram",
+    "model": "实业为手段公益为目的",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/tankahkee/实业为手段公益为目的.png"
+  },
+  {
+    "card_id": "tankahkee",
+    "person_id": "P-tankahkee",
+    "type": "strategy_diagram",
+    "model": "诚信为本",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/tankahkee/诚信为本.png"
+  },
+  {
+    "card_id": "tankahkee",
+    "person_id": "P-tankahkee",
+    "type": "strategy_diagram",
+    "model": "抓住时代机遇",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/tankahkee/抓住时代机遇.png"
+  },
+  {
+    "card_id": "tankahkee",
+    "person_id": "P-tankahkee",
+    "type": "strategy_diagram",
+    "model": "家国担当超越小我",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/tankahkee/家国担当超越小我.png"
+  },
+  {
+    "card_id": "tankahkee",
+    "person_id": "P-tankahkee",
+    "type": "strategy_diagram",
+    "model": "俭以养德表率",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/tankahkee/俭以养德表率.png"
+  },
+  {
+    "card_id": "templeton",
+    "person_id": "P-templeton",
+    "type": "portrait",
+    "file": "images/portraits/templeton.png"
+  },
+  {
+    "card_id": "templeton",
+    "person_id": "P-templeton",
+    "type": "avatar",
+    "file": "images/avatars/templeton.png"
+  },
+  {
+    "card_id": "templeton",
+    "person_id": "P-templeton",
+    "type": "strategy_diagram",
+    "model": "极度悲观点买入",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/templeton/极度悲观点买入.png"
+  },
+  {
+    "card_id": "templeton",
+    "person_id": "P-templeton",
+    "type": "strategy_diagram",
+    "model": "全球分散搜寻便宜",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/templeton/全球分散搜寻便宜.png"
+  },
+  {
+    "card_id": "templeton",
+    "person_id": "P-templeton",
+    "type": "strategy_diagram",
+    "model": "与众不同才能超额",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/templeton/与众不同才能超额.png"
+  },
+  {
+    "card_id": "templeton",
+    "person_id": "P-templeton",
+    "type": "strategy_diagram",
+    "model": "比较价值买最便宜",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/templeton/比较价值买最便宜.png"
+  },
+  {
+    "card_id": "templeton",
+    "person_id": "P-templeton",
+    "type": "strategy_diagram",
+    "model": "警惕这次不一样",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/templeton/警惕这次不一样.png"
+  },
+  {
+    "card_id": "tesla",
+    "person_id": "P-tesla",
+    "type": "portrait",
+    "file": "images/portraits/tesla.png"
+  },
+  {
+    "card_id": "tesla",
+    "person_id": "P-tesla",
+    "type": "avatar",
+    "file": "images/avatars/tesla.png"
+  },
+  {
+    "card_id": "tesla",
+    "person_id": "P-tesla",
+    "type": "strategy_diagram",
+    "model": "旋转磁场原理",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/tesla/旋转磁场原理.png"
+  },
+  {
+    "card_id": "tesla",
+    "person_id": "P-tesla",
+    "type": "strategy_diagram",
+    "model": "系统级押注交流",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/tesla/系统级押注交流.png"
+  },
+  {
+    "card_id": "tesla",
+    "person_id": "P-tesla",
+    "type": "strategy_diagram",
+    "model": "远超时代目标",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/tesla/远超时代目标.png"
+  },
+  {
+    "card_id": "tesla",
+    "person_id": "P-tesla",
+    "type": "strategy_diagram",
+    "model": "心智预演",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/tesla/心智预演.png"
+  },
+  {
+    "card_id": "tesla",
+    "person_id": "P-tesla",
+    "type": "strategy_diagram",
+    "model": "想象力优先",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/tesla/想象力优先.png"
+  },
+  {
+    "card_id": "tolstoy",
+    "person_id": "P-tolstoy",
+    "type": "portrait",
+    "file": "images/portraits/tolstoy.png"
+  },
+  {
+    "card_id": "tolstoy",
+    "person_id": "P-tolstoy",
+    "type": "avatar",
+    "file": "images/avatars/tolstoy.png"
+  },
+  {
+    "card_id": "tolstoy",
+    "person_id": "P-tolstoy",
+    "type": "strategy_diagram",
+    "model": "心灵辩证法",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/tolstoy/心灵辩证法.png"
+  },
+  {
+    "card_id": "tolstoy",
+    "person_id": "P-tolstoy",
+    "type": "strategy_diagram",
+    "model": "史诗全景",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/tolstoy/史诗全景.png"
+  },
+  {
+    "card_id": "tolstoy",
+    "person_id": "P-tolstoy",
+    "type": "strategy_diagram",
+    "model": "道德与意义的追问",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/tolstoy/道德与意义的追问.png"
+  },
+  {
+    "card_id": "tolstoy",
+    "person_id": "P-tolstoy",
+    "type": "strategy_diagram",
+    "model": "平凡中的真实",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/tolstoy/平凡中的真实.png"
+  },
+  {
+    "card_id": "tolstoy",
+    "person_id": "P-tolstoy",
+    "type": "strategy_diagram",
+    "model": "返璞归真",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/tolstoy/返璞归真.png"
+  },
+  {
+    "card_id": "turing",
+    "person_id": "P-turing",
+    "type": "portrait",
+    "file": "images/portraits/turing.png"
+  },
+  {
+    "card_id": "turing",
+    "person_id": "P-turing",
+    "type": "avatar",
+    "file": "images/avatars/turing.png"
+  },
+  {
+    "card_id": "turing",
+    "person_id": "P-turing",
+    "type": "strategy_diagram",
+    "model": "化归为机械步骤",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/turing/化归为机械步骤.png"
+  },
+  {
+    "card_id": "turing",
+    "person_id": "P-turing",
+    "type": "strategy_diagram",
+    "model": "操作性定义",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/turing/操作性定义.png"
+  },
+  {
+    "card_id": "turing",
+    "person_id": "P-turing",
+    "type": "strategy_diagram",
+    "model": "承认计算极限",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/turing/承认计算极限.png"
+  },
+  {
+    "card_id": "turing",
+    "person_id": "P-turing",
+    "type": "strategy_diagram",
+    "model": "通用机抽象",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/turing/通用机抽象.png"
+  },
+  {
+    "card_id": "turing",
+    "person_id": "P-turing",
+    "type": "strategy_diagram",
+    "model": "抓可利用的规律性",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/turing/抓可利用的规律性.png"
+  },
+  {
+    "card_id": "twain",
+    "person_id": "P-twain",
+    "type": "portrait",
+    "file": "images/portraits/twain.png"
+  },
+  {
+    "card_id": "twain",
+    "person_id": "P-twain",
+    "type": "avatar",
+    "file": "images/avatars/twain.png"
+  },
+  {
+    "card_id": "twain",
+    "person_id": "P-twain",
+    "type": "strategy_diagram",
+    "model": "讽刺幽默作批判",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/twain/讽刺幽默作批判.png"
+  },
+  {
+    "card_id": "twain",
+    "person_id": "P-twain",
+    "type": "strategy_diagram",
+    "model": "通俗口语化",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/twain/通俗口语化.png"
+  },
+  {
+    "card_id": "twain",
+    "person_id": "P-twain",
+    "type": "strategy_diagram",
+    "model": "共情视角",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/twain/共情视角.png"
+  },
+  {
+    "card_id": "twain",
+    "person_id": "P-twain",
+    "type": "strategy_diagram",
+    "model": "具体细节胜过说教",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/twain/具体细节胜过说教.png"
+  },
+  {
+    "card_id": "twain",
+    "person_id": "P-twain",
+    "type": "strategy_diagram",
+    "model": "精炼有力",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/twain/精炼有力.png"
+  },
+  {
+    "card_id": "vonneumann",
+    "person_id": "P-vonneumann",
+    "type": "portrait",
+    "file": "images/portraits/vonneumann.png"
+  },
+  {
+    "card_id": "vonneumann",
+    "person_id": "P-vonneumann",
+    "type": "avatar",
+    "file": "images/avatars/vonneumann.png"
+  },
+  {
+    "card_id": "vonneumann",
+    "person_id": "P-vonneumann",
+    "type": "strategy_diagram",
+    "model": "形式化优先",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/vonneumann/形式化优先.png"
+  },
+  {
+    "card_id": "vonneumann",
+    "person_id": "P-vonneumann",
+    "type": "strategy_diagram",
+    "model": "极小化极大",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/vonneumann/极小化极大.png"
+  },
+  {
+    "card_id": "vonneumann",
+    "person_id": "P-vonneumann",
+    "type": "strategy_diagram",
+    "model": "通用架构抽象",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/vonneumann/通用架构抽象.png"
+  },
+  {
+    "card_id": "vonneumann",
+    "person_id": "P-vonneumann",
+    "type": "strategy_diagram",
+    "model": "跨域结构迁移",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/vonneumann/跨域结构迁移.png"
+  },
+  {
+    "card_id": "vonneumann",
+    "person_id": "P-vonneumann",
+    "type": "strategy_diagram",
+    "model": "数值模拟",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/vonneumann/数值模拟.png"
+  },
+  {
+    "card_id": "walton",
+    "person_id": "P-walton",
+    "type": "portrait",
+    "file": "images/portraits/walton.png"
+  },
+  {
+    "card_id": "walton",
+    "person_id": "P-walton",
+    "type": "avatar",
+    "file": "images/avatars/walton.png"
+  },
+  {
+    "card_id": "walton",
+    "person_id": "P-walton",
+    "type": "strategy_diagram",
+    "model": "天天低价",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/walton/天天低价.png"
+  },
+  {
+    "card_id": "walton",
+    "person_id": "P-walton",
+    "type": "strategy_diagram",
+    "model": "极致成本控制",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/walton/极致成本控制.png"
+  },
+  {
+    "card_id": "walton",
+    "person_id": "P-walton",
+    "type": "strategy_diagram",
+    "model": "农村包围城市",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/walton/农村包围城市.png"
+  },
+  {
+    "card_id": "walton",
+    "person_id": "P-walton",
+    "type": "strategy_diagram",
+    "model": "亲临一线巡店",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/walton/亲临一线巡店.png"
+  },
+  {
+    "card_id": "walton",
+    "person_id": "P-walton",
+    "type": "strategy_diagram",
+    "model": "善待同事激励",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/walton/善待同事激励.png"
+  },
+  {
+    "card_id": "wanganshi",
+    "person_id": "P-wanganshi",
+    "type": "portrait",
+    "file": "images/portraits/wanganshi.png"
+  },
+  {
+    "card_id": "wanganshi",
+    "person_id": "P-wanganshi",
+    "type": "avatar",
+    "file": "images/avatars/wanganshi.png"
+  },
+  {
+    "card_id": "wanganshi",
+    "person_id": "P-wanganshi",
+    "type": "strategy_diagram",
+    "model": "理财为先",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/wanganshi/理财为先.png"
+  },
+  {
+    "card_id": "wanganshi",
+    "person_id": "P-wanganshi",
+    "type": "strategy_diagram",
+    "model": "制度性理财创新",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/wanganshi/制度性理财创新.png"
+  },
+  {
+    "card_id": "wanganshi",
+    "person_id": "P-wanganshi",
+    "type": "strategy_diagram",
+    "model": "不畏人言果决变法",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/wanganshi/不畏人言果决变法.png"
+  },
+  {
+    "card_id": "wanganshi",
+    "person_id": "P-wanganshi",
+    "type": "strategy_diagram",
+    "model": "做大蛋糕而非分蛋糕",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/wanganshi/做大蛋糕而非分蛋糕.png"
+  },
+  {
+    "card_id": "wanganshi",
+    "person_id": "P-wanganshi",
+    "type": "strategy_diagram",
+    "model": "系统配套的整体变法",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/wanganshi/系统配套的整体变法.png"
+  },
+  {
+    "card_id": "wangyangming",
+    "person_id": "P-wangyangming",
+    "type": "portrait",
+    "file": "images/portraits/wangyangming.png"
+  },
+  {
+    "card_id": "wangyangming",
+    "person_id": "P-wangyangming",
+    "type": "avatar",
+    "file": "images/avatars/wangyangming.png"
+  },
+  {
+    "card_id": "wangyangming",
+    "person_id": "P-wangyangming",
+    "type": "strategy_diagram",
+    "model": "知行合一",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/wangyangming/知行合一.png"
+  },
+  {
+    "card_id": "wangyangming",
+    "person_id": "P-wangyangming",
+    "type": "strategy_diagram",
+    "model": "致良知",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/wangyangming/致良知.png"
+  },
+  {
+    "card_id": "wangyangming",
+    "person_id": "P-wangyangming",
+    "type": "strategy_diagram",
+    "model": "事上磨练",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/wangyangming/事上磨练.png"
+  },
+  {
+    "card_id": "wangyangming",
+    "person_id": "P-wangyangming",
+    "type": "strategy_diagram",
+    "model": "心即理",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/wangyangming/心即理.png"
+  },
+  {
+    "card_id": "wangyangming",
+    "person_id": "P-wangyangming",
+    "type": "strategy_diagram",
+    "model": "破心中贼难",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/wangyangming/破心中贼难.png"
+  },
+  {
+    "card_id": "wangyongqing",
+    "person_id": "P-wangyongqing",
+    "type": "portrait",
+    "file": "images/portraits/wangyongqing.png"
+  },
+  {
+    "card_id": "wangyongqing",
+    "person_id": "P-wangyongqing",
+    "type": "avatar",
+    "file": "images/avatars/wangyongqing.png"
+  },
+  {
+    "card_id": "wangyongqing",
+    "person_id": "P-wangyongqing",
+    "type": "strategy_diagram",
+    "model": "瘦鹅理论",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/wangyongqing/瘦鹅理论.png"
+  },
+  {
+    "card_id": "wangyongqing",
+    "person_id": "P-wangyongqing",
+    "type": "strategy_diagram",
+    "model": "追根究底",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/wangyongqing/追根究底.png"
+  },
+  {
+    "card_id": "wangyongqing",
+    "person_id": "P-wangyongqing",
+    "type": "strategy_diagram",
+    "model": "压力管理",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/wangyongqing/压力管理.png"
+  },
+  {
+    "card_id": "wangyongqing",
+    "person_id": "P-wangyongqing",
+    "type": "strategy_diagram",
+    "model": "垂直整合",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/wangyongqing/垂直整合.png"
+  },
+  {
+    "card_id": "wangyongqing",
+    "person_id": "P-wangyongqing",
+    "type": "strategy_diagram",
+    "model": "成本极致合理化",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/wangyongqing/成本极致合理化.png"
+  },
+  {
+    "card_id": "washington",
+    "person_id": "P-washington",
+    "type": "portrait",
+    "file": "images/portraits/washington.png"
+  },
+  {
+    "card_id": "washington",
+    "person_id": "P-washington",
+    "type": "avatar",
+    "file": "images/avatars/washington.png"
+  },
+  {
+    "card_id": "washington",
+    "person_id": "P-washington",
+    "type": "strategy_diagram",
+    "model": "主动交权立先例",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/washington/主动交权立先例.png"
+  },
+  {
+    "card_id": "washington",
+    "person_id": "P-washington",
+    "type": "strategy_diagram",
+    "model": "我所行皆成先例",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/washington/我所行皆成先例.png"
+  },
+  {
+    "card_id": "washington",
+    "person_id": "P-washington",
+    "type": "strategy_diagram",
+    "model": "超党派黏合",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/washington/超党派黏合.png"
+  },
+  {
+    "card_id": "washington",
+    "person_id": "P-washington",
+    "type": "strategy_diagram",
+    "model": "克制立威",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/washington/克制立威.png"
+  },
+  {
+    "card_id": "washington",
+    "person_id": "P-washington",
+    "type": "strategy_diagram",
+    "model": "制度高于个人",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/washington/制度高于个人.png"
+  },
+  {
+    "card_id": "wuqi",
+    "person_id": "P-wuqi",
+    "type": "portrait",
+    "file": "images/portraits/wuqi.png"
+  },
+  {
+    "card_id": "wuqi",
+    "person_id": "P-wuqi",
+    "type": "avatar",
+    "file": "images/avatars/wuqi.png"
+  },
+  {
+    "card_id": "wuqi",
+    "person_id": "P-wuqi",
+    "type": "strategy_diagram",
+    "model": "与士卒同甘共苦",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/wuqi/与士卒同甘共苦.png"
+  },
+  {
+    "card_id": "wuqi",
+    "person_id": "P-wuqi",
+    "type": "strategy_diagram",
+    "model": "文德武备并重·在德不在险",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/wuqi/文德武备并重·在德不在险.png"
+  },
+  {
+    "card_id": "wuqi",
+    "person_id": "P-wuqi",
+    "type": "strategy_diagram",
+    "model": "因敌制胜的料敌",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/wuqi/因敌制胜的料敌.png"
+  },
+  {
+    "card_id": "wuqi",
+    "person_id": "P-wuqi",
+    "type": "strategy_diagram",
+    "model": "法治治军赏罚必信",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/wuqi/法治治军赏罚必信.png"
+  },
+  {
+    "card_id": "wuqi",
+    "person_id": "P-wuqi",
+    "type": "strategy_diagram",
+    "model": "选练精兵",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/wuqi/选练精兵.png"
+  },
+  {
+    "card_id": "xuanzang",
+    "person_id": "P-xuanzang",
+    "type": "portrait",
+    "file": "images/portraits/xuanzang.png"
+  },
+  {
+    "card_id": "xuanzang",
+    "person_id": "P-xuanzang",
+    "type": "avatar",
+    "file": "images/avatars/xuanzang.png"
+  },
+  {
+    "card_id": "xuanzang",
+    "person_id": "P-xuanzang",
+    "type": "strategy_diagram",
+    "model": "求真溯源",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/xuanzang/求真溯源.png"
+  },
+  {
+    "card_id": "xuanzang",
+    "person_id": "P-xuanzang",
+    "type": "strategy_diagram",
+    "model": "断退之志",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/xuanzang/断退之志.png"
+  },
+  {
+    "card_id": "xuanzang",
+    "person_id": "P-xuanzang",
+    "type": "strategy_diagram",
+    "model": "以学折服",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/xuanzang/以学折服.png"
+  },
+  {
+    "card_id": "xuanzang",
+    "person_id": "P-xuanzang",
+    "type": "strategy_diagram",
+    "model": "完成先于荣耀",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/xuanzang/完成先于荣耀.png"
+  },
+  {
+    "card_id": "xuanzang",
+    "person_id": "P-xuanzang",
+    "type": "strategy_diagram",
+    "model": "实录见闻",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/xuanzang/实录见闻.png"
+  },
+  {
+    "card_id": "xunzi",
+    "person_id": "P-xunzi",
+    "type": "portrait",
+    "file": "images/portraits/xunzi.png"
+  },
+  {
+    "card_id": "xunzi",
+    "person_id": "P-xunzi",
+    "type": "avatar",
+    "file": "images/avatars/xunzi.png"
+  },
+  {
+    "card_id": "xunzi",
+    "person_id": "P-xunzi",
+    "type": "strategy_diagram",
+    "model": "性恶化性起伪",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/xunzi/性恶化性起伪.png"
+  },
+  {
+    "card_id": "xunzi",
+    "person_id": "P-xunzi",
+    "type": "strategy_diagram",
+    "model": "隆礼重法",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/xunzi/隆礼重法.png"
+  },
+  {
+    "card_id": "xunzi",
+    "person_id": "P-xunzi",
+    "type": "strategy_diagram",
+    "model": "天人之分",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/xunzi/天人之分.png"
+  },
+  {
+    "card_id": "xunzi",
+    "person_id": "P-xunzi",
+    "type": "strategy_diagram",
+    "model": "学不可以已",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/xunzi/学不可以已.png"
+  },
+  {
+    "card_id": "xunzi",
+    "person_id": "P-xunzi",
+    "type": "strategy_diagram",
+    "model": "虚壹而静",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/xunzi/虚壹而静.png"
+  },
+  {
+    "card_id": "xuxiake",
+    "person_id": "P-xuxiake",
+    "type": "portrait",
+    "file": "images/portraits/xuxiake.png"
+  },
+  {
+    "card_id": "xuxiake",
+    "person_id": "P-xuxiake",
+    "type": "avatar",
+    "file": "images/avatars/xuxiake.png"
+  },
+  {
+    "card_id": "xuxiake",
+    "person_id": "P-xuxiake",
+    "type": "strategy_diagram",
+    "model": "亲历实测",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/xuxiake/亲历实测.png"
+  },
+  {
+    "card_id": "xuxiake",
+    "person_id": "P-xuxiake",
+    "type": "strategy_diagram",
+    "model": "为知而活",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/xuxiake/为知而活.png"
+  },
+  {
+    "card_id": "xuxiake",
+    "person_id": "P-xuxiake",
+    "type": "strategy_diagram",
+    "model": "日记式采集",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/xuxiake/日记式采集.png"
+  },
+  {
+    "card_id": "xuxiake",
+    "person_id": "P-xuxiake",
+    "type": "strategy_diagram",
+    "model": "穷究到源",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/xuxiake/穷究到源.png"
+  },
+  {
+    "card_id": "xuxiake",
+    "person_id": "P-xuxiake",
+    "type": "strategy_diagram",
+    "model": "实地归纳规律",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/xuxiake/实地归纳规律.png"
+  },
+  {
+    "card_id": "yuefei",
+    "person_id": "P-yuefei",
+    "type": "portrait",
+    "file": "images/portraits/yuefei.png"
+  },
+  {
+    "card_id": "yuefei",
+    "person_id": "P-yuefei",
+    "type": "avatar",
+    "file": "images/avatars/yuefei.png"
+  },
+  {
+    "card_id": "yuefei",
+    "person_id": "P-yuefei",
+    "type": "strategy_diagram",
+    "model": "严明的纪律即战斗力",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/yuefei/严明的纪律即战斗力.png"
+  },
+  {
+    "card_id": "yuefei",
+    "person_id": "P-yuefei",
+    "type": "strategy_diagram",
+    "model": "以信念与表率带兵",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/yuefei/以信念与表率带兵.png"
+  },
+  {
+    "card_id": "yuefei",
+    "person_id": "P-yuefei",
+    "type": "strategy_diagram",
+    "model": "联合民间的力量",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/yuefei/联合民间的力量.png"
+  },
+  {
+    "card_id": "yuefei",
+    "person_id": "P-yuefei",
+    "type": "strategy_diagram",
+    "model": "运用之妙存乎一心",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/yuefei/运用之妙存乎一心.png"
+  },
+  {
+    "card_id": "yuefei",
+    "person_id": "P-yuefei",
+    "type": "strategy_diagram",
+    "model": "清廉担当不惜身",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/yuefei/清廉担当不惜身.png"
+  },
+  {
+    "card_id": "zengguofan",
+    "person_id": "P-zengguofan",
+    "type": "portrait",
+    "file": "images/portraits/zengguofan.png"
+  },
+  {
+    "card_id": "zengguofan",
+    "person_id": "P-zengguofan",
+    "type": "avatar",
+    "file": "images/avatars/zengguofan.png"
+  },
+  {
+    "card_id": "zengguofan",
+    "person_id": "P-zengguofan",
+    "type": "strategy_diagram",
+    "model": "结硬寨打呆仗",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/zengguofan/结硬寨打呆仗.png"
+  },
+  {
+    "card_id": "zengguofan",
+    "person_id": "P-zengguofan",
+    "type": "strategy_diagram",
+    "model": "尚拙",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/zengguofan/尚拙.png"
+  },
+  {
+    "card_id": "zengguofan",
+    "person_id": "P-zengguofan",
+    "type": "strategy_diagram",
+    "model": "日课省察",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/zengguofan/日课省察.png"
+  },
+  {
+    "card_id": "zengguofan",
+    "person_id": "P-zengguofan",
+    "type": "strategy_diagram",
+    "model": "莫问收获但问耕耘",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/zengguofan/莫问收获但问耕耘.png"
+  },
+  {
+    "card_id": "zengguofan",
+    "person_id": "P-zengguofan",
+    "type": "strategy_diagram",
+    "model": "打脱牙和血吞",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/zengguofan/打脱牙和血吞.png"
+  },
+  {
+    "card_id": "zhangjuzheng",
+    "person_id": "P-zhangjuzheng",
+    "type": "portrait",
+    "file": "images/portraits/zhangjuzheng.png"
+  },
+  {
+    "card_id": "zhangjuzheng",
+    "person_id": "P-zhangjuzheng",
+    "type": "avatar",
+    "file": "images/avatars/zhangjuzheng.png"
+  },
+  {
+    "card_id": "zhangjuzheng",
+    "person_id": "P-zhangjuzheng",
+    "type": "strategy_diagram",
+    "model": "考成法",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/zhangjuzheng/考成法.png"
+  },
+  {
+    "card_id": "zhangjuzheng",
+    "person_id": "P-zhangjuzheng",
+    "type": "strategy_diagram",
+    "model": "一条鞭法",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/zhangjuzheng/一条鞭法.png"
+  },
+  {
+    "card_id": "zhangjuzheng",
+    "person_id": "P-zhangjuzheng",
+    "type": "strategy_diagram",
+    "model": "务实任事不务虚名",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/zhangjuzheng/务实任事不务虚名.png"
+  },
+  {
+    "card_id": "zhangjuzheng",
+    "person_id": "P-zhangjuzheng",
+    "type": "strategy_diagram",
+    "model": "集权强推改革",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/zhangjuzheng/集权强推改革.png"
+  },
+  {
+    "card_id": "zhangjuzheng",
+    "person_id": "P-zhangjuzheng",
+    "type": "strategy_diagram",
+    "model": "整饬纪纲固根本",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/zhangjuzheng/整饬纪纲固根本.png"
+  },
+  {
+    "card_id": "zhangqian",
+    "person_id": "P-zhangqian",
+    "type": "portrait",
+    "file": "images/portraits/zhangqian.png"
+  },
+  {
+    "card_id": "zhangqian",
+    "person_id": "P-zhangqian",
+    "type": "avatar",
+    "file": "images/avatars/zhangqian.png"
+  },
+  {
+    "card_id": "zhangqian",
+    "person_id": "P-zhangqian",
+    "type": "strategy_diagram",
+    "model": "凿空",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/zhangqian/凿空.png"
+  },
+  {
+    "card_id": "zhangqian",
+    "person_id": "P-zhangqian",
+    "type": "strategy_diagram",
+    "model": "持节不失",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/zhangqian/持节不失.png"
+  },
+  {
+    "card_id": "zhangqian",
+    "person_id": "P-zhangqian",
+    "type": "strategy_diagram",
+    "model": "灵活求存",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/zhangqian/灵活求存.png"
+  },
+  {
+    "card_id": "zhangqian",
+    "person_id": "P-zhangqian",
+    "type": "strategy_diagram",
+    "model": "副产致胜",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/zhangqian/副产致胜.png"
+  },
+  {
+    "card_id": "zhangqian",
+    "person_id": "P-zhangqian",
+    "type": "strategy_diagram",
+    "model": "见闻即情报",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/zhangqian/见闻即情报.png"
+  },
+  {
+    "card_id": "zhenghe",
+    "person_id": "P-zhenghe",
+    "type": "portrait",
+    "file": "images/portraits/zhenghe.png"
+  },
+  {
+    "card_id": "zhenghe",
+    "person_id": "P-zhenghe",
+    "type": "avatar",
+    "file": "images/avatars/zhenghe.png"
+  },
+  {
+    "card_id": "zhenghe",
+    "person_id": "P-zhenghe",
+    "type": "strategy_diagram",
+    "model": "威服怀柔",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/zhenghe/威服怀柔.png"
+  },
+  {
+    "card_id": "zhenghe",
+    "person_id": "P-zhenghe",
+    "type": "strategy_diagram",
+    "model": "巨系统统御",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/zhenghe/巨系统统御.png"
+  },
+  {
+    "card_id": "zhenghe",
+    "person_id": "P-zhenghe",
+    "type": "strategy_diagram",
+    "model": "和而能战",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/zhenghe/和而能战.png"
+  },
+  {
+    "card_id": "zhenghe",
+    "person_id": "P-zhenghe",
+    "type": "strategy_diagram",
+    "model": "跨文化包容",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/zhenghe/跨文化包容.png"
+  },
+  {
+    "card_id": "zhenghe",
+    "person_id": "P-zhenghe",
+    "type": "strategy_diagram",
+    "model": "厚往薄来建网络",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/zhenghe/厚往薄来建网络.png"
+  },
+  {
+    "card_id": "zhuangzi",
+    "person_id": "P-zhuangzi",
+    "type": "portrait",
+    "file": "images/portraits/zhuangzi.png"
+  },
+  {
+    "card_id": "zhuangzi",
+    "person_id": "P-zhuangzi",
+    "type": "avatar",
+    "file": "images/avatars/zhuangzi.png"
+  },
+  {
+    "card_id": "zhuangzi",
+    "person_id": "P-zhuangzi",
+    "type": "strategy_diagram",
+    "model": "齐物泯除分别",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/zhuangzi/齐物泯除分别.png"
+  },
+  {
+    "card_id": "zhuangzi",
+    "person_id": "P-zhuangzi",
+    "type": "strategy_diagram",
+    "model": "无用之用",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/zhuangzi/无用之用.png"
+  },
+  {
+    "card_id": "zhuangzi",
+    "person_id": "P-zhuangzi",
+    "type": "strategy_diagram",
+    "model": "因循自然",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/zhuangzi/因循自然.png"
+  },
+  {
+    "card_id": "zhuangzi",
+    "person_id": "P-zhuangzi",
+    "type": "strategy_diagram",
+    "model": "逍遥超脱",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/zhuangzi/逍遥超脱.png"
+  },
+  {
+    "card_id": "zhuangzi",
+    "person_id": "P-zhuangzi",
+    "type": "strategy_diagram",
+    "model": "物化换视角",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/zhuangzi/物化换视角.png"
+  },
+  {
+    "card_id": "zhugeliang",
+    "person_id": "P-zhugeliang",
+    "type": "portrait",
+    "file": "images/portraits/zhugeliang.png"
+  },
+  {
+    "card_id": "zhugeliang",
+    "person_id": "P-zhugeliang",
+    "type": "avatar",
+    "file": "images/avatars/zhugeliang.png"
+  },
+  {
+    "card_id": "zhugeliang",
+    "person_id": "P-zhugeliang",
+    "type": "strategy_diagram",
+    "model": "隆中对式顶层战略",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/zhugeliang/隆中对式顶层战略.png"
+  },
+  {
+    "card_id": "zhugeliang",
+    "person_id": "P-zhugeliang",
+    "type": "strategy_diagram",
+    "model": "联弱抗强",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/zhugeliang/联弱抗强.png"
+  },
+  {
+    "card_id": "zhugeliang",
+    "person_id": "P-zhugeliang",
+    "type": "strategy_diagram",
+    "model": "攻心为上",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/zhugeliang/攻心为上.png"
+  },
+  {
+    "card_id": "zhugeliang",
+    "person_id": "P-zhugeliang",
+    "type": "strategy_diagram",
+    "model": "法治严明",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/zhugeliang/法治严明.png"
+  },
+  {
+    "card_id": "zhugeliang",
+    "person_id": "P-zhugeliang",
+    "type": "strategy_diagram",
+    "model": "谨慎稳健不弄险",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/zhugeliang/谨慎稳健不弄险.png"
+  },
+  {
+    "card_id": "zhuxi",
+    "person_id": "P-zhuxi",
+    "type": "portrait",
+    "file": "images/portraits/zhuxi.png"
+  },
+  {
+    "card_id": "zhuxi",
+    "person_id": "P-zhuxi",
+    "type": "avatar",
+    "file": "images/avatars/zhuxi.png"
+  },
+  {
+    "card_id": "zhuxi",
+    "person_id": "P-zhuxi",
+    "type": "strategy_diagram",
+    "model": "格物致知",
+    "model_index": 1,
+    "file": "images/strategy_diagrams/zhuxi/格物致知.png"
+  },
+  {
+    "card_id": "zhuxi",
+    "person_id": "P-zhuxi",
+    "type": "strategy_diagram",
+    "model": "理一分殊",
+    "model_index": 2,
+    "file": "images/strategy_diagrams/zhuxi/理一分殊.png"
+  },
+  {
+    "card_id": "zhuxi",
+    "person_id": "P-zhuxi",
+    "type": "strategy_diagram",
+    "model": "存天理去人欲",
+    "model_index": 3,
+    "file": "images/strategy_diagrams/zhuxi/存天理去人欲.png"
+  },
+  {
+    "card_id": "zhuxi",
+    "person_id": "P-zhuxi",
+    "type": "strategy_diagram",
+    "model": "读书穷理之法",
+    "model_index": 4,
+    "file": "images/strategy_diagrams/zhuxi/读书穷理之法.png"
+  },
+  {
+    "card_id": "zhuxi",
+    "person_id": "P-zhuxi",
+    "type": "strategy_diagram",
+    "model": "居敬穷理",
+    "model_index": 5,
+    "file": "images/strategy_diagrams/zhuxi/居敬穷理.png"
+  }
+]

@@ -77,7 +77,7 @@ textarea::placeholder { color: #aaa197; }
 .avatar-sm { width: 62px; height: 62px; font-size: 62px; }
 .avatar-md { width: 64px; height: 64px; font-size: 64px; }
 .avatar-lg { width: 88px; height: 88px; font-size: 88px; }
-.persona-dot small { font-size: 11px; color: var(--muted); background: #f4efe5; padding: 1px 5px; }
+.persona-dot small { width: max-content; padding: 0; color: var(--muted); background: transparent; font-size: 11px; line-height: 1.35; white-space: nowrap; }
 .dot-1 { left: 50%; top: 2%; }.dot-2 { left: 79%; top: 13%; }.dot-3 { left: 96%; top: 40%; }.dot-4 { left: 90%; top: 73%; }.dot-5 { left: 65%; top: 95%; }.dot-6 { left: 34%; top: 95%; }.dot-7 { left: 9%; top: 75%; }.dot-8 { left: 4%; top: 40%; }.dot-9 { left: 21%; top: 13%; }
 
 .section-block { padding: 90px 0; border-top: 1px solid var(--line); }

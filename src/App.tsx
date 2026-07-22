@@ -299,6 +299,12 @@ function History({ history, openReport, clear }: { history: AdviceReport[]; open
   )
 }
 
+function formatAdvisorTitle(name: string, title: string) {
+  let value = title.trim()
+  if (value.startsWith(name)) value = value.slice(name.length).replace(/^[·・:：\s-]+/, '')
+  return value.replace(/(?:思维)?框架卡\s*$/, '').trim()
+}
+
 function Roster() {
   const [query, setQuery] = useState('')
   const [domain, setDomain] = useState('all')
@@ -315,6 +321,8 @@ function Roster() {
   const [detail, setDetail] = useState<AdvisorDetail | null>(null)
   const [detailState, setDetailState] = useState<'idle' | 'loading' | 'error'>('idle')
   const [detailError, setDetailError] = useState('')
+  const [previewModel, setPreviewModel] = useState<{ advisorName: string; name: string; image: string } | null>(null)
+  const [modelZoomed, setModelZoomed] = useState(false)
 
   useEffect(() => {
     const controller = new AbortController()
@@ -345,15 +353,22 @@ function Roster() {
   }, [])
 
   useEffect(() => {
-    if (!detail && detailState === 'idle') return
+    if (!detail && detailState === 'idle' && !previewModel) return
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') closeDetail()
+      if (event.key !== 'Escape') return
+      if (previewModel) {
+        setPreviewModel(null)
+        setModelZoomed(false)
+      }
+      else closeDetail()
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [detail, detailState])
+  }, [detail, detailState, previewModel])
 
   function closeDetail() {
+    setPreviewModel(null)
+    setModelZoomed(false)
     setDetail(null)
     setDetailState('idle')
     setDetailError('')
@@ -423,13 +438,16 @@ function Roster() {
               <>
                 <header className="advisor-detail-header">
                   <AdvisorAvatar name={detail.name} src={detail.avatar} size="lg" />
-                  <div><span>{detail.domain} · {detail.era}</span><h2>{detail.name}</h2><p>{detail.title}</p></div>
+                  <div><span>{detail.domain} · {detail.era}</span><h2>{detail.name}</h2><p>{formatAdvisorTitle(detail.name, detail.title)}</p></div>
                 </header>
                 <div className="advisor-model-heading"><span>核心方法</span><h3>5 个思维模型与谋略图</h3></div>
                 <div className="advisor-model-grid">
                   {detail.core_models.map((model, index) => (
                     <article key={`${model.name}-${index}`}>
-                      <img src={model.strategy_card_image} alt={`${detail.name}思维模型：${model.name}`} loading="lazy" />
+                      <button type="button" className="advisor-model-preview-trigger" onClick={() => { setPreviewModel({ advisorName: detail.name, name: model.name, image: model.strategy_card_image }); setModelZoomed(false) }} aria-label={`查看${model.name}模型大图`}>
+                        <img src={model.strategy_card_image} alt={`${detail.name}思维模型：${model.name}`} loading="lazy" />
+                        <span>点击查看大图</span>
+                      </button>
                       <div><small>{String(index + 1).padStart(2, '0')}</small><h4>{model.name}</h4><p>{model.definition}</p>{model.modern_transfer && <blockquote>{model.modern_transfer}</blockquote>}</div>
                     </article>
                   ))}
@@ -441,6 +459,16 @@ function Roster() {
                 {detail.cases.length > 0 && <section className="advisor-case-list"><h3>相关案例</h3>{detail.cases.map((item) => <article key={item.case_id}><h4>{item.title_period}</h4><p>{item.key_judgment}</p><blockquote>{item.transferable_lesson}</blockquote></article>)}</section>}
               </>
             )}
+          </section>
+        </div>
+      )}
+
+      {previewModel && (
+        <div className="model-lightbox" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) { setPreviewModel(null); setModelZoomed(false) } }}>
+          <section role="dialog" aria-modal="true" aria-label={`${previewModel.name}模型大图`}>
+            <header><div><small>{previewModel.advisorName} · 思维模型</small><h3>{previewModel.name}</h3></div><div className="model-lightbox-actions"><button type="button" className="model-lightbox-zoom" onClick={() => setModelZoomed((current) => !current)} aria-pressed={modelZoomed}>{modelZoomed ? '适合屏幕' : '原始尺寸'}</button><button type="button" className="model-lightbox-close" onClick={() => { setPreviewModel(null); setModelZoomed(false) }} aria-label="关闭模型大图">×</button></div></header>
+            <div className={`model-lightbox-stage ${modelZoomed ? 'is-zoomed' : ''}`}><img src={previewModel.image} alt={`${previewModel.advisorName}思维模型大图：${previewModel.name}`} /></div>
+            <p>{modelZoomed ? '当前为原始尺寸，可滑动查看细节' : '可切换原始尺寸查看细节，按 Esc 关闭'}</p>
           </section>
         </div>
       )}

@@ -444,11 +444,11 @@ function Roster() {
                 <div className="advisor-model-grid">
                   {detail.core_models.map((model, index) => (
                     <article key={`${model.name}-${index}`}>
+                      <div className="advisor-model-copy"><small>{String(index + 1).padStart(2, '0')}</small><h4>{model.name}</h4><p>{model.definition}</p>{model.modern_transfer && <blockquote>{model.modern_transfer}</blockquote>}</div>
                       <button type="button" className="advisor-model-preview-trigger" onClick={() => { setPreviewModel({ advisorName: detail.name, name: model.name, image: model.strategy_card_core_image, originalImage: model.strategy_card_image }); setModelZoomed(false) }} aria-label={`查看${model.name}模型大图`}>
                         <img src={model.strategy_card_core_image} alt={`${detail.name}思维模型：${model.name}`} loading="lazy" />
                         <span>点击查看大图</span>
                       </button>
-                      <div><small>{String(index + 1).padStart(2, '0')}</small><h4>{model.name}</h4><p>{model.definition}</p>{model.modern_transfer && <blockquote>{model.modern_transfer}</blockquote>}</div>
                     </article>
                   ))}
                 </div>

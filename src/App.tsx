@@ -416,7 +416,7 @@ function Roster() {
         {visibleAdvisors.map((advisor) => (
           <article className={`advisor-roster-card ${advisor.avatar ? 'has-asset' : 'missing-asset'}`} key={advisor.id}>
             <AdvisorAvatar name={advisor.name} src={advisor.avatar} size="lg" showMissingBadge />
-            <div><small>{advisor.domainName}</small><h2>{advisor.name}</h2><p>{advisor.insight}</p><span>{advisor.sourceStatus === 'approved' ? '知识源卡已审核' : advisor.sourceStatus === 'in_review' ? '知识源卡待复核' : advisor.avatar ? '视觉素材已入库' : '头像素材待补'}</span><button className="advisor-detail-trigger" onClick={() => openDetail(advisor)}>查看 5 个思维模型</button></div>
+            <div><h2>{advisor.name}</h2><p>{advisor.insight}</p><span>{advisor.sourceStatus === 'approved' ? '知识源卡已审核' : advisor.sourceStatus === 'in_review' ? '知识源卡待复核' : advisor.avatar ? '视觉素材已入库' : '头像素材待补'}</span><button className="advisor-detail-trigger" onClick={() => openDetail(advisor)}>查看 5 个思维模型</button></div>
           </article>
         ))}
       </div>

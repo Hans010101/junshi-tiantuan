@@ -194,8 +194,7 @@ textarea::placeholder { color: #aaa197; }
 .advisor-roster-card { display: flex; gap: 15px; align-items: center; min-height: 156px; padding: 18px; background: rgba(255,253,248,.72); border: 1px solid var(--line); border-radius: 4px 16px 4px 16px; }
 .advisor-roster-card.has-asset { background: #fffaf0; border-color: rgba(174,138,66,.5); box-shadow: 4px 5px 0 rgba(213,194,157,.45); }
 .advisor-roster-card > div { min-width: 0; }
-.advisor-roster-card small { color: var(--red); font-size: 10px; }
-.advisor-roster-card h2 { margin: 3px 0 7px; font-size: 18px; }
+.advisor-roster-card h2 { margin: 0 0 7px; font-size: 18px; }
 .advisor-roster-card p { margin: 0 0 8px; color: var(--ink); font-size: 12px; line-height: 1.5; }
 .advisor-roster-card div > span { color: var(--muted); font-size: 9px; }
 .advisor-roster-card.has-asset div > span { color: #8d6a2d; }

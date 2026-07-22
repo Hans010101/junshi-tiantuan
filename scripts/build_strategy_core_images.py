@@ -14,6 +14,37 @@ SOURCE_ROOT = PROJECT_ROOT / "public" / "advisors" / "strategy"
 OUTPUT_ROOT = PROJECT_ROOT / "public" / "advisors" / "strategy-core"
 
 
+def find_model_title_bottom(image: Image.Image) -> int | None:
+    """Find the whitespace immediately below the large repeated model title."""
+    pixels = np.asarray(image, dtype=np.int16)
+    sample = pixels[::16, ::16].reshape(-1, 3)
+    colors, counts = np.unique(sample, axis=0, return_counts=True)
+    background = colors[counts.argmax()]
+    margin = round(image.width * 0.04)
+    different = np.square(pixels - background).sum(axis=2) > 100
+    ink_by_row = different[:, margin:-margin].sum(axis=1)
+    search_end = min(round(image.height * 0.35), image.height)
+    blank_rows = np.flatnonzero(
+        ink_by_row[:search_end] < max(8, round(image.width * 0.012))
+    ).tolist()
+
+    blocks: list[list[int]] = []
+    for y in blank_rows:
+        if not blocks or y > blocks[-1][-1] + 1:
+            blocks.append([y])
+        else:
+            blocks[-1].append(y)
+
+    minimum_gap = round(image.width * 0.018)
+    minimum_start = round(image.width * 0.025)
+    candidates = [
+        block
+        for block in blocks
+        if len(block) >= minimum_gap and block[0] >= minimum_start
+    ]
+    return candidates[0][-1] + 1 if candidates else None
+
+
 def find_insight_box_bottom(image: Image.Image) -> int | None:
     pixels = np.asarray(image, dtype=np.int16)
     sample = pixels[::16, ::16].reshape(-1, 3)
@@ -53,9 +84,15 @@ def build_core_image(source: Path, destination: Path) -> tuple[int, int, bool]:
         if bottom <= top:
             raise ValueError(f"Invalid crop bounds for {source}: top={top}, bottom={bottom}")
 
+        focused = image.crop((0, top, image.width, bottom))
+        title_bottom = find_model_title_bottom(focused)
+        if title_bottom is None:
+            raise ValueError(f"Could not detect model title boundary for {source}")
+        content_top = max(0, title_bottom - round(focused.width * 0.01))
+
         destination.parent.mkdir(parents=True, exist_ok=True)
-        image.crop((0, top, image.width, bottom)).save(destination)
-        return image.width, bottom - top, has_complete_card
+        focused.crop((0, content_top, focused.width, focused.height)).save(destination)
+        return image.width, focused.height - content_top, has_complete_card
 
 
 def main() -> None:

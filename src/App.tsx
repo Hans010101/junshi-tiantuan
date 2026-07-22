@@ -312,7 +312,6 @@ function Roster() {
     strategyCardsAvailable: 545,
     strategyCardsMissing: 0,
   })
-  const [databaseState, setDatabaseState] = useState<'loading' | 'ready' | 'fallback'>('loading')
   const [detail, setDetail] = useState<AdvisorDetail | null>(null)
   const [detailState, setDetailState] = useState<'idle' | 'loading' | 'error'>('idle')
   const [detailError, setDetailError] = useState('')
@@ -338,10 +337,9 @@ function Roster() {
           knowledgeQcStatus: item.knowledgeQcStatus,
         })))
         setStats(payload.stats)
-        setDatabaseState('ready')
       })
       .catch((reason) => {
-        if ((reason as Error).name !== 'AbortError') setDatabaseState('fallback')
+        if ((reason as Error).name === 'AbortError') return
       })
     return () => controller.abort()
   }, [])
@@ -381,42 +379,36 @@ function Roster() {
   const normalizedQuery = query.trim().toLowerCase()
   const visibleAdvisors = useMemo(() => advisors.filter((advisor) => {
     const matchesDomain = domain === 'all' || advisor.domainId === domain
-    const matchesQuery = !normalizedQuery || `${advisor.name}${advisor.insight}${advisor.domainName}`.toLowerCase().includes(normalizedQuery)
+    const matchesQuery = !normalizedQuery || advisor.name.toLowerCase().includes(normalizedQuery)
     return matchesDomain && matchesQuery
   }), [advisors, domain, normalizedQuery])
 
   return (
     <section className="roster-page">
       <header className="roster-hero">
-        <span className="eyebrow">D1 知识库 · 军师方法论名录</span>
-        <h1>{stats.advisors} 位思考者，<em>完整视觉资产已经入库</em></h1>
-        <p>109 份框架卡、451 条决策案例、109 个专业圆头像、109 张终版肖像与 545 张思维模型谋略图已完成一一映射。</p>
+        <span className="eyebrow">跨越古今 · 汇聚十大智慧领域</span>
+        <h1>{stats.advisors} 位军师，<em>汇聚跨越古今的决策智慧</em></h1>
+        <p>从孙子、亚里士多德到巴菲特、乔布斯，涵盖战略、商业、治理、哲学与科学等十大领域。把前人的洞见转化为今天可用的判断框架，帮你看清局势、校准选择、找到行动路径。</p>
         <div className="roster-stats">
-          <div><strong>{stats.avatars}</strong><span>专业圆头像可用</span></div>
-          <div><strong>{stats.strategyCardsAvailable}</strong><span>思维模型谋略图</span></div>
-          <div className="is-warning"><strong>{stats.knowledgeQcPending}</strong><span>知识源卡待复核</span></div>
+          <div><strong>{stats.advisors}</strong><span>位古今中外军师</span></div>
+          <div><strong>{advisorDomains.length}</strong><span>大核心智慧领域</span></div>
+          <div><strong>{stats.strategyCardsAvailable}</strong><span>个实战思维模型</span></div>
         </div>
       </header>
 
-      <div className="roster-notice">
-        <strong>质检状态如实说明</strong>
-        <p>视觉素材已完成 763/763 项质检：圆头像、终版肖像和思维模型谋略图均无缺失，当前缺图数为 {stats.strategyCardsMissing}。知识内容虽然齐全，但源卡仍只有 {stats.knowledgeQcPassed} 人通过审核、{stats.knowledgeQcPending} 人等待人工复核；这不会影响浏览，引用时仍应留意审核状态。{databaseState === 'fallback' ? ' 当前数据库接口暂不可用，页面正在显示内置备用名录。' : ''}</p>
-      </div>
-
       <div className="roster-tools">
-        <label><span>搜索军师</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="姓名、领域或思维关键词" /></label>
+        <label><span>搜索军师</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="输入军师姓名" /></label>
         <div className="domain-tabs" role="group" aria-label="按领域筛选">
           <button className={domain === 'all' ? 'active' : ''} onClick={() => setDomain('all')}>全部</button>
           {advisorDomains.map((item) => <button key={item.id} className={domain === item.id ? 'active' : ''} onClick={() => setDomain(item.id)}>{item.name}<small>{item.advisors.length}</small></button>)}
         </div>
       </div>
 
-      <div className="roster-result"><span>当前显示 {visibleAdvisors.length} 位 · {databaseState === 'ready' ? '来自 Cloudflare D1' : databaseState === 'loading' ? '正在读取 D1' : '备用名录'}</span><i><b />视觉素材齐全　<em />知识待复核</i></div>
       <div className="advisor-roster-grid">
         {visibleAdvisors.map((advisor) => (
           <article className={`advisor-roster-card ${advisor.avatar ? 'has-asset' : 'missing-asset'}`} key={advisor.id}>
             <AdvisorAvatar name={advisor.name} src={advisor.avatar} size="lg" showMissingBadge />
-            <div><h2>{advisor.name}</h2><p>{advisor.insight}</p><span>{advisor.sourceStatus === 'approved' ? '知识源卡已审核' : advisor.sourceStatus === 'in_review' ? '知识源卡待复核' : advisor.avatar ? '视觉素材已入库' : '头像素材待补'}</span><button className="advisor-detail-trigger" onClick={() => openDetail(advisor)}>查看 5 个思维模型</button></div>
+            <div><h2>{advisor.name}</h2><p>{advisor.insight}</p><button className="advisor-detail-trigger" onClick={() => openDetail(advisor)}>查看 5 个思维模型</button></div>
           </article>
         ))}
       </div>
@@ -431,7 +423,7 @@ function Roster() {
               <>
                 <header className="advisor-detail-header">
                   <AdvisorAvatar name={detail.name} src={detail.avatar} size="lg" />
-                  <div><span>{detail.domain} · {detail.era}</span><h2>{detail.name}</h2><p>{detail.title}</p><small className={detail.source_review_status === 'approved' ? 'is-approved' : ''}>{detail.source_review_status === 'approved' ? '知识源卡已审核' : '知识源卡待复核'}</small></div>
+                  <div><span>{detail.domain} · {detail.era}</span><h2>{detail.name}</h2><p>{detail.title}</p></div>
                 </header>
                 <div className="advisor-model-heading"><span>核心方法</span><h3>5 个思维模型与谋略图</h3></div>
                 <div className="advisor-model-grid">

@@ -173,11 +173,7 @@ textarea::placeholder { color: #aaa197; }
 .roster-stats strong, .roster-stats span { display: block; }
 .roster-stats strong { color: #f2d39f; font-family: "Noto Serif SC", serif; font-size: 30px; }
 .roster-stats span { color: #c9c2b7; font-size: 11px; margin-top: 2px; }
-.roster-stats .is-warning strong { color: #e9a598; }
-.roster-notice { display: grid; grid-template-columns: 150px 1fr; gap: 22px; margin: 22px 0 36px; padding: 20px 24px; background: #eee2ce; border-left: 3px solid var(--gold); border-radius: 3px 13px 3px 13px; }
-.roster-notice strong { font-family: "Noto Serif SC", serif; }
-.roster-notice p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
-.roster-tools { display: grid; gap: 18px; margin-bottom: 18px; }
+.roster-tools { display: grid; gap: 18px; margin: 36px 0 20px; }
 .roster-tools label { display: grid; grid-template-columns: 80px minmax(200px, 420px); align-items: center; gap: 12px; font-weight: 600; }
 .roster-tools input { width: 100%; padding: 12px 14px; color: var(--ink); background: rgba(255,253,248,.84); border: 1px solid var(--line); border-radius: 8px; }
 .domain-tabs { display: flex; flex-wrap: wrap; gap: 7px; }
@@ -185,20 +181,13 @@ textarea::placeholder { color: #aaa197; }
 .domain-tabs button small { margin-left: 5px; color: var(--muted); }
 .domain-tabs button.active { color: white; background: var(--red); border-color: var(--red); }
 .domain-tabs button.active small { color: #efd8cf; }
-.roster-result { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
-.roster-result i { display: flex; gap: 7px; align-items: center; font-style: normal; }
-.roster-result b, .roster-result em { width: 8px; height: 8px; border-radius: 50%; }
-.roster-result b { background: #ae8a42; }
-.roster-result em { margin-left: 8px; background: #8f8980; }
 .advisor-roster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .advisor-roster-card { display: flex; gap: 15px; align-items: center; min-height: 156px; padding: 18px; background: rgba(255,253,248,.72); border: 1px solid var(--line); border-radius: 4px 16px 4px 16px; }
 .advisor-roster-card.has-asset { background: #fffaf0; border-color: rgba(174,138,66,.5); box-shadow: 4px 5px 0 rgba(213,194,157,.45); }
 .advisor-roster-card > div { min-width: 0; }
 .advisor-roster-card h2 { margin: 0 0 7px; font-size: 18px; }
 .advisor-roster-card p { margin: 0 0 8px; color: var(--ink); font-size: 12px; line-height: 1.5; }
-.advisor-roster-card div > span { color: var(--muted); font-size: 9px; }
-.advisor-roster-card.has-asset div > span { color: #8d6a2d; }
-.advisor-detail-trigger { display: block; margin-top: 9px; padding: 0; color: var(--red); background: none; border: 0; border-bottom: 1px solid rgba(164,61,47,.3); cursor: pointer; font-size: 11px; }
+.advisor-detail-trigger { display: block; margin-top: 12px; padding: 0; color: var(--red); background: none; border: 0; border-bottom: 1px solid rgba(164,61,47,.3); cursor: pointer; font-size: 11px; }
 .advisor-detail-trigger:hover { border-color: var(--red); }
 .advisor-detail-backdrop { position: fixed; z-index: 40; inset: 0; display: grid; place-items: center; padding: 24px; background: rgba(31,27,22,.72); backdrop-filter: blur(7px); }
 .advisor-detail-panel { position: relative; width: min(1060px, 100%); max-height: calc(100vh - 48px); overflow-y: auto; padding: 42px; background: #f7f1e5; border: 1px solid rgba(224,187,125,.52); border-radius: 7px 28px 7px 28px; box-shadow: 0 30px 100px rgba(24,19,14,.34); }
@@ -207,8 +196,6 @@ textarea::placeholder { color: #aaa197; }
 .advisor-detail-header span { color: var(--red); font-size: 12px; }
 .advisor-detail-header h2 { margin: 4px 0; font-size: 34px; }
 .advisor-detail-header p { margin: 0 0 7px; color: var(--muted); }
-.advisor-detail-header small { color: #886d46; }
-.advisor-detail-header small.is-approved { color: #557058; }
 .advisor-detail-message { display: grid; place-items: center; gap: 10px; min-height: 280px; color: var(--muted); }
 .advisor-detail-message strong { color: var(--ink); font-family: "Noto Serif SC", serif; font-size: 24px; }
 .advisor-model-heading { margin: 34px 0 18px; }
@@ -291,11 +278,9 @@ footer { padding: 30px; text-align: center; border-top: 1px solid var(--line); c
   .roster-stats { display: grid; grid-template-columns: repeat(3, 1fr); }
   .roster-stats div { padding: 12px 10px; }
   .roster-stats strong { font-size: 24px; }
-  .roster-notice { grid-template-columns: 1fr; gap: 7px; }
   .roster-tools label { grid-template-columns: 1fr; gap: 7px; }
   .domain-tabs { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
   .domain-tabs button { flex: 0 0 auto; }
-  .roster-result i { display: none; }
   .advisor-roster-grid { grid-template-columns: 1fr; }
   .advisor-roster-card { min-height: 120px; }
   .advisor-detail-backdrop { padding: 0; place-items: stretch; }

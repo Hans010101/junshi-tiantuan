@@ -43,6 +43,7 @@ export interface AdvisorCoreModel {
   trigger?: string
   modern_transfer?: string
   strategy_card_image: string
+  strategy_card_core_image: string
 }
 
 export interface AdvisorCase {

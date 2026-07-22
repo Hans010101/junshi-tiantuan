@@ -276,6 +276,7 @@ async function handleAdvisorDetail(rawId: string, db: D1Database): Promise<Respo
       core_models: models.map((model, index) => ({
         ...(typeof model === 'object' && model ? model : {}),
         strategy_card_image: `/advisors/strategy/${id}/model-${index + 1}.png`,
+        strategy_card_core_image: `/advisors/strategy-core/${id}/model-${index + 1}.png`,
       })),
       source_review_status: row.source_status,
       knowledge_qc_status: row.knowledge_qc_status,

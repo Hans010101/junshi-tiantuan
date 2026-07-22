@@ -207,7 +207,7 @@ textarea::placeholder { color: #aaa197; }
 .advisor-model-grid > article { overflow: hidden; background: #fffaf0; border: 1px solid rgba(174,138,66,.38); border-radius: 5px 18px 5px 18px; }
 .advisor-model-grid > article:last-child:nth-child(odd) { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
 .advisor-model-preview-trigger { position: relative; display: block; width: 100%; padding: 0; overflow: hidden; background: #f6eedf; border: 0; border-bottom: 1px solid var(--line); cursor: zoom-in; }
-.advisor-model-preview-trigger img { display: block; width: 100%; aspect-ratio: 886 / 869; object-fit: contain; transition: transform .25s ease; }
+.advisor-model-preview-trigger img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; transition: transform .25s ease; }
 .advisor-model-preview-trigger span { position: absolute; right: 12px; bottom: 12px; padding: 6px 9px; color: white; background: rgba(48,45,40,.82); border-radius: 99px; font-size: 10px; letter-spacing: .04em; backdrop-filter: blur(5px); }
 .advisor-model-preview-trigger:hover img { transform: scale(1.015); }
 .advisor-model-preview-trigger:focus-visible { outline: 3px solid var(--red); outline-offset: -3px; }
@@ -236,11 +236,14 @@ textarea::placeholder { color: #aaa197; }
 .model-lightbox-zoom { padding: 8px 12px; color: var(--red); background: #fffaf0; border: 1px solid rgba(164,61,47,.42); border-radius: 99px; cursor: pointer; font-size: 11px; }
 .model-lightbox-zoom[aria-pressed="true"] { color: white; background: var(--red); }
 .model-lightbox-close { display: grid; place-items: center; width: 38px; height: 38px; flex: 0 0 auto; color: white; background: var(--red); border: 0; border-radius: 50%; cursor: pointer; font-size: 24px; }
-.model-lightbox-stage { display: flex; align-items: center; justify-content: center; height: min(78vh, 820px); overflow: hidden; background: #fffaf0; border: 1px solid var(--line); border-radius: 4px 14px 4px 14px; }
+.model-lightbox-stage { display: flex; align-items: center; justify-content: center; height: min(72vh, 760px); overflow: hidden; background: #fffaf0; border: 1px solid var(--line); border-radius: 4px 14px 4px 14px; }
 .model-lightbox-stage img { display: block; width: auto; max-width: 100%; height: 100%; min-height: 0; object-fit: contain; }
 .model-lightbox-stage.is-zoomed { align-items: flex-start; justify-content: flex-start; overflow: auto; }
 .model-lightbox-stage.is-zoomed img { width: 886px; max-width: none; height: auto; margin: 0 auto; flex: 0 0 auto; }
-.model-lightbox > section > p { margin: 9px 4px 0; color: var(--muted); text-align: center; font-size: 10px; }
+.model-lightbox-footer { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 9px 4px 0; }
+.model-lightbox-footer p { margin: 0; color: var(--muted); font-size: 10px; }
+.model-lightbox-footer a { flex: 0 0 auto; color: var(--red); font-size: 11px; text-decoration: none; border-bottom: 1px solid rgba(164,61,47,.35); }
+.model-lightbox-footer a:hover { border-color: var(--red); }
 .prose h2 { margin: 42px 0 8px; }
 .prose p { max-width: 720px; }
 footer { padding: 30px; text-align: center; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; letter-spacing: .05em; }
@@ -322,6 +325,7 @@ footer { padding: 30px; text-align: center; border-top: 1px solid var(--line); c
   .model-lightbox-stage { height: min(calc(100vw - 44px), calc(100vh - 150px)); }
   .model-lightbox-stage img { width: 100%; height: 100%; max-height: none; }
   .model-lightbox-stage.is-zoomed img { width: 886px; max-width: none; height: auto; margin: 0; }
+  .model-lightbox-footer { align-items: flex-start; }
   .simple-page { padding-top: 50px; }
   footer { padding-bottom: 90px; }
   .mobile-nav { position: fixed; z-index: 10; left: 12px; right: 12px; bottom: max(10px, env(safe-area-inset-bottom)); display: grid; grid-template-columns: repeat(4, 1fr); padding: 6px; background: rgba(37,35,31,.94); border-radius: 14px; box-shadow: 0 10px 35px rgba(0,0,0,.22); backdrop-filter: blur(12px); }

@@ -321,7 +321,7 @@ function Roster() {
   const [detail, setDetail] = useState<AdvisorDetail | null>(null)
   const [detailState, setDetailState] = useState<'idle' | 'loading' | 'error'>('idle')
   const [detailError, setDetailError] = useState('')
-  const [previewModel, setPreviewModel] = useState<{ advisorName: string; name: string; image: string } | null>(null)
+  const [previewModel, setPreviewModel] = useState<{ advisorName: string; name: string; image: string; originalImage: string } | null>(null)
   const [modelZoomed, setModelZoomed] = useState(false)
 
   useEffect(() => {
@@ -444,8 +444,8 @@ function Roster() {
                 <div className="advisor-model-grid">
                   {detail.core_models.map((model, index) => (
                     <article key={`${model.name}-${index}`}>
-                      <button type="button" className="advisor-model-preview-trigger" onClick={() => { setPreviewModel({ advisorName: detail.name, name: model.name, image: model.strategy_card_image }); setModelZoomed(false) }} aria-label={`查看${model.name}模型大图`}>
-                        <img src={model.strategy_card_image} alt={`${detail.name}思维模型：${model.name}`} loading="lazy" />
+                      <button type="button" className="advisor-model-preview-trigger" onClick={() => { setPreviewModel({ advisorName: detail.name, name: model.name, image: model.strategy_card_core_image, originalImage: model.strategy_card_image }); setModelZoomed(false) }} aria-label={`查看${model.name}模型大图`}>
+                        <img src={model.strategy_card_core_image} alt={`${detail.name}思维模型：${model.name}`} loading="lazy" />
                         <span>点击查看大图</span>
                       </button>
                       <div><small>{String(index + 1).padStart(2, '0')}</small><h4>{model.name}</h4><p>{model.definition}</p>{model.modern_transfer && <blockquote>{model.modern_transfer}</blockquote>}</div>
@@ -468,7 +468,7 @@ function Roster() {
           <section role="dialog" aria-modal="true" aria-label={`${previewModel.name}模型大图`}>
             <header><div><small>{previewModel.advisorName} · 思维模型</small><h3>{previewModel.name}</h3></div><div className="model-lightbox-actions"><button type="button" className="model-lightbox-zoom" onClick={() => setModelZoomed((current) => !current)} aria-pressed={modelZoomed}>{modelZoomed ? '适合屏幕' : '原始尺寸'}</button><button type="button" className="model-lightbox-close" onClick={() => { setPreviewModel(null); setModelZoomed(false) }} aria-label="关闭模型大图">×</button></div></header>
             <div className={`model-lightbox-stage ${modelZoomed ? 'is-zoomed' : ''}`}><img src={previewModel.image} alt={`${previewModel.advisorName}思维模型大图：${previewModel.name}`} /></div>
-            <p>{modelZoomed ? '当前为原始尺寸，可滑动查看细节' : '可切换原始尺寸查看细节，按 Esc 关闭'}</p>
+            <div className="model-lightbox-footer"><p>{modelZoomed ? '当前为核心内容原始尺寸，可滑动查看细节' : '已隐藏模板信息，可切换原始尺寸查看细节'}</p><a href={previewModel.originalImage} download={`${previewModel.advisorName}-${previewModel.name}-思维模型卡.png`}>下载完整卡片</a></div>
           </section>
         </div>
       )}

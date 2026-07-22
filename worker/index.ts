@@ -2,7 +2,6 @@ import { personas } from '../src/data/personas.js'
 import type { AdviceReport, DecisionOption, Perspective, ReportMode } from '../src/types.js'
 
 const MAX_BODY_BYTES = 16_000
-const MAX_REPORT_BODY_CHARS = 1_500
 const MODEL = '@cf/qwen/qwen3-30b-a3b-fp8' as const
 const personaMap = new Map(personas.map((persona) => [persona.id, persona]))
 
@@ -164,7 +163,7 @@ async function runCouncil(ai: Ai, db: D1Database, question: string, context: str
     return `${persona.id}｜${persona.name}｜视角：${persona.lens}｜追问：${persona.challenge}｜语气：${persona.tone}${knowledgeLine}`
   }).join('\n')
   const system = `你是一名严谨的中文决策分析助手。你引用人物公开的方法论，不扮演人物本人，不虚构名言、经历或事实。不同视角必须有真实分歧，先澄清目标和约束，再给出可验证行动。不要替用户做最终决定。对于医疗、法律、金融等高风险主题，明确建议咨询合格专业人士。只输出合法 JSON，不要 Markdown。`
-  const prompt = `问题：${question}\n背景：${context || '未提供'}\n\n本次视角：\n${council}\n\n输出对象必须包含：title（短标题）、diagnosis（核心矛盾）、perspectives（每位军师一项，字段 personaId/personaName/headline/analysis/question）、synthesis（综合判断）、options（恰好3项，字段 title/upside/risk/firstStep）、actions（恰好3项、未来7天内可执行）。所有字符串正文合计控制在 1200 个中文字符以内，绝对不可超过 1500 字；简洁表达，不重复问题背景。不要输出 disclaimer、id、时间。`
+  const prompt = `问题：${question}\n背景：${context || '未提供'}\n\n本次视角：\n${council}\n\n输出对象必须包含：title（短标题）、diagnosis（核心矛盾，80-180字）、perspectives（每位军师一项，字段 personaId/personaName/headline/analysis/question）、synthesis（综合判断，100-220字）、options（恰好3项，字段 title/upside/risk/firstStep）、actions（恰好3项、未来7天内可执行）。不要输出 disclaimer、id、时间。`
 
   const result = await ai.run(MODEL, {
     messages: [
@@ -427,55 +426,7 @@ function disclaimer(professional: boolean): string {
 }
 
 function createReport(input: Omit<AdviceReport, 'id' | 'createdAt'>): AdviceReport {
-  const limited = limitReportBody(input)
-  return { id: crypto.randomUUID(), createdAt: new Date().toISOString(), ...limited }
-}
-
-function limitReportBody(input: Omit<AdviceReport, 'id' | 'createdAt'>): Omit<AdviceReport, 'id' | 'createdAt'> {
-  const limited = {
-    ...input,
-    title: clipText(input.title, 24),
-    diagnosis: clipText(input.diagnosis, 130),
-    perspectives: input.perspectives.slice(0, 3).map((item) => ({
-      ...item,
-      personaName: clipText(item.personaName, 12),
-      headline: clipText(item.headline, 18),
-      analysis: clipText(item.analysis, 95),
-      question: clipText(item.question, 35),
-    })),
-    synthesis: clipText(input.synthesis, 130),
-    options: input.options.slice(0, 3).map((item) => ({
-      title: clipText(item.title, 14),
-      upside: clipText(item.upside, 35),
-      risk: clipText(item.risk, 35),
-      firstStep: clipText(item.firstStep, 40),
-    })),
-    actions: input.actions.slice(0, 3).map((item) => clipText(item, 42)),
-    disclaimer: clipText(input.disclaimer, 70),
-  }
-  if (reportBodyCharCount(limited) > MAX_REPORT_BODY_CHARS) {
-    throw new Error('REPORT_BODY_LIMIT_INVARIANT')
-  }
-  return limited
-}
-
-function clipText(value: string, maxChars: number): string {
-  const chars = Array.from(value.trim())
-  if (chars.length <= maxChars) return chars.join('')
-  return `${chars.slice(0, Math.max(0, maxChars - 1)).join('')}…`
-}
-
-function reportBodyCharCount(report: Omit<AdviceReport, 'id' | 'createdAt'>): number {
-  const text = [
-    report.title,
-    report.diagnosis,
-    report.synthesis,
-    report.disclaimer,
-    ...report.perspectives.flatMap((item) => [item.personaName, item.headline, item.analysis, item.question]),
-    ...report.options.flatMap((item) => [item.title, item.upside, item.risk, item.firstStep]),
-    ...report.actions,
-  ].join('')
-  return Array.from(text).length
+  return { id: crypto.randomUUID(), createdAt: new Date().toISOString(), ...input }
 }
 
 function json(data: unknown, status = 200): Response {

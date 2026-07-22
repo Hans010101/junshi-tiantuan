@@ -423,7 +423,7 @@ function Roster() {
         {visibleAdvisors.map((advisor) => (
           <article className={`advisor-roster-card ${advisor.avatar ? 'has-asset' : 'missing-asset'}`} key={advisor.id}>
             <AdvisorAvatar name={advisor.name} src={advisor.avatar} size="lg" showMissingBadge />
-            <div><h2>{advisor.name}</h2><p>{advisor.insight}</p><button className="advisor-detail-trigger" onClick={() => openDetail(advisor)}>查看 5 个思维模型</button></div>
+            <div><h2>{advisor.name}</h2><p>{advisor.insight}</p><button className="advisor-detail-trigger" onClick={() => openDetail(advisor)}>查看思维模型</button></div>
           </article>
         ))}
       </div>
@@ -438,9 +438,9 @@ function Roster() {
               <>
                 <header className="advisor-detail-header">
                   <AdvisorAvatar name={detail.name} src={detail.avatar} size="lg" />
-                  <div><span>{detail.domain} · {detail.era}</span><h2>{detail.name}</h2><p>{formatAdvisorTitle(detail.name, detail.title)}</p></div>
+                  <div className="advisor-detail-copy"><span>{detail.domain} · {detail.era}</span><div className="advisor-detail-name-row"><h2>{detail.name}</h2><p>{formatAdvisorTitle(detail.name, detail.title)}</p></div></div>
                 </header>
-                <div className="advisor-model-heading"><span>核心方法</span><h3>5 个思维模型与谋略图</h3></div>
+                <div className="advisor-model-heading"><span>核心方法</span><h3>思维模型与谋略图</h3></div>
                 <div className="advisor-model-grid">
                   {detail.core_models.map((model, index) => (
                     <article key={`${model.name}-${index}`}>

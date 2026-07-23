@@ -154,6 +154,16 @@ function Header({ view, navigate, reset }: { view: View; navigate: (view: View) 
 function Home({ question, setQuestion, begin, error }: {
   question: string; setQuestion: (value: string) => void; begin: (value?: string) => void; error: string
 }) {
+  function startConsultation() {
+    if (question.trim()) {
+      begin()
+      return
+    }
+    const field = document.getElementById('question')
+    field?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    window.setTimeout(() => field?.focus(), 450)
+  }
+
   return (
     <>
       <section className="hero">
@@ -199,6 +209,92 @@ function Home({ question, setQuestion, begin, error }: {
           <article><b>审势</b><h3>先看局，再行动</h3><p>识别目标、约束、筹码和时机，避免用战术勤奋掩盖战略问题。</p></article>
           <article><b>破题</b><h3>拆开隐藏假设</h3><p>从反向思考、第一性原理和追问中，找到你尚未说出口的前提。</p></article>
           <article><b>落子</b><h3>形成下一步</h3><p>不止分析利弊，把结论压缩为可验证、可复盘的七日行动。</p></article>
+        </div>
+      </section>
+
+      <section className="section-block process-block">
+        <div className="section-heading"><span>02</span><div><h2>三步，把模糊困惑变成清晰判断</h2><p>你只负责讲清问题，军师天团负责组织视角、暴露分歧并收束结论。</p></div></div>
+        <div className="process-grid">
+          <article>
+            <span className="process-index">01</span>
+            <div className="process-mark" aria-hidden="true">问</div>
+            <small>说清问题</small>
+            <h3>写下真正的决策冲突</h3>
+            <p>不需要整理成专业方案，只需说明你在犹豫什么、受什么限制、希望得到什么结果。</p>
+            <strong>输入：问题与必要背景</strong>
+          </article>
+          <article>
+            <span className="process-index">02</span>
+            <div className="process-mark" aria-hidden="true">议</div>
+            <small>组建军师团</small>
+            <h3>匹配三位互补的军师</h3>
+            <p>系统推荐不同立场的思维模型，你也可以亲自换人，避免所有观点都在迎合你的预设。</p>
+            <strong>过程：独立判断与交叉质询</strong>
+          </article>
+          <article>
+            <span className="process-index">03</span>
+            <div className="process-mark" aria-hidden="true">策</div>
+            <small>形成决策简报</small>
+            <h3>把洞察压缩为下一步</h3>
+            <p>保留共识，也保留分歧，最后整理成选项比较、风险盲区和可以立即执行的行动计划。</p>
+            <strong>输出：一份结构化决策报告</strong>
+          </article>
+        </div>
+        <div className="process-proof" aria-label="产品工作方式摘要">
+          <div><b>109</b><span>位古今军师的方法论</span></div>
+          <i aria-hidden="true">×</i>
+          <div><b>3</b><span>位互补军师参与会诊</span></div>
+          <i aria-hidden="true">→</i>
+          <div><b>1</b><span>份可执行决策简报</span></div>
+        </div>
+      </section>
+
+      <section className="section-block outcome-block">
+        <div className="section-heading outcome-heading"><span>03</span><div><h2>得到方案，而不是一段聊天记录</h2><p>每次会诊都会沉淀为结构化简报，让你看见依据、分歧、风险与行动路径。</p></div></div>
+        <div className="outcome-grid">
+          <article className="report-demo" aria-label="决策简报示例">
+            <header>
+              <div><small>军师天团 · 决策简报</small><strong>示例报告</strong></div>
+              <span>已生成</span>
+            </header>
+            <section className="report-demo-question">
+              <small>问题焦点</small>
+              <p>“我是否应该离开稳定工作，开始自己的项目？”</p>
+            </section>
+            <section className="report-demo-insight">
+              <small>关键判断</small>
+              <p>现在不必急着辞职。先用 30 天验证真实需求、付费意愿与自己的持续投入能力，再决定是否跨出单向门。</p>
+            </section>
+            <div className="report-demo-views">
+              <div><b>势</b><span>保留现金流，先建立安全边际</span></div>
+              <div><b>破</b><span>验证你追求的是机会，而非逃离现状</span></div>
+              <div><b>策</b><span>用一次可收费的小实验代替空想</span></div>
+            </div>
+            <section className="report-demo-plan">
+              <small>未来七日行动</small>
+              <ol>
+                <li>访谈 10 位目标用户</li>
+                <li>做出一个可收费的最小方案</li>
+                <li>设定继续、调整与停止的阈值</li>
+              </ol>
+            </section>
+            <footer><span>三位军师共同会诊</span><b>审势 · 破题 · 落子</b></footer>
+          </article>
+
+          <div className="outcome-copy">
+            <span className="eyebrow">一份报告，六层判断</span>
+            <h3>让决定有依据，也给犹豫一个出口</h3>
+            <p>好的决策工具不替你选择，而是把混乱拆成可以检查的部分。你可以保存报告、回看当时的判断，也可以在行动后重新复盘。</p>
+            <ul>
+              <li><b>关键洞察</b><span>先看清真正需要决定的是什么</span></li>
+              <li><b>军师分歧</b><span>同时呈现支持、反对与条件性意见</span></li>
+              <li><b>选项比较</b><span>比较收益、代价、可逆性与机会成本</span></li>
+              <li><b>行动计划</b><span>把结论转化为未来七日的验证动作</span></li>
+              <li><b>风险盲区</b><span>明确哪些判断仍需专业人士确认</span></li>
+              <li><b>追问清单</b><span>留下下一轮思考最值得回答的问题</span></li>
+            </ul>
+            <button className="primary outcome-cta" onClick={startConsultation}>开始我的决策会诊 <span>→</span></button>
+          </div>
         </div>
       </section>
 

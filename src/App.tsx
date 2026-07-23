@@ -169,7 +169,7 @@ function Home({ question, setQuestion, begin, error }: {
       <section className="hero">
         <div className="hero-copy">
           <span className="eyebrow">不是替你决定，而是帮你想得更清楚</span>
-          <h1>复杂问题，<em>换九种视角</em>再看一次。</h1>
+          <h1>集古今智慧，<em>解眼前难题</em></h1>
           <p>把一个难题交给不同思维模型：看战略、找盲点、拆假设，最后汇成一份可以马上行动的决策简报。</p>
           <div className="ask-card">
             <label htmlFor="question">此刻最困扰你的问题是什么？</label>
@@ -283,7 +283,7 @@ function Home({ question, setQuestion, begin, error }: {
 
           <div className="outcome-copy">
             <span className="eyebrow">一份报告，六层判断</span>
-            <h3>让决定有依据，也给犹豫一个出口</h3>
+            <h3>让决定有据可循</h3>
             <p>好的决策工具不替你选择，而是把混乱拆成可以检查的部分。你可以保存报告、回看当时的判断，也可以在行动后重新复盘。</p>
             <ul>
               <li><b>关键洞察</b><span>先看清真正需要决定的是什么</span></li>

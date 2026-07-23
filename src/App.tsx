@@ -194,7 +194,9 @@ function Home({ question, setQuestion, begin, error }: {
         <div className="council-visual" aria-label="九位思维模型顾问">
           <div className="orbit orbit-one" />
           <div className="orbit orbit-two" />
-          <div className="center-seal"><strong>智</strong><span>多元思维</span></div>
+          <div className="center-seal" aria-label="棋局推演中">
+            <img className="center-board-logo" src="/brand/logo.png" alt="" />
+          </div>
           {personas.map((persona, index) => (
             <div className={`persona-dot dot-${index + 1}`} key={persona.id} title={persona.name}>
               <AdvisorAvatar personaId={persona.id} name={persona.name} size="sm" /><small>{persona.name}</small>

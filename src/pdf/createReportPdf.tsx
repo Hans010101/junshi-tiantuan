@@ -63,7 +63,10 @@ export async function downloadReportPdf(report: AdviceReport, onProgress?: (prog
         height: 1123,
       })
       if (index > 0) pdf.addPage('a4', 'portrait')
-      pdf.addImage(canvas.toDataURL('image/jpeg', 0.92), 'JPEG', 0, 0, 210, 297, undefined, 'FAST')
+      const isModelPage = sheets[index].querySelector('.pdf-model-page') !== null
+      const imageType = isModelPage ? 'PNG' : 'JPEG'
+      const imageData = isModelPage ? canvas.toDataURL('image/png') : canvas.toDataURL('image/jpeg', 0.92)
+      pdf.addImage(imageData, imageType, 0, 0, 210, 297, undefined, 'FAST')
       canvas.width = 1
       canvas.height = 1
     }
@@ -248,9 +251,7 @@ function ModelPage({ item }: { item: ModelAppendix }) {
   return (
     <div className="pdf-model-page">
       <SectionHeading number="附" eyebrow="思维模型图谱" title={`${item.advisorName} · ${item.model.name}`} />
-      <p className="pdf-model-definition">{item.model.definition}</p>
-      <div className="pdf-model-image"><img src={item.model.strategy_card_core_image} alt={`${item.advisorName}的${item.model.name}思维模型`} /></div>
-      {item.model.modern_transfer && <blockquote className="pdf-model-transfer"><b>用于本题</b>{item.model.modern_transfer}</blockquote>}
+      <div className="pdf-model-image"><img src={item.model.strategy_card_image} alt={`${item.advisorName}的${item.model.name}完整思维模型卡片`} /></div>
     </div>
   )
 }

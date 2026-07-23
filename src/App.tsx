@@ -169,7 +169,7 @@ function Home({ question, setQuestion, begin, error }: {
       <section className="hero">
         <div className="hero-copy">
           <span className="eyebrow">不是替你决定，而是帮你想得更清楚</span>
-          <h1>集古今智慧，<em>解眼前难题</em></h1>
+          <h1>集古今智慧<em>解眼前难题</em></h1>
           <p>把一个难题交给不同思维模型：看战略、找盲点、拆假设，最后汇成一份可以马上行动的决策简报。</p>
           <div className="ask-card">
             <label htmlFor="question">此刻最困扰你的问题是什么？</label>

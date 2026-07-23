@@ -51,32 +51,94 @@ export async function downloadReportPdf(report: AdviceReport, onProgress?: (prog
     if (sheets.length === 0) throw new Error('PDF_PAGE_EMPTY')
 
     const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4', compress: true })
+    pdf.setProperties({
+      title: report.title,
+      subject: '军师天团 · 完整锦囊',
+      author: '军师天团',
+      creator: '军师天团',
+    })
     for (let index = 0; index < sheets.length; index += 1) {
       onProgress?.({ stage: 'rendering', current: index + 1, total: sheets.length })
-      const canvas = await html2canvas(sheets[index], {
-        backgroundColor: '#f7f1e5',
-        scale: 2,
-        useCORS: true,
-        logging: false,
-        imageTimeout: 20_000,
-        width: 794,
-        height: 1123,
-      })
-      if (index > 0) pdf.addPage('a4', 'portrait')
       const isModelPage = sheets[index].querySelector('.pdf-model-page') !== null
-      const imageType = isModelPage ? 'PNG' : 'JPEG'
-      const imageData = isModelPage ? canvas.toDataURL('image/png') : canvas.toDataURL('image/jpeg', 0.92)
-      pdf.addImage(imageData, imageType, 0, 0, 210, 297, undefined, 'FAST')
-      canvas.width = 1
-      canvas.height = 1
+      const imageData = await renderSheetAsJpeg(html2canvas, sheets[index], isModelPage)
+      if (index > 0) pdf.addPage('a4', 'portrait')
+      pdf.addImage(imageData, 'JPEG', 0, 0, 210, 297, undefined, 'FAST')
+      await yieldToBrowser()
     }
 
     onProgress?.({ stage: 'saving' })
-    pdf.save(`军师天团-完整锦囊-${safeFilename(report.title)}.pdf`)
+    const blob = pdf.output('blob')
+    if (blob.size === 0) throw new Error('PDF_FILE_EMPTY')
+    saveBlob(blob, `军师天团-完整锦囊-${safeFilename(report.title)}.pdf`)
   } finally {
     root.unmount()
     host.remove()
   }
+}
+
+async function renderSheetAsJpeg(
+  html2canvas: typeof import('html2canvas').default,
+  sheet: HTMLElement,
+  isModelPage: boolean,
+) {
+  try {
+    return await renderSheetAtScale(html2canvas, sheet, 1.8, isModelPage ? 0.96 : 0.92)
+  } catch (reason) {
+    console.warn('PDF page render retried in low-memory mode', reason)
+    await yieldToBrowser()
+    return renderSheetAtScale(html2canvas, sheet, 1.25, 0.9)
+  }
+}
+
+async function renderSheetAtScale(
+  html2canvas: typeof import('html2canvas').default,
+  sheet: HTMLElement,
+  scale: number,
+  quality: number,
+) {
+  const canvas = await html2canvas(sheet, {
+    backgroundColor: '#f7f1e5',
+    scale,
+    useCORS: true,
+    logging: false,
+    imageTimeout: 20_000,
+    width: 794,
+    height: 1123,
+  })
+  try {
+    const blob = await canvasToBlob(canvas, 'image/jpeg', quality)
+    if (blob.size === 0) throw new Error('PDF_PAGE_IMAGE_EMPTY')
+    return new Uint8Array(await blob.arrayBuffer())
+  } finally {
+    canvas.width = 1
+    canvas.height = 1
+  }
+}
+
+function canvasToBlob(canvas: HTMLCanvasElement, type: string, quality: number) {
+  return new Promise<Blob>((resolve, reject) => {
+    canvas.toBlob((blob) => {
+      if (blob) resolve(blob)
+      else reject(new Error('PDF_PAGE_ENCODING_FAILED'))
+    }, type, quality)
+  })
+}
+
+function saveBlob(blob: Blob, filename: string) {
+  const url = URL.createObjectURL(blob)
+  const anchor = document.createElement('a')
+  anchor.href = url
+  anchor.download = filename
+  anchor.rel = 'noopener'
+  anchor.style.display = 'none'
+  document.body.appendChild(anchor)
+  anchor.click()
+  anchor.remove()
+  window.setTimeout(() => URL.revokeObjectURL(url), 60_000)
+}
+
+async function yieldToBrowser() {
+  await new Promise<void>((resolve) => window.setTimeout(resolve, 0))
 }
 
 async function loadModelAppendices(report: AdviceReport): Promise<ModelAppendix[]> {

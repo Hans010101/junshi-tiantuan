@@ -1,5 +1,5 @@
 import { personas } from '../src/data/personas.js'
-import type { AdviceReport, DecisionOption, Perspective, ReportMode } from '../src/types.js'
+import type { AdviceReport, DecisionOption, Perspective, ProblemAnalysis, ReportMode } from '../src/types.js'
 
 const MAX_BODY_BYTES = 16_000
 const MODEL = '@cf/qwen/qwen3-30b-a3b-fp8' as const
@@ -18,10 +18,14 @@ interface AdviceRequest {
 interface AiPayload {
   title?: unknown
   diagnosis?: unknown
+  deepAnalysis?: unknown
   perspectives?: unknown
   synthesis?: unknown
+  consensus?: unknown
+  disagreements?: unknown
   options?: unknown
   actions?: unknown
+  risks?: unknown
 }
 
 class HttpError extends Error {
@@ -80,12 +84,13 @@ async function handleAdvice(request: Request, env: Env): Promise<Response> {
     }
 
     let report: AdviceReport
+    const knowledge = await loadAdvisorKnowledge(env.DB, personaIds)
     try {
-      const aiPayload = await runCouncil(env.AI, env.DB, question, context, personaIds)
-      report = normalizeAiReport(aiPayload, question, personaIds, professionalPattern.test(question + context))
+      const aiPayload = await runCouncil(env.AI, question, context, personaIds, knowledge)
+      report = normalizeAiReport(aiPayload, question, personaIds, professionalPattern.test(question + context), knowledge)
     } catch (error) {
       console.warn(JSON.stringify({ event: 'ai_fallback', requestId, error: error instanceof Error ? error.name : 'unknown' }))
-      report = fallbackReport(question, personaIds, professionalPattern.test(question + context))
+      report = fallbackReport(question, personaIds, professionalPattern.test(question + context), knowledge)
     }
     logResult(requestId, report.mode, Date.now() - startedAt, personaIds.length)
     return json(report)
@@ -152,8 +157,7 @@ function normalizePersonaIds(value: unknown): string[] {
   return ids
 }
 
-async function runCouncil(ai: Ai, db: D1Database, question: string, context: string, personaIds: string[]): Promise<AiPayload> {
-  const knowledge = await loadAdvisorKnowledge(db, personaIds)
+async function runCouncil(ai: Ai, question: string, context: string, personaIds: string[], knowledge: Map<string, AdvisorKnowledge>): Promise<AiPayload> {
   const council = personaIds.map((id) => {
     const persona = personaMap.get(id)!
     const profile = knowledge.get(id)
@@ -163,7 +167,18 @@ async function runCouncil(ai: Ai, db: D1Database, question: string, context: str
     return `${persona.id}｜${persona.name}｜视角：${persona.lens}｜追问：${persona.challenge}｜语气：${persona.tone}${knowledgeLine}`
   }).join('\n')
   const system = `你是一名严谨的中文决策分析助手。你引用人物公开的方法论，不扮演人物本人，不虚构名言、经历或事实。不同视角必须有真实分歧，先澄清目标和约束，再给出可验证行动。不要替用户做最终决定。对于医疗、法律、金融等高风险主题，明确建议咨询合格专业人士。只输出合法 JSON，不要 Markdown。`
-  const prompt = `问题：${question}\n背景：${context || '未提供'}\n\n本次视角：\n${council}\n\n输出对象必须包含：title（短标题）、diagnosis（核心矛盾，80-180字）、perspectives（每位军师一项，字段 personaId/personaName/headline/analysis/question）、synthesis（综合判断，100-220字）、options（恰好3项，字段 title/upside/risk/firstStep）、actions（恰好3项、未来7天内可执行）。不要输出 disclaimer、id、时间。`
+  const prompt = `问题：${question}\n背景：${context || '未提供'}\n\n本次视角：\n${council}\n\n请形成一份可独立阅读的系统性决策方案。输出对象必须包含：
+title（短标题）；
+diagnosis（核心矛盾，80-180字）；
+deepAnalysis（字段 decisionGoal/coreTension，以及 constraints/assumptions/successCriteria 三个数组，每个数组恰好3项，说明决策目标、矛盾、约束、隐含假设和判断标准）；
+perspectives（每位军师一项，字段 personaId/personaName/headline/analysis/question/modelName；analysis 需说明推理链和解决思路，modelName 必须从该军师的“知识库模型”中选择一个）；
+synthesis（综合判断，100-220字）；
+consensus（恰好3项军师共识）；
+disagreements（恰好3项仍需用户判断的分歧或条件）；
+options（恰好3项，字段 title/upside/risk/firstStep）；
+actions（恰好3项、未来7天内可执行）；
+risks（恰好3项需要持续观察或专业复核的风险）。
+只输出合法 JSON。不要输出 disclaimer、id、时间。`
 
   const result = await ai.run(MODEL, {
     messages: [
@@ -171,7 +186,7 @@ async function runCouncil(ai: Ai, db: D1Database, question: string, context: str
       { role: 'user', content: prompt },
     ],
     response_format: { type: 'json_object' },
-    max_tokens: 1800,
+    max_tokens: 2600,
     temperature: 0.45,
   })
   const text = extractAiText(result)
@@ -305,36 +320,65 @@ function extractAiText(result: unknown): string {
   throw new Error('AI_UNREADABLE_RESULT')
 }
 
-function normalizeAiReport(payload: AiPayload, question: string, personaIds: string[], professional: boolean): AdviceReport {
-  const perspectives = normalizePerspectives(payload.perspectives, personaIds)
+function normalizeAiReport(
+  payload: AiPayload,
+  question: string,
+  personaIds: string[],
+  professional: boolean,
+  knowledge: Map<string, AdvisorKnowledge>,
+): AdviceReport {
+  const perspectives = normalizePerspectives(payload.perspectives, personaIds, knowledge)
   const options = normalizeOptions(payload.options)
-  const actions = normalizeStringArray(payload.actions, 3)
+  const actions = normalizeList(payload.actions, fallbackActions(), 3)
   return createReport({
     question,
     mode: 'ai',
     title: cleanAiString(payload.title, '你的决策简报'),
     diagnosis: cleanAiString(payload.diagnosis, '关键不是立刻做出选择，而是先厘清目标、约束和能够低成本验证的核心假设。'),
+    deepAnalysis: normalizeProblemAnalysis(payload.deepAnalysis),
     perspectives,
     synthesis: cleanAiString(payload.synthesis, '先用一个可逆、低成本的行动收集真实反馈，再根据证据扩大投入。'),
+    consensus: normalizeList(payload.consensus, fallbackConsensus(), 3),
+    disagreements: normalizeList(payload.disagreements, fallbackDisagreements(), 3),
     options,
     actions,
+    risks: normalizeList(payload.risks, fallbackRisks(), 3),
     disclaimer: disclaimer(professional),
   })
 }
 
-function normalizePerspectives(value: unknown, personaIds: string[]): Perspective[] {
+function normalizePerspectives(
+  value: unknown,
+  personaIds: string[],
+  knowledge: Map<string, AdvisorKnowledge>,
+): Perspective[] {
   const rows = Array.isArray(value) ? value : []
   return personaIds.map((id, index) => {
     const persona = personaMap.get(id)!
     const row = rows[index] && typeof rows[index] === 'object' ? rows[index] as Record<string, unknown> : {}
+    const availableModels = knowledge.get(id)?.models ?? []
+    const requestedModel = cleanAiString(row.modelName, '')
+    const modelName = availableModels.includes(requestedModel) ? requestedModel : availableModels[0]
     return {
       personaId: id,
       personaName: persona.name,
       headline: cleanAiString(row.headline, persona.role),
       analysis: cleanAiString(row.analysis, persona.lens),
       question: cleanAiString(row.question, persona.challenge),
+      ...(modelName ? { modelName } : {}),
     }
   })
+}
+
+function normalizeProblemAnalysis(value: unknown): ProblemAnalysis {
+  const row = value && typeof value === 'object' ? value as Record<string, unknown> : {}
+  return {
+    decisionGoal: cleanAiString(row.decisionGoal, '明确真正要实现的结果，并判断它是否值得承担相应代价。'),
+    coreTension: cleanAiString(row.coreTension, '在行动速度与信息充分度之间取得平衡，避免把可逆选择做成不可逆承诺。'),
+    constraints: normalizeList(row.constraints, fallbackConstraints(), 3),
+    assumptions: normalizeList(row.assumptions, fallbackAssumptions(), 3),
+    successCriteria: normalizeList(row.successCriteria, fallbackSuccessCriteria(), 3),
+  }
 }
 
 function normalizeOptions(value: unknown): DecisionOption[] {
@@ -351,8 +395,7 @@ function normalizeOptions(value: unknown): DecisionOption[] {
   })
 }
 
-function normalizeStringArray(value: unknown, count: number): string[] {
-  const defaults = fallbackActions()
+function normalizeList(value: unknown, defaults: string[], count: number): string[] {
   if (!Array.isArray(value)) return defaults
   const clean = value.filter((item): item is string => typeof item === 'string' && item.trim().length > 0).map((item) => item.trim().slice(0, 300))
   return [...clean, ...defaults].slice(0, count)
@@ -362,20 +405,37 @@ function cleanAiString(value: unknown, fallback: string): string {
   return typeof value === 'string' && value.trim() ? value.trim().slice(0, 800) : fallback
 }
 
-function fallbackReport(question: string, personaIds: string[], professional: boolean): AdviceReport {
+function fallbackReport(
+  question: string,
+  personaIds: string[],
+  professional: boolean,
+  knowledge: Map<string, AdvisorKnowledge> = new Map(),
+): AdviceReport {
   const perspectives = personaIds.map((id) => {
     const persona = personaMap.get(id)!
-    return { personaId: id, personaName: persona.name, headline: persona.role, analysis: persona.lens, question: persona.challenge }
+    const modelName = knowledge.get(id)?.models[0]
+    return {
+      personaId: id,
+      personaName: persona.name,
+      headline: persona.role,
+      analysis: persona.lens,
+      question: persona.challenge,
+      ...(modelName ? { modelName } : {}),
+    }
   })
   return createReport({
     question,
     mode: 'fallback',
     title: '先把选择变成可以验证的假设',
     diagnosis: '当前信息还不足以支持一次不可逆的决定。真正需要澄清的是：你想获得什么结果、最不能承受什么代价，以及哪项关键假设可以用最小成本得到真实反馈。',
+    deepAnalysis: fallbackProblemAnalysis(),
     perspectives,
     synthesis: '这些视角的共同点不是要求你立刻选边，而是缩小不确定性。先把大问题拆成一个可逆实验，写清成功与停止标准；获得现实证据后，再决定是否增加投入。',
+    consensus: fallbackConsensus(),
+    disagreements: fallbackDisagreements(),
     options: fallbackOptions(),
     actions: fallbackActions(),
+    risks: fallbackRisks(),
     disclaimer: disclaimer(professional),
   })
 }
@@ -389,6 +449,7 @@ function safetyReport(question: string, personaIds: string[], kind: 'emergency' 
     diagnosis: emergency
       ? '你描述的情况可能涉及紧急的人身或健康风险，此时不适合继续做一般性的决策分析。请优先获得现实中的即时帮助。'
       : '这个问题可能涉及伤害他人、违法规避或严重安全风险。系统不会提供实施方法，但可以帮助你寻找合法、降低伤害的替代方案。',
+    deepAnalysis: fallbackProblemAnalysis(),
     perspectives: personaIds.map((id) => {
       const persona = personaMap.get(id)!
       return { personaId: id, personaName: persona.name, headline: '先守住不可突破的底线', analysis: emergency ? '暂停独自处理，尽快让现实中的专业人员或可信赖的人介入。' : '把目标改写为合法合规且不伤害他人的结果，再讨论可行路径。', question: emergency ? '谁能在十分钟内来到你身边或与你通话？' : '你真正想实现的合法结果是什么？' }
@@ -396,6 +457,8 @@ function safetyReport(question: string, personaIds: string[], kind: 'emergency' 
     synthesis: emergency
       ? '如果存在立即危险，请联系当地紧急服务；在中国大陆可拨打 120（急救）或 110（报警）。也请立刻联系身边可信赖的人，不要独处。'
       : '停止任何可能造成伤害或违法的行动，保留必要记录，并向合格的法律、合规或安全专业人士说明真实情况。',
+    consensus: fallbackConsensus(),
+    disagreements: fallbackDisagreements(),
     options: emergency ? [
       { title: '立即求助', upside: '最快获得现场支持', risk: '等待会放大风险', firstStep: '拨打当地紧急电话并清楚说明位置与状况' },
       { title: '联系身边的人', upside: '避免独自面对风险', risk: '对方可能不了解严重程度', firstStep: '明确说“我现在需要你陪着我”' },
@@ -404,8 +467,43 @@ function safetyReport(question: string, personaIds: string[], kind: 'emergency' 
     actions: emergency
       ? ['现在联系紧急服务或可信赖的人。', '离开危险物品和不安全环境，不要独处。', '把位置、症状和已经发生的事情如实告诉专业人员。']
       : ['暂停可能违法或伤害他人的操作。', '写下你真正想实现的合法目标。', '向合格的法律、合规或安全专业人士咨询。'],
+    risks: fallbackRisks(),
     disclaimer: emergency ? '本页不能替代紧急服务或专业医疗帮助。' : '本工具不提供违法、规避监管或伤害他人的操作指导。',
   })
+}
+
+function fallbackProblemAnalysis(): ProblemAnalysis {
+  return {
+    decisionGoal: '把模糊的两难选择改写为能够验证、比较和复盘的决策目标。',
+    coreTension: '既要抓住行动窗口，也要避免在关键假设尚未验证时做出过度投入。',
+    constraints: fallbackConstraints(),
+    assumptions: fallbackAssumptions(),
+    successCriteria: fallbackSuccessCriteria(),
+  }
+}
+
+function fallbackConstraints(): string[] {
+  return ['时间、资金与注意力都有限，无法同时验证所有方向。', '现有信息带有主观判断，仍缺少来自真实场景的反馈。', '部分选择具有路径依赖，需要预先设置止损和复盘节点。']
+}
+
+function fallbackAssumptions(): string[] {
+  return ['当前最担心的问题确实是决定成败的核心变量。', '用户或相关方的真实行为会与口头反馈基本一致。', '一次小规模实验能够代表后续扩大投入的主要风险。']
+}
+
+function fallbackSuccessCriteria(): string[] {
+  return ['获得足以改变或强化当前判断的真实证据。', '下一步投入、停止或调整的阈值可以明确写出。', '行动后仍保留必要的现金流、时间与选择空间。']
+}
+
+function fallbackConsensus(): string[] {
+  return ['先明确目标与底线，再讨论具体方案。', '优先验证最关键且最不确定的假设。', '用可逆的小步行动换取现实证据。']
+}
+
+function fallbackDisagreements(): string[] {
+  return ['行动窗口是否紧迫，决定验证节奏。', '能够承受的最大损失，需要由你明确。', '短期结果与长期价值的权重仍需取舍。']
+}
+
+function fallbackRisks(): string[] {
+  return ['不要把一次偶然反馈直接外推为长期结论。', '警惕沉没成本和确认偏误推动继续投入。', '涉及医疗、法律或金融问题时应交由专业人士复核。']
 }
 
 function fallbackOptions(): DecisionOption[] {

@@ -6,7 +6,17 @@ export interface Perspective {
   headline: string
   analysis: string
   question: string
+  modelName?: string
 }
+
+export interface ProblemAnalysis {
+  decisionGoal: string
+  coreTension: string
+  constraints: string[]
+  assumptions: string[]
+  successCriteria: string[]
+}
+
 export interface DecisionOption {
   title: string
   upside: string
@@ -21,9 +31,13 @@ export interface AdviceReport {
   mode: ReportMode
   title: string
   diagnosis: string
+  deepAnalysis?: ProblemAnalysis
   perspectives: Perspective[]
   synthesis: string
+  consensus?: string[]
+  disagreements?: string[]
   options: DecisionOption[]
   actions: string[]
+  risks?: string[]
   disclaimer: string
 }

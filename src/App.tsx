@@ -349,9 +349,30 @@ function selectedPersonasFallback(selected: string[]) {
 }
 
 function Report({ report, onAgain }: { report: AdviceReport; onAgain: () => void }) {
+  const [pdfStatus, setPdfStatus] = useState<'idle' | 'working' | 'error'>('idle')
+  const [pdfLabel, setPdfLabel] = useState('下载完整 PDF 锦囊')
   const copy = async () => {
     const text = [report.title, report.diagnosis, report.synthesis, ...report.actions.map((item, i) => `${i + 1}. ${item}`), report.disclaimer].join('\n\n')
     await navigator.clipboard.writeText(text)
+  }
+  const downloadPdf = async () => {
+    if (pdfStatus === 'working') return
+    setPdfStatus('working')
+    setPdfLabel('正在整理完整锦囊…')
+    try {
+      const { downloadReportPdf } = await import('./pdf/createReportPdf')
+      await downloadReportPdf(report, ({ stage, current, total }) => {
+        if (stage === 'preparing') setPdfLabel('正在调取思维模型…')
+        if (stage === 'rendering') setPdfLabel(`正在排版 ${current}/${total}`)
+        if (stage === 'saving') setPdfLabel('正在生成下载文件…')
+      })
+      setPdfStatus('idle')
+      setPdfLabel('再次下载完整 PDF')
+    } catch (reason) {
+      console.error('PDF export failed', reason)
+      setPdfStatus('error')
+      setPdfLabel('下载失败，点击重试')
+    }
   }
   return (
     <article className="report-page">
@@ -359,7 +380,13 @@ function Report({ report, onAgain }: { report: AdviceReport; onAgain: () => void
         <span className="eyebrow">军师会商 · 决策简报</span>
         <h1>{report.title}</h1>
         <p>{new Date(report.createdAt).toLocaleString('zh-CN')} · {report.mode === 'ai' ? 'AI 综合生成' : report.mode === 'safety' ? '安全提示' : '基础分析模式'}</p>
-        <div className="report-actions"><button onClick={copy}>复制摘要</button><button className="primary" onClick={onAgain}>再问一题</button></div>
+        <div className="report-actions">
+          <button onClick={copy}>复制摘要</button>
+          <button onClick={onAgain}>再问一题</button>
+          <button className={`primary pdf-download ${pdfStatus === 'error' ? 'has-error' : ''}`} onClick={downloadPdf} disabled={pdfStatus === 'working'}>
+            <span aria-hidden="true">↓</span>{pdfLabel}
+          </button>
+        </div>
       </header>
       <section className="report-section lead"><span>核心诊断</span><p>{report.diagnosis}</p></section>
       <section className="report-section">

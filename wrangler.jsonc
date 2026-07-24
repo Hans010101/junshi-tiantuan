@@ -7,6 +7,18 @@
 	"name": "junshi-tiantuan",
 	"main": "worker/index.ts",
 	"compatibility_date": "2026-07-17",
+	"workers_dev": true,
+	"preview_urls": true,
+	"routes": [
+		{
+			"pattern": "askjunshi.com",
+			"custom_domain": true
+		},
+		{
+			"pattern": "www.askjunshi.com",
+			"custom_domain": true
+		}
+	],
 	"assets": {
 		"not_found_handling": "single-page-application"
 	},

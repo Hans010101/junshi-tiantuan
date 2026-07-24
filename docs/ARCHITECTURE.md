@@ -30,7 +30,7 @@
 ## 为什么选择 Cloudflare Workers
 
 - React 静态资源和 API 可以在同一项目部署。
-- `workers.dev` 提供免费的默认访问域名，也支持后续绑定自有域名。
+- `askjunshi.com` 与 `www.askjunshi.com` 作为正式入口，`workers.dev` 保留为部署回退地址。
 - Workers AI 通过绑定调用，不需要把模型密钥放进前端或 GitHub。
 - GitHub 集成后可以从 `main` 自动构建发布。
 

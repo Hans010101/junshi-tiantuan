@@ -353,6 +353,9 @@ function selectedPersonasFallback(selected: string[]) {
 function Report({ report, onAgain }: { report: AdviceReport; onAgain: () => void }) {
   const [pdfStatus, setPdfStatus] = useState<'idle' | 'working' | 'error'>('idle')
   const [pdfLabel, setPdfLabel] = useState('下载完整 PDF 锦囊')
+  const [email, setEmail] = useState('')
+  const [emailStatus, setEmailStatus] = useState<'idle' | 'working' | 'sent' | 'error'>('idle')
+  const [emailMessage, setEmailMessage] = useState('')
   const copy = async () => {
     const text = [report.title, report.diagnosis, report.synthesis, ...report.actions.map((item, i) => `${i + 1}. ${item}`), report.disclaimer].join('\n\n')
     await navigator.clipboard.writeText(text)
@@ -376,6 +379,34 @@ function Report({ report, onAgain }: { report: AdviceReport; onAgain: () => void
       setPdfLabel('下载失败，点击重试')
     }
   }
+  const sendEmail = async (event: React.FormEvent) => {
+    event.preventDefault()
+    if (!report.emailToken || emailStatus === 'working') return
+    setEmailStatus('working')
+    setEmailMessage('正在整理完整 PDF 锦囊…')
+    try {
+      const { createReportPdf } = await import('./pdf/createReportPdf')
+      const { blob, filename } = await createReportPdf(report, ({ stage, current, total }) => {
+        if (stage === 'preparing') setEmailMessage('正在调取思维模型…')
+        if (stage === 'rendering') setEmailMessage(`正在排版 ${current}/${total}`)
+        if (stage === 'saving') setEmailMessage('正在发送邮件…')
+      })
+      const pdfBase64 = await blobToBase64(blob)
+      const response = await fetch('/api/report/email', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ email, report, pdfBase64, filename }),
+      })
+      const payload = await response.json() as { error?: string }
+      if (!response.ok) throw new Error(payload.error || '邮件发送失败，请稍后重试。')
+      setEmailStatus('sent')
+      setEmailMessage(`已发送到 ${email}，请留意收件箱和垃圾邮件。`)
+    } catch (reason) {
+      console.error('Report email failed', reason)
+      setEmailStatus('error')
+      setEmailMessage(reason instanceof Error ? reason.message : '邮件发送失败，请稍后重试。')
+    }
+  }
   return (
     <article className="report-page">
       <header className="report-cover">
@@ -390,6 +421,17 @@ function Report({ report, onAgain }: { report: AdviceReport; onAgain: () => void
           </button>
         </div>
       </header>
+      <section className="report-email">
+        <div><strong>把这份锦囊带走</strong><span>简要说明与完整 PDF 将一并发送到你的邮箱。</span></div>
+        {report.emailToken ? (
+          <form onSubmit={sendEmail}>
+            <label className="sr-only" htmlFor={`report-email-${report.id}`}>接收报告的邮箱</label>
+            <input id={`report-email-${report.id}`} type="email" autoComplete="email" required placeholder="你的邮箱地址" value={email} onChange={(event) => setEmail(event.target.value)} disabled={emailStatus === 'working'} />
+            <button className="primary" disabled={emailStatus === 'working'}>{emailStatus === 'working' ? '发送中…' : emailStatus === 'sent' ? '再次发送' : '发送到邮箱'}</button>
+          </form>
+        ) : <small>旧报告暂不支持邮件发送，重新提问后即可使用。</small>}
+        {emailMessage && <p className={emailStatus === 'error' ? 'is-error' : ''} role={emailStatus === 'error' ? 'alert' : 'status'}>{emailMessage}</p>}
+      </section>
       <section className="report-section lead"><span>核心诊断</span><p>{report.diagnosis}</p></section>
       <section className="report-section">
         <div className="report-title"><span>01</span><h2>军师观点</h2></div>
@@ -411,6 +453,15 @@ function Report({ report, onAgain }: { report: AdviceReport; onAgain: () => void
       <aside className="disclaimer">{report.disclaimer}</aside>
     </article>
   )
+}
+
+function blobToBase64(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = () => resolve(String(reader.result).split(',')[1] ?? '')
+    reader.onerror = () => reject(reader.error ?? new Error('PDF_READ_FAILED'))
+    reader.readAsDataURL(blob)
+  })
 }
 
 function History({ history, openReport, clear }: { history: AdviceReport[]; openReport: (item: AdviceReport) => void; clear: () => void }) {

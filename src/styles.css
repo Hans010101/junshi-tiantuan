@@ -187,6 +187,15 @@ textarea::placeholder { color: #aaa197; }
 .report-actions .pdf-download:hover { background: #efce91; }
 .report-actions .pdf-download.has-error { color: white; background: #a43d2f; }
 .report-actions .pdf-download > span { font-size: 17px; line-height: 1; }
+.report-email { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 12px 28px; align-items: center; margin: 18px 0; padding: 24px 28px; background: #efe3cf; border: 1px solid var(--line); border-radius: 5px 18px 5px 18px; }
+.report-email strong, .report-email span { display: block; }
+.report-email strong { font-family: "Noto Serif SC", serif; font-size: 19px; }
+.report-email span, .report-email small { margin-top: 5px; color: var(--muted); font-size: 12px; }
+.report-email form { display: flex; gap: 8px; }
+.report-email input { width: 240px; padding: 11px 13px; background: #fffaf2; border: 1px solid var(--line); border-radius: 6px; }
+.report-email button { white-space: nowrap; }
+.report-email p { grid-column: 1 / -1; margin: 0; color: #547044; font-size: 12px; }
+.report-email p.is-error { color: var(--red); }
 .report-section { padding: 52px; margin: 18px 0; background: rgba(255,253,248,.8); border: 1px solid var(--line); border-radius: 5px 22px 5px 22px; }
 .report-section.lead { display: grid; grid-template-columns: 110px 1fr; gap: 24px; background: #efe3cf; }
 .report-section.lead span { color: var(--red); font-weight: 600; }
@@ -466,6 +475,9 @@ footer { padding: 30px; text-align: center; border-top: 1px solid var(--line); c
   .report-cover, .report-section { padding: 28px 22px; }
   .report-actions { flex-wrap: wrap; }
   .report-actions .pdf-download { width: 100%; margin: 4px 0 0; }
+  .report-email { grid-template-columns: 1fr; padding: 20px; }
+  .report-email form { display: grid; grid-template-columns: 1fr auto; }
+  .report-email input { width: 100%; min-width: 0; }
   .report-section.lead { grid-template-columns: 1fr; gap: 10px; }
   .report-section.lead p, .synthesis > p { font-size: 17px; }
   .perspective { gap: 13px; }

@@ -10,6 +10,11 @@ export type PdfProgress = {
   total?: number
 }
 
+export type GeneratedReportPdf = {
+  blob: Blob
+  filename: string
+}
+
 interface ModelAppendix {
   advisorName: string
   model: AdvisorCoreModel
@@ -28,6 +33,11 @@ const DEFAULT_DISAGREEMENTS = ['行动窗口是否紧迫，决定验证节奏。
 const DEFAULT_RISKS = ['不要把一次偶然反馈直接外推为长期结论。', '警惕沉没成本和确认偏误推动继续投入。', '涉及专业问题时应交由合格人士复核。']
 
 export async function downloadReportPdf(report: AdviceReport, onProgress?: (progress: PdfProgress) => void) {
+  const result = await createReportPdf(report, onProgress)
+  saveBlob(result.blob, result.filename)
+}
+
+export async function createReportPdf(report: AdviceReport, onProgress?: (progress: PdfProgress) => void): Promise<GeneratedReportPdf> {
   onProgress?.({ stage: 'preparing' })
   const [{ default: html2canvas }, { jsPDF }, models] = await Promise.all([
     import('html2canvas'),
@@ -69,7 +79,7 @@ export async function downloadReportPdf(report: AdviceReport, onProgress?: (prog
     onProgress?.({ stage: 'saving' })
     const blob = pdf.output('blob')
     if (blob.size === 0) throw new Error('PDF_FILE_EMPTY')
-    saveBlob(blob, `军师天团-完整锦囊-${safeFilename(report.title)}.pdf`)
+    return { blob, filename: `军师天团-完整锦囊-${safeFilename(report.title)}.pdf` }
   } finally {
     root.unmount()
     host.remove()

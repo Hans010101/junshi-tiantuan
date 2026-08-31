@@ -1,7 +1,10 @@
 import { personas } from '../src/data/personas.js'
 import type { AdviceReport, DecisionOption, Perspective, ProblemAnalysis, ReportMode } from '../src/types.js'
+import { signReport, verifyEmailToken } from './reportToken.js'
 
 const MAX_BODY_BYTES = 16_000
+const MAX_EMAIL_BODY_BYTES = 12_000_000
+const MAX_PDF_BASE64_LENGTH = 10_000_000
 const MODEL = '@cf/qwen/qwen3-30b-a3b-fp8' as const
 const personaMap = new Map(personas.map((persona) => [persona.id, persona]))
 
@@ -13,6 +16,19 @@ interface AdviceRequest {
   question?: unknown
   context?: unknown
   personaIds?: unknown
+}
+
+type WorkerEnv = Env & {
+  RESEND_API_KEY: string
+  EMAIL_SIGNING_SECRET: string
+  RESEND_FROM: string
+}
+
+interface ReportEmailRequest {
+  email?: unknown
+  report?: unknown
+  pdfBase64?: unknown
+  filename?: unknown
 }
 
 interface AiPayload {
@@ -55,12 +71,15 @@ export default {
     if (url.pathname === '/api/advice' && request.method === 'POST') {
       return handleAdvice(request, env)
     }
+    if (url.pathname === '/api/report/email' && request.method === 'POST') {
+      return handleReportEmail(request, env)
+    }
     if (url.pathname.startsWith('/api/')) return json({ error: '接口不存在。' }, 404)
     return new Response(null, { status: 404 })
   },
-} satisfies ExportedHandler<Env>
+} satisfies ExportedHandler<WorkerEnv>
 
-async function handleAdvice(request: Request, env: Env): Promise<Response> {
+async function handleAdvice(request: Request, env: WorkerEnv): Promise<Response> {
   const requestId = crypto.randomUUID()
   const startedAt = Date.now()
   try {
@@ -75,12 +94,12 @@ async function handleAdvice(request: Request, env: Env): Promise<Response> {
     if (emergencyPattern.test(question + context)) {
       const report = safetyReport(question, personaIds, 'emergency')
       logResult(requestId, 'safety', Date.now() - startedAt, personaIds.length)
-      return json(report)
+      return json(await addEmailToken(report, env.EMAIL_SIGNING_SECRET))
     }
     if (harmfulPattern.test(question + context)) {
       const report = safetyReport(question, personaIds, 'harmful')
       logResult(requestId, 'safety', Date.now() - startedAt, personaIds.length)
-      return json(report)
+      return json(await addEmailToken(report, env.EMAIL_SIGNING_SECRET))
     }
 
     let report: AdviceReport
@@ -93,7 +112,7 @@ async function handleAdvice(request: Request, env: Env): Promise<Response> {
       report = fallbackReport(question, personaIds, professionalPattern.test(question + context), knowledge)
     }
     logResult(requestId, report.mode, Date.now() - startedAt, personaIds.length)
-    return json(report)
+    return json(await addEmailToken(report, env.EMAIL_SIGNING_SECRET))
   } catch (error) {
     const status = error instanceof HttpError ? error.status : 500
     const message = error instanceof HttpError ? error.message : '服务暂时不可用，请稍后重试。'
@@ -102,9 +121,9 @@ async function handleAdvice(request: Request, env: Env): Promise<Response> {
   }
 }
 
-async function readJsonBody(request: Request): Promise<unknown> {
+async function readJsonBody(request: Request, maxBytes = MAX_BODY_BYTES): Promise<unknown> {
   const declaredLength = Number(request.headers.get('content-length') ?? 0)
-  if (declaredLength > MAX_BODY_BYTES) throw new HttpError(413, '提交内容过长。')
+  if (declaredLength > maxBytes) throw new HttpError(413, '提交内容过长。')
   if (!request.body) throw new HttpError(400, '提交内容为空。')
 
   const reader = request.body.getReader()
@@ -114,7 +133,7 @@ async function readJsonBody(request: Request): Promise<unknown> {
     const { done, value } = await reader.read()
     if (done) break
     total += value.byteLength
-    if (total > MAX_BODY_BYTES) {
+    if (total > maxBytes) {
       await reader.cancel()
       throw new HttpError(413, '提交内容过长。')
     }
@@ -131,6 +150,108 @@ async function readJsonBody(request: Request): Promise<unknown> {
   } catch {
     throw new HttpError(400, 'JSON 格式无效。')
   }
+}
+
+async function handleReportEmail(request: Request, env: WorkerEnv): Promise<Response> {
+  try {
+    if (!request.headers.get('content-type')?.includes('application/json')) throw new HttpError(415, '请使用 JSON 格式提交。')
+    const origin = request.headers.get('origin')
+    if (origin && origin !== new URL(request.url).origin) throw new HttpError(403, '请求来源无效。')
+    const payload = await readJsonBody(request, MAX_EMAIL_BODY_BYTES) as ReportEmailRequest
+    const email = normalizeEmail(payload.email)
+    const report = normalizeSignedReport(payload.report)
+    if (!await verifyEmailToken(report, env.EMAIL_SIGNING_SECRET)) throw new HttpError(403, '报告凭证已失效，请重新生成报告。')
+    const pdfBase64 = normalizePdf(payload.pdfBase64)
+    const filename = normalizePdfFilename(payload.filename, report.title)
+    const recipientHash = await sha256(email)
+    const existing = await env.DB.prepare('SELECT resend_id FROM report_emails WHERE report_id = ? AND recipient_hash = ?').bind(report.id, recipientHash).first<{ resend_id: string | null }>()
+    if (existing) return json({ ok: true, id: existing.resend_id, alreadySent: true })
+    const sentCount = await env.DB.prepare('SELECT COUNT(*) AS count FROM report_emails WHERE report_id = ?').bind(report.id).first<{ count: number }>()
+    if ((sentCount?.count ?? 0) >= 2) throw new HttpError(429, '这份报告已达到邮件发送上限。')
+
+    const resendResponse = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        authorization: `Bearer ${env.RESEND_API_KEY}`,
+        'content-type': 'application/json',
+        'idempotency-key': `junshi-${report.id}-${recipientHash.slice(0, 20)}`,
+      },
+      body: JSON.stringify({
+        from: env.RESEND_FROM,
+        to: [email],
+        subject: `你的军师天团锦囊：${report.title}`,
+        html: reportEmailHtml(report),
+        text: `你的问题：${report.question}\n\n核心诊断：${report.diagnosis}\n\n综合判断：${report.synthesis}\n\n完整方案与思维模型图见 PDF 附件。`,
+        attachments: [{ filename, content: pdfBase64 }],
+        tags: [{ name: 'source', value: 'junshi_report' }],
+      }),
+    })
+    const resendPayload = await resendResponse.json().catch(() => ({})) as { id?: string; message?: string }
+    if (!resendResponse.ok || !resendPayload.id) {
+      console.error(JSON.stringify({ event: 'report_email_failed', status: resendResponse.status, message: resendPayload.message }))
+      throw new HttpError(502, '邮件服务暂时不可用，请稍后重试。')
+    }
+    await env.DB.prepare('INSERT OR IGNORE INTO report_emails (report_id, recipient_hash, resend_id, sent_at) VALUES (?, ?, ?, ?)')
+      .bind(report.id, recipientHash, resendPayload.id, new Date().toISOString()).run()
+    console.log(JSON.stringify({ event: 'report_email_sent', reportId: report.id, resendId: resendPayload.id }))
+    return json({ ok: true, id: resendPayload.id })
+  } catch (error) {
+    const status = error instanceof HttpError ? error.status : 500
+    const message = error instanceof HttpError ? error.message : '邮件发送失败，请稍后重试。'
+    if (!(error instanceof HttpError)) console.error(JSON.stringify({ event: 'report_email_error', error: error instanceof Error ? error.message : 'unknown' }))
+    return json({ error: message }, status)
+  }
+}
+
+function normalizeEmail(value: unknown): string {
+  if (typeof value !== 'string') throw new HttpError(400, '请输入有效的邮箱地址。')
+  const email = value.trim().toLowerCase()
+  if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new HttpError(400, '请输入有效的邮箱地址。')
+  return email
+}
+
+function normalizeSignedReport(value: unknown): AdviceReport {
+  if (!value || typeof value !== 'object') throw new HttpError(400, '报告内容无效。')
+  const report = value as Partial<AdviceReport>
+  if (typeof report.id !== 'string' || typeof report.createdAt !== 'string' || typeof report.emailToken !== 'string' || typeof report.title !== 'string' || typeof report.question !== 'string' || typeof report.diagnosis !== 'string' || typeof report.synthesis !== 'string' || !Array.isArray(report.perspectives) || !Array.isArray(report.options) || !Array.isArray(report.actions)) {
+    throw new HttpError(400, '报告内容无效。')
+  }
+  return report as AdviceReport
+}
+
+function normalizePdf(value: unknown): string {
+  if (typeof value !== 'string' || value.length < 8 || value.length > MAX_PDF_BASE64_LENGTH || !/^[A-Za-z0-9+/]+={0,2}$/.test(value)) throw new HttpError(400, 'PDF 文件无效或过大。')
+  try {
+    if (!atob(value.slice(0, 8)).startsWith('%PDF-')) throw new Error('not pdf')
+  } catch {
+    throw new HttpError(400, 'PDF 文件无效或过大。')
+  }
+  return value
+}
+
+function normalizePdfFilename(value: unknown, title: string): string {
+  if (typeof value === 'string' && value.endsWith('.pdf')) {
+    const clean = value.replace(/[\\/:*?"<>|]/g, '').slice(0, 100)
+    if (clean) return clean
+  }
+  return `军师天团-${title.replace(/[\\/:*?"<>|]/g, '').slice(0, 48) || '决策锦囊'}.pdf`
+}
+
+async function addEmailToken(report: AdviceReport, secret: string): Promise<AdviceReport> {
+  return { ...report, emailToken: await signReport(report, secret) }
+}
+
+async function sha256(value: string): Promise<string> {
+  const digest = new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value)))
+  return [...digest].map((byte) => byte.toString(16).padStart(2, '0')).join('')
+}
+
+function reportEmailHtml(report: AdviceReport): string {
+  return `<div style="max-width:640px;margin:auto;padding:32px;color:#312e29;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif"><p style="color:#a43d2f;font-size:13px">军师天团 · 决策锦囊</p><h1 style="font-family:serif;font-size:30px">${escapeHtml(report.title)}</h1><h3>你的问题</h3><p style="line-height:1.8">${escapeHtml(report.question)}</p><h3>核心诊断</h3><p style="line-height:1.8">${escapeHtml(report.diagnosis)}</p><h3>综合判断</h3><p style="line-height:1.8">${escapeHtml(report.synthesis)}</p><p style="margin-top:28px;padding:16px;background:#f4eee4">完整方案、行动路径与军师思维模型图已放入 PDF 附件。</p><p style="margin-top:28px;color:#777;font-size:12px">军师天团用于辅助思考，不替代独立判断。</p></div>`
+}
+
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]!)
 }
 
 function normalizeText(value: unknown, label: string, maxLength: number): string {

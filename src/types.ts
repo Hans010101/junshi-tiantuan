@@ -27,6 +27,7 @@ export interface DecisionOption {
 export interface AdviceReport {
   id: string
   createdAt: string
+  emailToken?: string
   question: string
   mode: ReportMode
   title: string

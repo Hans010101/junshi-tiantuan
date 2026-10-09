@@ -5,6 +5,7 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "junshi-tiantuan",
+	"account_id": "a828bebda1f352216c7d7da425bad17a",
 	"main": "worker/index.ts",
 	"compatibility_date": "2026-07-17",
 	"workers_dev": true,
@@ -30,7 +31,7 @@
 		{
 			"binding": "DB",
 			"database_name": "junshi-tiantuan-db",
-			"database_id": "2bab3dee-cf59-4b20-a2d6-ffb60004cb37",
+			"database_id": "c7c8584e-45f3-4095-bc82-75020d840d05",
 			"migrations_dir": "migrations"
 		}
 	],

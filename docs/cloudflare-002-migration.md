@@ -7,7 +7,7 @@ Status recorded on 2026-10-10.
 - Production domains: <https://askjunshi.com> and <https://www.askjunshi.com>
 - D1 database: `junshi-tiantuan-db` (`c7c8584e-45f3-4095-bc82-75020d840d05`)
 - Runtime bindings: Workers AI, D1, `RESEND_API_KEY`, `EMAIL_SIGNING_SECRET`, and `RESEND_FROM`
-- GitHub deployments: `.github/workflows/deploy.yml`; add the target-account API token as the repository secret `CLOUDFLARE_API_TOKEN`
+- GitHub deployments: `.github/workflows/deploy.yml` with the target-account repository secret `CLOUDFLARE_API_TOKEN`
 
 ## Verification
 
@@ -19,9 +19,10 @@ Status recorded on 2026-10-10.
 - Public Resend MX, SPF, DKIM, and DMARC records resolve from the 002 authoritative DNS.
 - The application has no login or OAuth flow, so there are no login callback URLs to migrate. Browser API calls are same-origin; email submission additionally enforces an exact same-origin check.
 - No KV, R2, Queue, Workflow, Durable Object, service binding, or scheduled trigger is used by this project.
+- GitHub Actions run `38011542870` completed a real 002 deployment on 2026-10-10; the Deploy step ran, the skip step did not, and Wrangler created Worker version `d35f2542-54f3-49ff-b8fd-ad5de445218d` with both custom domains.
 
 ## Remaining operations
 
-The public application no longer depends on 007 at runtime. The old 007 zone, custom-domain records, Worker, D1, and workers.dev entry remain only as an inactive rollback backup and must not be removed during the migration retention period.
+The public application and its publishing path no longer depend on 007. The old 007 zone, custom-domain records, Worker, D1, and workers.dev entry remain only as an inactive rollback backup and must not be removed during the migration retention period.
 
-GitHub validation runs automatically on `main`, but production deployment remains skipped until the target-account token is added as the repository secret `CLOUDFLARE_API_TOKEN`. Local Wrangler deployments already target account 002 and its D1 explicitly, so future publishing has no 007 configuration dependency.
+GitHub now validates and deploys automatically on `main`; manual dispatch is also available. The scoped 002 deployment token expires on 2027-10-10 and must be rotated before then. Local Wrangler deployments also target account 002 and its D1 explicitly.

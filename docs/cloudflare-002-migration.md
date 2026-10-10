@@ -11,11 +11,17 @@ Status recorded on 2026-10-10.
 
 ## Verification
 
+- `askjunshi.com` is active in the 002 zone and delegates publicly to `megan.ns.cloudflare.com` and `nero.ns.cloudflare.com`.
+- Both the apex and `www` custom domains are enabled on the 002 `junshi-tiantuan` Worker, and their HTTPS certificates are valid.
 - Target D1 contains 109 advisors, 763 advisor assets, 451 cases, and 10 domains; foreign-key verification passed.
 - The target Worker serves the SPA, manifest, logo, advisor API, portrait assets, and strategy-model images.
 - AI advice generation completed through the target Worker. The email endpoint rejected an unsigned request; no test email was sent.
+- Public Resend MX, SPF, DKIM, and DMARC records resolve from the 002 authoritative DNS.
+- The application has no login or OAuth flow, so there are no login callback URLs to migrate. Browser API calls are same-origin; email submission additionally enforces an exact same-origin check.
 - No KV, R2, Queue, Workflow, Durable Object, service binding, or scheduled trigger is used by this project.
 
-## Remaining dependency
+## Remaining operations
 
-The registrar still delegates `askjunshi.com` to the 007 account nameservers. Until the registrar nameserver change is completed and propagated, the public domain continues through the 007 DNS zone and its temporary forwarding Worker. The 002 Worker and D1 are already the active application runtime; the old resources must remain as a rollback bridge until DNS cutover is verified.
+The public application no longer depends on 007 at runtime. The old 007 zone, custom-domain records, Worker, D1, and workers.dev entry remain only as an inactive rollback backup and must not be removed during the migration retention period.
+
+GitHub validation runs automatically on `main`, but production deployment remains skipped until the target-account token is added as the repository secret `CLOUDFLARE_API_TOKEN`. Local Wrangler deployments already target account 002 and its D1 explicitly, so future publishing has no 007 configuration dependency.

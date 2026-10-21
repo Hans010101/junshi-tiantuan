@@ -8,18 +8,10 @@
 	"account_id": "a828bebda1f352216c7d7da425bad17a",
 	"main": "worker/index.ts",
 	"compatibility_date": "2026-07-17",
-	"workers_dev": true,
-	"preview_urls": true,
-	"routes": [
-		{
-			"pattern": "askjunshi.com",
-			"custom_domain": true
-		},
-		{
-			"pattern": "www.askjunshi.com",
-			"custom_domain": true
-		}
-	],
+	// Public access stopped on 2026-10-21; retain Worker code, assets and D1.
+	"workers_dev": false,
+	"preview_urls": false,
+	"routes": [],
 	"assets": {
 		"not_found_handling": "single-page-application"
 	},
